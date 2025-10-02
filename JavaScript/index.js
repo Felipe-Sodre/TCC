@@ -12,5 +12,6 @@ document.getElementById("btnLogin").addEventListener("click", function()
 //IR PARA PAGINA TRANSTORNOS
 document.getElementById("pageTranstornos").addEventListener("click", function() 
     {
-        window.location.href = "HTML/Transtornos.html";
+        window.location.href = "HTML/Login.html";
     });
+
