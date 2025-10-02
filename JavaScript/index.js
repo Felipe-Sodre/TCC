@@ -1,5 +1,16 @@
-document.getElementById("btnLogin").addEventListener("click", function() {
-    window.location.href = "HTML/Login.html"; // aqui você coloca o caminho da página de login
-});
+//// FELIPE SODRÉ ////
+
+//IR PARA PAGINA LOGIN
+document.getElementById("btnLogin").addEventListener("click", function() 
+    {
+        window.location.href = "HTML/Login.html";
+    });
+
+//IR PARA PAGINA CADASTRE-SE
 
 
+//IR PARA PAGINA TRANSTORNOS
+document.getElementById("pageTranstornos").addEventListener("click", function() 
+    {
+        window.location.href = "HTML/Transtornos.html";
+    });
