@@ -7,12 +7,16 @@ document.getElementById("btnLogin").addEventListener("click", function()
     });
 
 //IR PARA PAGINA CADASTRE-SE
-
+document.getElementById("pageTranstornos").addEventListener("click", function() 
+    {
+        window.location.href = "HTML/Cadastre-se.html";
+    });
 
 //IR PARA PAGINA TRANSTORNOS
 document.getElementById("pageTranstornos").addEventListener("click", function() 
     {
         window.location.href = "HTML/Transtornos.html";
     });
+
 
 
