@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
-$dbname = ''
-$user = ''
-$pass = ''
+$dbname = 'neuro_apoia_conecta_bd';
+$user = 'root';
+$pass = '';
 
 try{
   //Cria a conexão PDO
