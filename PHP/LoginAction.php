@@ -1,5 +1,5 @@
 <?php
-require 'PHP/conexao.php';
+require 'conexao.php';
 header('Content-Type: application/json');
 
 //recebe os dados enviados pelo Login.js
