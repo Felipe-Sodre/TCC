@@ -3,16 +3,28 @@
   <head>
     <meta charset= "UTF-8">
     <Title>Login</Title>
-    <link rel = "stylesheet" href= "CSS/">
+    <link rel = "stylesheet" href= "CSS/Login.css">
     <script src = "JavaScript/Login.js"defer></script>
   </head>
   <body>
-    <main>
+    <main class="form-content">
+      <!-- Adicionado "class="form-content"
+      "caixa" para o login e senha (questão estética) -- GUILHERME -->
       <h2>Login</h2>
-      <form id = "formLogin">
+      <form id = "formLogin" class= "form-centralizado">
+        <!-- Adicionado "class= "form-centralizado""
+        Acrescimo do formulario centralizado GUILHERME -->
+       <label for="email">Digite seu e-mail:</label>
+        <!-- Adicionado "<label for="email">Digite seu e-mail:</label>"
+        Acrescimo da label (estética) GUILHERME -->
         <input type = "email" name = "email" placeholder = "Email" required><br>
+        <label for="senha">Digite sua senha:</label>
+        <!-- Adicionado "<label for="senha">Digite sua senha:</label>"
+        Acrescimo da label (estética) GUILHERME -->
         <input type = "password" name = "senha" placeholder = "Senha" required><br>
-        <button type = "submit"></button>
+        <button type = "submit" class="button primary-button">Entrar</button>
+        <!-- Adicionado "class="button primary-button""
+        Estilização do botão GUILHERME -->
       </form>
     </main>
   </body>
