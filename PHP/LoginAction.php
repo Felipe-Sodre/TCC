@@ -38,8 +38,8 @@ foreach($table as $tabela){
 //Se o login for bem sucedido
 if($login){
     $_SESSION['user_id'] = $login['id_usuario'];
-    $_SESSION['user_id'] = $login['nome'];
-    $_SESSION['user_id'] = $login['tipo_perfil'];
+    $_SESSION['user_name'] = $login['nome'];
+    $_SESSION['user_tipo'] = $login['tipo_perfil'];
 
   echo json_encode([ 'success' => true, 'tipo_perfil' => $login['tipo_perfil'], 'nome' => $login['nome']]);
 }else{
