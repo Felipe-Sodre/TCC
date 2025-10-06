@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () =>{
                                            senha: senha.email.value
                                          };
                                          try{
-                                           const res = await fetch("LoginAction.php", {
+                                           const res = await fetch("PHP/LoginAction.php", {
                                              method: "POST",
                                              headers: {"Content-Type":"application/json"},
                                              body: JSON.stringify(data)
@@ -36,4 +36,5 @@ document.addEventListener("DOMContentLoaded", () =>{
                                          }
                                        });
 });
+
 
