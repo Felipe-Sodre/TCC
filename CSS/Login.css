@@ -1,0 +1,97 @@
+/* --- Variáveis --- */
+:root {
+    --cor-azul-principal: #12429c; 
+    --cor-cta-verde: #00b0a1; 
+    --cor-texto-escuro: #333;
+    --cor-branco: #fff;
+    --cor-borda-clara: #ddd;
+    --cor-fundo-claro: #f8f9fa;
+}
+
+/* --- Estilos Base --- */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--cor-texto-escuro);
+    line-height: 1.6;
+    background-color: var(--cor-fundo-claro);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--cor-azul-principal);
+}
+
+.form-content {
+    background-color: var(--cor-branco);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Estilo do Formulário */
+.form-centralizado {
+    display: block;
+    text-align: left; /* Garante que os rótulos e inputs fiquem alinhados à esquerda */
+}
+
+/* Estilo dos rótulos (labels) */
+.form-centralizado label {
+    display: block; /* Faz o rótulo ocupar a largura total e pular linha */
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--cor-texto-escuro);
+}
+
+/* Estilo dos campos de input */
+.form-centralizado input[type="email"],
+.form-centralizado input[type="password"] {
+    width: 100%; 
+    padding: 12px;
+    margin-bottom: 15px; /* Adiciona espaço após o input */
+    border: 1px solid var(--cor-borda-clara);
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+/* Estilo do botão base */
+.button {
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    display: block;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 20px; /* Adiciona um espaço acima do botão */
+}
+
+/* Estilo do botão primário (verde) */
+.primary-button {
+    background-color: var(--cor-cta-verde);
+    color: var(--cor-branco);
+}
+
+/* Estilo do hover */
+.primary-button:hover {
+    background-color: #6b6b6b;
+}
