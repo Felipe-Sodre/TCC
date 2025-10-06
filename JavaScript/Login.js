@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () =>{
   const form = document.getElementById("formLogin");
                                        form.addEventListener("submit", async (e) => {
-                                         e.preventDefaault();
+                                         e.preventDefault();
                                          const data = {
                                            email: form.email.value,
-                                           senha: senha.email.value
+                                           senha: form.senha.value
                                          };
                                          try{
                                            const res = await fetch("PHP/LoginAction.php", {
@@ -36,5 +36,6 @@ document.addEventListener("DOMContentLoaded", () =>{
                                          }
                                        });
 });
+
 
 
