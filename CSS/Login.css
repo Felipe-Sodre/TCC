@@ -1,4 +1,4 @@
-/* --- Variáveis --- */
+/* --- Variáveis --- Guilherme */
 :root {
     --cor-azul-principal: #12429c; 
     --cor-cta-verde: #00b0a1; 
@@ -94,4 +94,5 @@ h2 {
 /* Estilo do hover */
 .primary-button:hover {
     background-color: #6b6b6b;
+
 }
