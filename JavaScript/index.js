@@ -18,6 +18,11 @@ document.getElementById("pageTranstornos").addEventListener("click", function()
         window.location.href = "HTML/Transtornos.html";
     });
 
+//IR PARA A PAGINA INDEX COM O BOTÃO INICIO
+document.getElementById("btnInicio").addEventListener("click", function() {
+  window.location.href = "index.html";
+});
+
 
 
 
