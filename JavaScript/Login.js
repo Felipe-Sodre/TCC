@@ -1,5 +1,5 @@
-document.addEventListener("DOMContent Loaded", () =>{
-  const form = document.getElementById("formLogin);
+document.addEventListener("DOMContentLoaded", () =>{
+  const form = document.getElementById("formLogin");
                                        form.addEventListener("submit", async (e) => {
                                          e.preventDefaault();
                                          const data = {
