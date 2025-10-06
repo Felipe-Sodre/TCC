@@ -41,7 +41,7 @@ if($login){
     $_SESSION['user_id'] = $login['nome'];
     $_SESSION['user_id'] = $login['tipo_perfil'];
 
-  echo json_encode([ 'success' => true, 'tipo_perfil' => $login['tipo_perfil'], nome => $login['nome']]);
+  echo json_encode([ 'success' => true, 'tipo_perfil' => $login['tipo_perfil'], 'nome' => $login['nome']]);
 }else{
   echo json_encode(['success' => false, 'message' => 'Email ou senha incorretos.']);
 }
