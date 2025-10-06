@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () =>{
                                            });
                                            const json = await res.json();
                                            if(json.success){
-                                             switch(json.tipo){
+                                             switch(json.tipo_perfil){
                                                case "Paciente":
                                                  window.location.href = "HTML/PacientePage.html";
                                                  break;
@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () =>{
                                          }
                                        });
 });
+
 
 
 
