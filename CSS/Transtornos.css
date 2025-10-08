@@ -235,8 +235,8 @@ h2 {
     background-color: #E5F3F6;
     border: 1px solid #ddd;           /* Borda suave */
     border-radius: 30px;              /* Arredondamento das bordas */
-    padding: 20px;                    /* Espaçamento interno */
-    margin: 30px 0;                   /* Espaçamento entre as seções */
+    padding: 10px;                    /* Espaçamento interno */
+    margin: 20px 0;                   /* Espaçamento entre as seções */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* Sombra leve */
     transition: box-shadow 0.3s ease; /* Suaviza a animação */
 }
