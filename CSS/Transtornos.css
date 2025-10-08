@@ -179,7 +179,7 @@ h2 {
 /*CÓDIGO ADICIONADO PELO CHAT COM RELAÇÃO AOS CARDS*/
 /* --- Seção de Cards --- */
 .cards-section {
-    /*background-color: var(--cor-fundo-claro);*/
+    background-color: var(--cor-fundo-claro);
     padding: 60px 0;
     text-align: center;
 }
