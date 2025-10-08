@@ -175,4 +175,32 @@ h2 {
     text-align: center;
     padding: 20px;
 }
+.icones-sobre {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.icone-item {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.icone-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.icone-item p {
+    font-weight: 600;
+    color: #12429c;
+}
+
+.icone-item:hover {
+    transform: scale(1.1);
+}
+
 
