@@ -226,3 +226,21 @@ h2 {
     color: var(--cor-texto-claro);
     padding: 0 15px 20px;
 }
+
+/*CÓDIGOS REFERENTE AOS TEXTOS DE TRANSTORNO*/
+
+.caixa {
+    background-color: white;          /* Fundo branco (pode trocar por outra cor) */
+    border: 1px solid #ddd;           /* Borda suave */
+    border-radius: 30px;              /* Arredondamento das bordas */
+    padding: 30px;                    /* Espaçamento interno */
+    margin: 40px 0;                   /* Espaçamento entre as seções */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* Sombra leve */
+    transition: box-shadow 0.3s ease; /* Suaviza a animação */
+}
+
+/* Efeito quando o mouse passa por cima (opcional) */
+.caixa:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
