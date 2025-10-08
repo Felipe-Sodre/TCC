@@ -230,7 +230,7 @@ h2 {
 /*CÓDIGOS REFERENTE AOS TEXTOS DE TRANSTORNO*/
 
 .caixa {
-    background-color: white;          /* Fundo branco (pode trocar por outra cor) */
+    background-color: #E5F3F6;
     border: 1px solid #ddd;           /* Borda suave */
     border-radius: 30px;              /* Arredondamento das bordas */
     padding: 30px;                    /* Espaçamento interno */
