@@ -49,15 +49,18 @@ h2 {
 
 /* --- Botões --- */
 .button {
-  padding: 20px 30px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-size: 18px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            text-align: center;
+    padding: 20px 30px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-align: center;
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    cursor: pointer;
 }
 
 .primary-button {
@@ -90,10 +93,10 @@ h2 {
 /* --- Navbar Menu--- */
 .navbar {
     display: flex;
-    justify-content: center; /* Centraliza o menu */
+    justify-content: center;
     align-items: center;
     padding: 15px 20px;
-    background-color: transparent; /* ou #fff se quiser branco */
+    background-color: transparent;
     border-bottom: 2px solid var(--cor-borda-clara);
     gap: 40px;
 }
@@ -117,7 +120,7 @@ h2 {
     padding: 8px 12px;
     border-radius: 55px;
     transition: all 0.3s;
-    background-color: var(--cor-menu-fundo); /* Fundo dos links */
+    background-color: var(--cor-menu-fundo);
 }
 
 .navbar nav ul li a:hover {
@@ -125,20 +128,21 @@ h2 {
     color: var(--cor-branco);
 }
 
-/* --- quadro topo--- */
+/* --- quadro topo --- MODIFICADO */
 .quadro-topo {
     display: flex;
-    font-size: 1.2rem
     align-items: center;
-    padding: 20px;
+    padding: 40px 20px;
     background-color: #e3f1f5;
+    gap: 60px;
 }
 
-.quadro-content   {
-  font-size: 1.8rem;  
-  max-width: 30%;
- 
-  }
+.quadro-content {
+    font-size: 1rem; /* Texto principal menor */
+    max-width: 40%;
+    color: var(--cor-texto-claro);
+    line-height: 1.5;
+}
 
 .quadro-image {
     max-width: 35%;
@@ -148,8 +152,12 @@ h2 {
 .quadro-actions {
     margin-top: 25px;
     display: flex;
+    flex-direction: column; /* Botões um em cima do outro */
     gap: 15px;
+    align-items: flex-start;
 }
+
+/* Remove a linha abaixo do texto - já não existe no quadro-topo */
 
 /* --- Sobre a Ong--- */
 .sobre{
@@ -163,7 +171,6 @@ h2 {
     font-size: 1.1rem;
     color: var(--cor-texto-claro);
 }
-
 
 /* Depoimentos */
 .sec-depoimentos {
@@ -179,6 +186,7 @@ h2 {
     text-align: center;
     padding: 20px;
 }
+
 .icones-sobre {
     display: flex;
     justify-content: center;
@@ -207,19 +215,28 @@ h2 {
     transform: scale(1.1);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Responsivo */
+@media (max-width: 768px) {
+    .quadro-topo {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .quadro-content {
+        max-width: 100%;
+        font-size: 0.9rem;
+    }
+    
+    .quadro-image {
+        max-width: 80%;
+    }
+    
+    .quadro-actions {
+        align-items: center;
+    }
+    
+    .button {
+        max-width: 300px;
+    }
+}
