@@ -192,17 +192,17 @@ h2 {
 
 .icone-item {
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 .icone-item img {
-    width: 180px;
-    height: 180px;
-    margin-bottom: 30px;
+    width: 450px;
+    height: 450px;
+    margin-bottom: 100px;
 
 
 .icone-item:hover {
-    transform: scale(2.1);
+    transform: scale(8.1);
 }
 
 /* --- Layout Responsivo --- */
@@ -300,5 +300,6 @@ h2 {
         padding: 10px 20px;
     }
 }
+
 
 
