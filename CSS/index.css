@@ -186,7 +186,7 @@ h2 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 100px;
+    gap: 60px;
     margin-top: 40px;
 }
 
@@ -196,9 +196,9 @@ h2 {
 }
 
 .icone-item img {
-  width: 400px;
-    height: 400px;
-    margin-bottom: 80px;
+  width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
 }
 
 .icone-item:hover {
@@ -300,6 +300,7 @@ h2 {
         padding: 10px 20px;
     }
 }
+
 
 
 
