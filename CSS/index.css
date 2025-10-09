@@ -49,13 +49,16 @@ h2 {
 
 /* --- Botões --- */
 .button {
-    padding: 10px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s;
-    display: inline-block;
-    border: none;
+  padding: 20px 30px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
 }
 
 .primary-button {
@@ -205,6 +208,7 @@ h2 {
 .icone-item:hover {
     transform: scale(1.1);
 }
+
 
 
 
