@@ -58,8 +58,8 @@ h2 {
     transition: all 0.3s ease;
     text-align: center;
     display: block;
-    width: 100%;
-    max-width: 250px;
+    width: 10%;
+    max-width: 25px;
     cursor: pointer;
 }
 
@@ -128,7 +128,6 @@ h2 {
     color: var(--cor-branco);
 }
 
-/* --- quadro topo --- MODIFICADO */
 .quadro-topo {
     display: flex;
     align-items: center;
@@ -138,7 +137,7 @@ h2 {
 }
 
 .quadro-content {
-    font-size: 1rem; /* Texto principal menor */
+    font-size: 1rem; 
     max-width: 40%;
     color: var(--cor-texto-claro);
     line-height: 1.5;
@@ -152,7 +151,7 @@ h2 {
 .quadro-actions {
     margin-top: 25px;
     display: flex;
-    flex-direction: column; /* Botões um em cima do outro */
+    flex-direction: column; 
     gap: 15px;
     align-items: flex-start;
 }
@@ -240,3 +239,4 @@ h2 {
         max-width: 300px;
     }
 }
+
