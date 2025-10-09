@@ -246,3 +246,36 @@ h2 {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+
+/*INCLUSÃO DOIS ITENS EM ESTIDO DE MENU*/
+ .cards-section {
+        width: 80%;
+        margin: 20px auto;
+        font-family: Arial, sans-serif;
+    }
+
+    .accordion {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+
+    .accordion h2 {
+        margin: 0;
+        padding: 15px;
+        background-color: #E5F3F6;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .accordion p {
+        margin: 0;
+        padding: 15px;
+        display: none; /* começa escondido */
+        background-color: #f9f9f9;
+    }
+
+    .accordion.active p {
+        display: block;
+    }
