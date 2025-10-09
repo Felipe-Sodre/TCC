@@ -196,9 +196,9 @@ h2 {
 }
 
 .icone-item img {
-  width: 600px;
-    height: 600px;
-    margin-bottom: 100px;
+  width: 400px;
+    height: 400px;
+    margin-bottom: 80px;
 }
 
 .icone-item:hover {
@@ -300,6 +300,7 @@ h2 {
         padding: 10px 20px;
     }
 }
+
 
 
 
