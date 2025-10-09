@@ -126,6 +126,7 @@ h2 {
 /* --- quadro topo--- */
 .quadro-topo {
     display: flex;
+    font-size: 1.2rem
     justify-content: space-between;
     align-items: center;
     padding: 20px;
@@ -203,6 +204,7 @@ h2 {
 .icone-item:hover {
     transform: scale(1.1);
 }
+
 
 
 
