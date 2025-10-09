@@ -127,12 +127,11 @@ h2 {
 
 /* --- quadro topo--- */
 .quadro-topo {
-    display: flex;
-    font-size: 1.2rem
+   display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 20px;
     background-color: #e3f1f5;
-    gap: 60px;
 }
 
 .quadro-content   {
@@ -210,4 +209,5 @@ h2 {
 .icone-item:hover {
     transform: scale(1.1);
 }
+
 
