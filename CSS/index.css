@@ -199,10 +199,10 @@ h2 {
     width: 450px;
     height: 450px;
     margin-bottom: 100px;
-
+}
 
 .icone-item:hover {
-    transform: scale(8.1);
+    transform: scale(1.4);
 }
 
 /* --- Layout Responsivo --- */
@@ -300,6 +300,7 @@ h2 {
         padding: 10px 20px;
     }
 }
+
 
 
 
