@@ -186,7 +186,7 @@ h2 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 60px;
+    gap: 100px;
     margin-top: 40px;
 }
 
@@ -300,6 +300,7 @@ h2 {
         padding: 10px 20px;
     }
 }
+
 
 
 
