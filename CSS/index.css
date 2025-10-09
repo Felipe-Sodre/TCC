@@ -56,7 +56,6 @@ h2 {
             border-radius: 10px;
             font-size: 18px;
             font-weight: bold;
-            cursor: pointer;
             transition: all 0.3s ease;
             text-align: center;
 }
@@ -208,6 +207,7 @@ h2 {
 .icone-item:hover {
     transform: scale(1.1);
 }
+
 
 
 
