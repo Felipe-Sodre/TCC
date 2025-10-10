@@ -1,83 +1,91 @@
-<!--Melissa-->
+<!-- Melissa - Inclusão -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inclusão | Apoio Conecta</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="CSS/index.css">
+    <!-- Ajuste o caminho abaixo se o CSS estiver em outro local -->
+    <link rel="stylesheet" href="../CSS/index.css">
 </head>
 <body>
 
     <header class="navbar">
-        <div class="logo">
-            <span>Apoio Conecta</span>
+        <div class="container nav-inner">
+            <a class="logo" href="../index.html">Apoio <span>Conecta</span></a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="#">Quem Somos</a></li>
+                    <li><a href="#">Apoio</a></li>
+                    <li><a href="Transtornos.html">Transtornos</a></li>
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="#">Administração</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Início</a></li>
-                <li><a href="#">Quem Somos</a></li>
-                <li><a href="#">Apoio</a></li>
-                <li><a href="Transtornos.html">Transtornos</a></li>
-                <li><a href="#">Eventos</a></li>
-                <li><a href="#">Administração</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main class="conteudo-pagina">
         <div class="container">
 
-            <header class="ong-header">
-                <h1>Promovendo um Futuro de Inclusão e Potencial</h1>
-            </header>
-
-            <p>A <strong>inclusão</strong> não é apenas um ato de bondade; é um <strong>imperativo social</strong> e o alicerce fundamental para a construção de uma sociedade verdadeiramente justa e rica em diversidade. No contexto da <strong>neurodiversidade</strong>, a inclusão significa reconhecer e valorizar as diferenças neurológicas – como Transtorno do Espectro Autista (TEA), TDAH, dislexia, entre outros – como variações naturais do cérebro humano, e não como falhas a serem corrigidas.</p>
-
-            <section class="foco-ong">
-                <h2>O Foco da Nossa ONG: Crianças e Adolescentes Neurodivergentes</h2>
-                <p>Nossa Organização Não Governamental nasce com um <strong>objetivo claro e transformador</strong>: ser o farol de apoio e desenvolvimento para <strong>crianças e adolescentes neurodivergentes</strong>. Focamos em criar um ecossistema onde o potencial de cada indivíduo seja reconhecido, nutrido e celebrado, garantindo que as barreiras sociais e educacionais sejam derrubadas.</p>
+            <section class="hero">
+                <div class="hero-text">
+                    <h1>Promovendo um futuro de inclusão e potencial</h1>
+                    <p class="hero-sub">Reconhecer, valorizar e nutrir as diferenças — juntos construímos ambientes onde crianças e adolescentes neurodivergentes florescem.</p>
+                    <a href="../index.html" class="cta-button-blue">Voltar ao Início</a>
+                </div>
+                <div class="hero-visual">
+                    <!-- Espaço para uma imagem ou ilustração futura -->
+                </div>
             </section>
-            
+
+            <!-- Frases em quadros separados -->
+            <section class="quote-grid" aria-label="Frases-chave">
+                <div class="quote-card">Inclusão é um <strong>imperativo social</strong>.</div>
+                <div class="quote-card">Neurodiversidade = <strong>variedade e força</strong>.</div>
+                <div class="quote-card">Ambientes adaptados geram <strong>autonomia</strong>.</div>
+            </section>
+
+            <!-- Pilares organizados em cards -->
             <section class="pilares">
                 <h2>Nossos Pilares e Metas de Inclusão</h2>
-                
-                <article class="pilar-item">
-                    <h3>Criação de Espaços Seguros e Adaptativos</h3>
-                    <p>Muitas vezes, ambientes tradicionais (escolas, clubes) são sobrecarregados sensorialmente ou estruturalmente rígidos.</p>
-                    <ul>
-                        <li><strong>Meta:</strong> Desenvolver <strong>programas de acolhimento</strong> em ambientes otimizados para necessidades sensoriais e de aprendizado neurodivergentes.</li>
-                        <li><strong>Ação:</strong> Oferecer oficinas, grupos de socialização e terapias em locais com pausas e regulação sensorial.</li>
-                    </ul>
-                </article>
-                
-                <article class="pilar-item">
-                    <h3>Capacitação e Conscientização da Comunidade</h3>
-                    <p>A inclusão começa com a compreensão. Nossos esforços visam educar a comunidade para que a aceitação seja natural e o <strong>estigma</strong> seja combatido ativamente.</p>
-                    <ul>
-                        <li><strong>Meta:</strong> Transformar a percepção pública sobre a neurodiversidade, de “déficit” para <strong>força e diferença</strong>.</li>
-                        <li><strong>Ação:</strong> Promover palestras, workshops e materiais educativos para pais, educadores e profissionais de saúde.</li>
-                    </ul>
-                </article>
-                
-                <article class="pilar-item">
-                    <h3>Advocacia por Direitos e Oportunidades</h3>
-                    <p>Crianças e adolescentes neurodivergentes têm direito a uma educação e oportunidades que se ajustem às suas formas únicas de aprender e interagir.</p>
-                    <ul>
-                        <li><strong>Meta:</strong> Tornar <strong>políticas públicas e educacionais</strong> mais inclusivas, com recursos e adaptações individualizadas.</li>
-                        <li><strong>Ação:</strong> Atuar junto a escolas e órgãos públicos para criar Planos de Ensino Individualizados e acesso a tecnologias assistivas.</li>
-                    </ul>
-                </article>
+                <div class="cards">
+                    <article class="card">
+                        <h3>Espaços Seguros e Adaptativos</h3>
+                        <p>Muitos ambientes convencionais são sobrecarregados sensorialmente. Trabalhamos para oferecer espaços com regulação e pausas.</p>
+                        <ul>
+                            <li><strong>Meta:</strong> Programas de acolhimento adaptados.</li>
+                            <li><strong>Ação:</strong> Oficinas, grupos de socialização e terapias com suporte sensorial.</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h3>Capacitação e Conscientização</h3>
+                        <p>A inclusão começa com compreensão: informar famílias, escolas e comunidade reduz o estigma.</p>
+                        <ul>
+                            <li><strong>Meta:</strong> Mudar percepções de “déficit” para “diferença”.</li>
+                            <li><strong>Ação:</strong> Palestras, workshops e materiais educativos.</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h3>Advocacia por Direitos</h3>
+                        <p>Garantir acesso à educação e tecnologias assistivas é central para a igualdade de oportunidades.</p>
+                        <ul>
+                            <li><strong>Meta:</strong> Políticas e adaptações educacionais inclusivas.</li>
+                            <li><strong>Ação:</strong> Atuação junto a escolas e órgãos públicos.</li>
+                        </ul>
+                    </article>
+                </div>
             </section>
 
             <footer class="ong-footer">
                 <h2>O Resultado Esperado: Potencial Pleno</h2>
-                <p>Ao focar na inclusão desde a infância e adolescência, nossa ONG investe na <strong>autonomia e sucesso a longo prazo</strong> desses jovens. Queremos que cada um saiba que seu cérebro, do jeito que é, é perfeito para o que ele precisa fazer.</p>
-                <p>Com apoio e ambiente certo, esses jovens se tornam adultos confiantes, capazes de contribuir e liderar com suas perspectivas únicas — um verdadeiro <strong>superpoder</strong>.</p>
+                <p>Investimos na autonomia e sucesso a longo prazo desses jovens. Cada cérebro tem valor — e isso deve ser celebrado.</p>
             </footer>
 
-            <a href="../index.html" class="cta-button-blue">Voltar ao Início</a>
         </div>
     </main>
 
