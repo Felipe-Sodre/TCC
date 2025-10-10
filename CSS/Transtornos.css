@@ -301,3 +301,20 @@ h2 {
   box-shadow: 0 6px 12px rgba(0,0,0,0.25);
   transform: scale(1.05);
 }
+
+/*BOTÕES VOLTAR AO TOPO*/
+.btn-topo {
+  display: inline-block;
+  background-color: #00A79D;  /* mesmo tom turquesa */
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-topo:hover {
+  background-color: #008F87;
+  transform: scale(1.05);
+}
