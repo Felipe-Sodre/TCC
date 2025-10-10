@@ -129,7 +129,10 @@ body {
     }
 
     .conteudo-pagina {
-        padding: 20px 15px;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #e0e0e0; /* linha separadora opcional */
+}
     }
 
     .conteudo-pagina h1 {
