@@ -318,3 +318,12 @@ h2 {
   background-color: #008F87;
   transform: scale(1.05);
 }
+
+/*TEXTOS A ESQUERDA*/
+.texto-esquerda {
+  text-align: left; /* Alinha os textos à esquerda */
+  margin-top: 20px;
+}
+
+.texto-esquerda h2 {
+  font-weight: bold;
