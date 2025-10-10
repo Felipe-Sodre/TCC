@@ -28,7 +28,7 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -196,13 +196,13 @@ h2 {
 }
 
 .icone-item img {
-  width: 200px;
-    height: 200px;
-    margin-bottom: 80px;
+  width: 1750px;
+    height: 175px;
+    margin-bottom: 165px;
 }
 
 .icone-item:hover {
-    transform: scale(1.4);
+    transform: scale(1.8);
 }
 
 /* --- Layout Responsivo --- */
@@ -300,6 +300,7 @@ h2 {
         padding: 10px 20px;
     }
 }
+
 
 
 
