@@ -1,51 +1,157 @@
-/* --- Páginas internas --- */
-.conteudo-pagina {
-    text-align: center;
-    padding: 80px 20px;
+/* Melissa - Página Inclusão */
+
+/* --- Estilos Base e Tipografia --- */
+:root {
+    --cor-azul-principal: #12429c;
+    --cor-cta-azul: #5ca0c7;
+    --cor-cta-verde: #00b0a1;
+    --cor-texto-escuro: #333;
+    --cor-texto-claro: #555;
+    --cor-fundo-claro: #f8f9fa;
+    --cor-branco: #fff;
+    --cor-borda-clara: #ddd;
+    --cor-menu-fundo: #d3f1f5;
 }
 
-.conteudo-pagina .container {
-    max-width: 800px;
-    margin: auto;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--cor-texto-escuro);
+    line-height: 1.6;
+    background-color: var(--cor-fundo-claro);
+}
+
+/* --- Navbar Menu --- */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 2px solid var(--cor-borda-clara);
+    background-color: transparent;
+    gap: 40px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cor-azul-principal);
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: var(--cor-texto-escuro);
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 55px;
+    transition: all 0.3s;
+    background-color: var(--cor-menu-fundo);
+}
+
+.navbar nav ul li a:hover {
+    background-color: var(--cor-cta-verde);
+    color: var(--cor-branco);
+}
+
+/* --- Conteúdo da Página de Inclusão --- */
+.conteudo-pagina {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background-color: var(--cor-branco);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .conteudo-pagina h1 {
-    font-size: 1.8em;
+    font-size: 2rem;
     color: var(--cor-azul-principal);
+    text-align: center;
     margin-bottom: 20px;
 }
 
 .conteudo-pagina p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #333;
-    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: var(--cor-texto-claro);
+    text-align: justify;
+    margin-bottom: 20px;
 }
 
-.imagem-conteudo {
-    width: 100%;
-    max-width: 250px;
-    margin-bottom: 30px;
+/* --- Botões --- */
+.button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
 }
 
 .cta-button-blue {
-    text-decoration: none;
-    padding: 12px 30px;
-    border-radius: 30px;
-    background-color: var(--cor-azul-principal);
-    color: #fff;
-    font-weight: 600;
-    transition: 0.3s;
+    background-color: var(--cor-cta-azul);
+    color: var(--cor-branco);
 }
 
 .cta-button-blue:hover {
-    padding: 20px 30px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-size: 18px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            text-align: center;
+    background-color: #6b6b6b;
+}
+
+.cta-button-green {
+    background-color: var(--cor-cta-verde);
+    color: var(--cor-branco);
+}
+
+.cta-button-green:hover {
+    background-color: #6b6b6b;
+}
+
+/* --- Layout Responsivo --- */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .conteudo-pagina {
+        padding: 20px 15px;
+    }
+
+    .conteudo-pagina h1 {
+        font-size: 1.6rem;
+    }
+
+    .conteudo-pagina p {
+        font-size: 1rem;
+    }
+
+    .button {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .conteudo-pagina h1 {
+        font-size: 1.4rem;
+    }
+
+    .conteudo-pagina p {
+        font-size: 0.95rem;
+    }
 }
