@@ -113,7 +113,7 @@ h2 {
 .navbar nav ul li a {
     text-decoration: none;
     color: var(--cor-texto-escuro);
-    font-weight: 500;
+    font-weight: 400;
     padding: 8px 12px;
     border-radius: 55px;
     transition: all 0.3s;
@@ -136,7 +136,7 @@ h2 {
 
 .quadro-content   {
   font-size: 1.8rem;  
-  max-width: 40%;
+  max-width: 30%;
   line-height: 1.5;
      
  
@@ -305,6 +305,7 @@ h2 {
         padding: 10px 20px;
     }
 }
+
 
 
 
