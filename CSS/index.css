@@ -152,6 +152,8 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    width: 70px;        /* largura */
+    height: 80px; 
 }
 
 /* --- Sobre a Ong--- */
@@ -303,6 +305,7 @@ h2 {
         padding: 10px 20px;
     }
 }
+
 
 
 
