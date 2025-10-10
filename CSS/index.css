@@ -54,7 +54,7 @@ h2 {
             color: white;
             border: none;
             border-radius: 10px;
-            font-size: 18px;
+            font-size: 14px;
             font-weight: bold;
             transition: all 0.3s ease;
             text-align: center;
@@ -144,7 +144,7 @@ h2 {
 
 .quadro-image {
     max-width: 35%;
-    width: 100%;
+    width: 80%;
 }
 
 .quadro-actions {
@@ -321,6 +321,7 @@ h2 {
         padding: 10px 20px;
     }
 }
+
 
 
 
