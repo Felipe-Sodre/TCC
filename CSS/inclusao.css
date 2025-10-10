@@ -5,6 +5,7 @@
     --cor-azul-principal: #12429c; /* Azul Geral */
     --cor-cta-azul: #5ca0c7; /* Botão "Preciso de Apoio" */
     --cor-cta-verde: #00b0a1; /* Botão "Quero Ajudar" e ícones verdes */
+    --cor-fundo-cinza: #C0C0C0; /*Rodpé*/
     --cor-texto-escuro: #333;
     --cor-texto-claro: #555;
     --cor-fundo-claro: #f8f9fa;
@@ -166,7 +167,7 @@ body {
 /* --- Footer --- */
 .ong-footer {
     margin-top: 40px;
-    background: linear-gradient(90deg, var(--cor-cta-verde), #00a18f);
+    background: linear-gradient(90deg, var(cor-fundo-cinza);
     color: var(--cor-branco);
     padding: 25px;
     border-radius: 12px;
