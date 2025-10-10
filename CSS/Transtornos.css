@@ -282,22 +282,22 @@ h2 {
 
 
 /*Botão saiba mais*/
-/* Estilo do botão */
+/* Botão com cor do "Quero Ajudar" */
 .btn-saiba-mais {
   display: inline-block;
   margin-top: 12px;
   padding: 10px 18px;
-  background: linear-gradient(135deg, #007bff, #0056b3);
+  background-color: #00A79D;  /* Cor turquesa */
   color: #fff;
   font-weight: bold;
-  border-radius: 25px;
+  border-radius: 12px;
   text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .btn-saiba-mais:hover {
-  background: linear-gradient(135deg, #0056b3, #003d82);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  background-color: #008F87; /* Tom mais escuro ao passar o mouse */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
   transform: scale(1.05);
 }
