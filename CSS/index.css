@@ -184,25 +184,28 @@ h2 {
 }
 .icones-sobre {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 60px;
+    justify-content: space-between; /* ← Distribui igualmente */
+    align-items: center;
+    flex-wrap: nowrap;
     margin-top: 40px;
+    padding: 0 20px; /* ← Adiciona padding nas laterais */
 }
 
 .icone-item {
     text-align: center;
     transition: transform 0.5s ease;
+    flex: 1; /* ← Cada item ocupa espaço igual */
+    max-width: 200px; /* ← Limita largura máxima */
 }
 
 .icone-item img {
-  width: 175px;
+    width: 175px;
     height: 175px;
-    margin-bottom: 165px;
+    margin-bottom: 20px; /* ← Margem reduzida */
 }
 
 .icone-item:hover {
-    transform: scale(1.8);
+    transform: scale(1.4);
 }
 
 /* --- Layout Responsivo --- */
@@ -300,6 +303,7 @@ h2 {
         padding: 10px 20px;
     }
 }
+
 
 
 
