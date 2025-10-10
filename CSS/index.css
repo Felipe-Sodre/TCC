@@ -148,12 +148,28 @@ h2 {
 }
 
 .quadro-actions {
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 120px;        /* largura */
-    height: 20px; 
+    margin-top: 25px;       /* distância acima do quadro */
+    display: flex;           /* flexbox para organizar os botões */
+    flex-direction: column;  /* um botão embaixo do outro */
+    gap: 15px;               /* espaçamento entre os botões */
+    align-items: center;     /* centraliza horizontalmente */
+}
+
+/* Ajustando os botões */
+.quadro-actions button {
+    padding: 12px 25px;      /* altura e largura interna do botão */
+    font-size: 1rem;         /* tamanho do texto */
+    border-radius: 10px;     /* bordas arredondadas */
+    width: 220px;            /* largura fixa */
+    max-width: 80%;          /* largura máxima responsiva */
+    cursor: pointer;         /* muda o cursor ao passar */
+    transition: all 0.3s ease;
+}
+
+/* Mudança de cor ao passar o mouse */
+.quadro-actions button:hover {
+    transform: translateY(-2px); /* efeito sutil */
+    opacity: 0.9;
 }
 
 /* --- Sobre a Ong--- */
@@ -305,6 +321,7 @@ h2 {
         padding: 10px 20px;
     }
 }
+
 
 
 
