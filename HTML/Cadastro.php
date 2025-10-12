@@ -20,8 +20,8 @@
       <label for="senha">Senha:</label>
       <input type="password" id="senha" name="senha" placeholder="Sua senha" required>
 
-      <label for="tipo">Selecione o tipo de perfil:</label>
-      <select id="tipo" name="tipo" required>
+      <label for="tipo_perfil">Selecione o tipo de perfil:</label>
+      <select id="tipo_perfil" name="tipo_perfil" required>
         <option value="">Escolha uma opção</option>
         <option value="paciente">Paciente</option>
         <option value="profissional">Profissional</option>
