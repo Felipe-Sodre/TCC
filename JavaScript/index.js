@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (btnApoio) {
         btnApoio.addEventListener("click", function(event) {
             event.preventDefault();
-            window.location.href = "HTML/apoio.html"; // Página destino
+            window.location.href = "HTML/Login.html"; // Página destino
         });
     }
 
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (btnAjudar) {
         btnAjudar.addEventListener("click", function(event) {
             event.preventDefault();
-            window.location.href = "HTML/ajudar.html";
+            window.location.href = "HTML/Cadastro.html";
         });
     }
 
@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
 
 
 
