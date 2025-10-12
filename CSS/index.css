@@ -125,23 +125,43 @@ h2 {
     color: var(--cor-branco);
 }
 
-
-
-/* Ajustando os botões */
-.quadro-actions button {
-    padding: 18px 30px;      /* altura e largura interna do botão */
-    font-size: 1.2rem;         /* tamanho do texto */
-    border-radius: 10px;     /* bordas arredondadas */
-    width: 220px;            /* largura fixa */
-    max-width: 80%;          /* largura máxima responsiva */
-    cursor: pointer;         /* muda o cursor ao passar */
-    transition: all 0.3s ease;
+/* --- quadro topo --- */
+.quadro-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;         /* menos espaço interno */
+    background-color: #e3f1f5;
+    gap: 20px;                  /* espaço entre elementos */
 }
 
-/* Mudança de cor ao passar o mouse */
-.quadro-actions button:hover {
-    transform: translateY(-2px); /* efeito sutil */
-    opacity: 0.9;
+/* conteúdo textual */
+.quadro-content {
+    font-size: 1.4rem;          /* menor que antes */
+    max-width: 40%;              /* aumenta proporcionalmente para caber texto */
+    line-height: 1.4;           
+}
+
+/* imagem do quadro */
+.quadro-image {
+    max-width: 30%;              /* ocupa menos espaço */
+    width: auto;                 /* mantém proporção da imagem */
+    height: auto;
+}
+
+/* botões/ações */
+.quadro-actions {
+    margin-top: 0;               /* remove excesso de espaço */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;                   /* menos espaçamento entre botões */
+    align-items: center;
+}
+
+/* opcional: reduzir tamanho dos botões para proporção */
+.quadro-actions button {
+    padding: 8px 16px;           /* menor tamanho dos botões */
+    font-size: 1rem;
 }
 
 /* --- Sobre a Ong--- */
@@ -305,6 +325,7 @@ h2 {
         padding: 10px 20px;
     }
 }
+
 
 
 
