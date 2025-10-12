@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="CSS/.css">
+  <script src="JavaScript/cadastro.js" defer></script>
+</head>
+<body>
+  <main class="">
+    <h2>Crie sua conta</h2>
 
+    <form id="formCadastro">
+      <label for="nome">Nome completo:</label>
+      <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" placeholder="Sua senha" required>
+
+      <label for="tipo">Selecione o tipo de perfil:</label>
+      <select id="tipo" name="tipo" required>
+        <option value="">Escolha uma opção</option>
+        <option value="paciente">Paciente</option>
+        <option value="profissional">Profissional</option>
+        <option value="familiar">Familiar</option>
+      </select>
+
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <p id="msg"></p>
+  </main>
+</body>
+</html>
