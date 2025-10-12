@@ -58,6 +58,7 @@ h2 {
             font-weight: bold;
             transition: all 0.3s ease;
             text-align: center;
+            text-decoration: none;
 }
 
 .primary-button {
@@ -162,6 +163,7 @@ h2 {
 .quadro-actions button {
     padding: 8px 16px;           /* menor tamanho dos botões */
     font-size: 1rem;
+    text-decoration: none;
 }
 
 /* --- Sobre a Ong--- */
@@ -222,6 +224,7 @@ h2 {
     font-weight: bold;  /* negrito */
     margin: 0;          /* remove margens extras */
     text-align: center; /* centraliza o texto */
+     text-decoration: none;
 }
 
 /* Hover: aumenta o tamanho do item inteiro */
@@ -325,6 +328,7 @@ h2 {
         padding: 10px 20px;
     }
 }
+
 
 
 
