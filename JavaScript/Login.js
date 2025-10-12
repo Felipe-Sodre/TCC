@@ -15,14 +15,16 @@ document.addEventListener("DOMContentLoaded", () =>{
                                            const json = await res.json();
                                            if(json.success){
                                              switch(json.tipo_perfil){
-                                               case "Paciente":
+                                               case "paciente":
                                                  window.location.href = "HTML/PacientePage.html";
                                                  break;
-                                               case "Responsável":
+                                               case "familiar":
                                                  window.location.href = "HTML/Responsaveis.html";
                                                  break;
-                                               case "Profissional":
+                                               case "profissional":
                                                  window.location.href = "HTML/ProfissionalPage.html";
+                                               case "admin":
+                                                 window.location.href " "HTML/AdminPage.html";
                                                  break;
                                                default:
                                                  alert("Tipo de usuário desconhecido.");
@@ -36,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () =>{
                                          }
                                        });
 });
+
 
 
 
