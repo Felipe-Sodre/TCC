@@ -1,0 +1,126 @@
+/*
+ * Arquivo CSS Externo para a página de Cadastro.
+ -- GUILHERME --
+ * Segue o padrão de estilo (variáveis, centralização e design de formulário)
+ * estabelecido pelos arquivos index.css e login.css.
+*/
+
+/* --- Variáveis (Reaproveitadas do projeto base) --- */
+:root {
+    --cor-azul-principal: #12429c; 
+    --cor-cta-verde: #00b0a1; 
+    --cor-texto-escuro: #333;
+    --cor-branco: #fff;
+    --cor-borda-clara: #ddd;
+    --cor-fundo-claro: #f8f9fa;
+}
+
+/* --- Estilos Base e Centralização --- */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--cor-texto-escuro);
+    line-height: 1.6;
+    background-color: var(--cor-fundo-claro);
+    /* Centraliza o conteúdo na tela */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--cor-azul-principal);
+}
+
+/* Container do Formulário (Similar ao .form-content do Login) */
+.form-container {
+    background-color: var(--cor-branco);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 450px; /* Um pouco mais largo que o login para acomodar mais campos */
+    text-align: center;
+}
+
+/* Estilo do Formulário */
+#formCadastro {
+    display: block;
+    text-align: left;
+}
+
+/* Estilo dos rótulos (labels) */
+#formCadastro label {
+    display: block; 
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--cor-texto-escuro);
+}
+
+/* Estilo dos campos de input e select */
+#formCadastro input[type="text"],
+#formCadastro input[type="email"],
+#formCadastro input[type="password"],
+#formCadastro select {
+    width: 100%; 
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid var(--cor-borda-clara);
+    border-radius: 6px;
+    font-size: 1rem;
+    /* Garante que o select tenha a mesma aparência que os inputs */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--cor-branco); 
+}
+
+/* Estilo do botão de Submit (Baseado no .button e .primary-button) */
+#formCadastro button[type="submit"] {
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    display: block;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 25px; 
+    
+    /* Cores do Botão (CTA Verde) */
+    background-color: var(--cor-cta-verde);
+    color: var(--cor-branco);
+}
+
+/* Estilo do hover */
+#formCadastro button[type="submit"]:hover {
+    background-color: #6b6b6b; /* Cinza escuro no hover, seguindo o padrão */
+}
+
+/* Estilo da mensagem de retorno */
+#msg {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+.form-content {
+    background-color: var(--cor-branco);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;}
