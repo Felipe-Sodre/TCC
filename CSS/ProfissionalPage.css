@@ -122,7 +122,7 @@ body {
 
 /* Banner de Boas-Vindas */
 .welcome-banner {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: linear-gradient(180deg, #12429c, #d3f1f5);
     color: white;
     border-radius: var(--border-radius);
     padding: 30px;
@@ -132,7 +132,6 @@ body {
     align-items: center;
     box-shadow: var(--box-shadow);
 }
-
 .welcome-content h1 {
     font-size: 1.8rem;
     margin-bottom: 10px;
