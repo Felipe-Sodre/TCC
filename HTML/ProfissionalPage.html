@@ -1,1 +1,336 @@
 Pagina com os agendamentos, canal de escuta, conteúdos 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Profissional - Apoio Conecta</title>
+    <link rel="stylesheet" href="ProfissionalPage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src=>
+                <span>Apoio Conecta</span>
+            </div>
+            <nav class="nav">
+                <a href="#" class="nav-link active"><i class="fas fa-home"></i> Início</a>
+                <a href="#" class="nav-link"><i class="fas fa-calendar-check"></i> Agenda</a>
+                <a href="#" class="nav-link"><i class="fas fa-users"></i> Pacientes</a>
+                <a href="#" class="nav-link"><i class="fas fa-chart-line"></i> Relatórios</a>
+            </nav>
+            <div class="user-menu">
+                <div class="user-info">
+                    <img src=>
+                    <span class="user-name">Dr. Adilson Brandão</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="main">
+        <div class="container">
+            <!-- Banner de Boas-Vindas -->
+            <section class="welcome-banner">
+                <div class="welcome-content">
+                    <h1>Bem-vindo, Dr. Brandão!</h1>
+                    <p>Hoje você tem <strong>3 consultas</strong> agendadas. Sua próxima consulta é às <strong>14:30</strong>.</p>
+                </div>
+                <div class="welcome-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-user-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Consultas esta semana</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">4.9</span>
+                            <span class="stat-label">Avaliação média</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dashboard Rápido -->
+            <section class="dashboard">
+                <div class="section-header">
+                    <h2>Dashboard Rápido</h2>
+                    <a href="#" class="view-all">Ver tudo <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="dashboard-cards">
+                    <!-- Próximas Consultas -->
+                    <div class="dashboard-card wide">
+                        <div class="card-header">
+                            <h3><i class="fas fa-calendar-day"></i> Próximas Consultas</h3>
+                            <button class="btn-primary">Nova Consulta</button>
+                        </div>
+                        <div class="consultation-list">
+                            <div class="consultation-item">
+                                <div class="consultation-time">
+                                    <span class="time">14:30</span>
+                                    <span class="duration">50 min</span>
+                                </div>
+                                <div class="consultation-info">
+                                    <h4>Melissa Assuncão</h4>
+                                    <p>Consulta de acompanhamento</p>
+                                    <div class="consultation-tags">
+                                        <span class="tag online">Online</span>
+                                        <span class="tag confirmed">Confirmada</span>
+                                    </div>
+                                </div>
+                                <div class="consultation-actions">
+                                    <button class="btn-icon" title="Iniciar consulta">
+                                        <i class="fas fa-video"></i>
+                                    </button>
+                                    <button class="btn-icon" title="Detalhes">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="consultation-item">
+                                <div class="consultation-time">
+                                    <span class="time">16:00</span>
+                                    <span class="duration">50 min</span>
+                                </div>
+                                <div class="consultation-info">
+                                    <h4>Carlos </h4>
+                                    <p>Avaliação inicial</p>
+                                    <div class="consultation-tags">
+                                        <span class="tag presential">Presencial</span>
+                                        <span class="tag pending">A confirmar</span>
+                                    </div>
+                                </div>
+                                <div class="consultation-actions">
+                                    <button class="btn-icon" title="Enviar lembrete">
+                                        <i class="fas fa-bell"></i>
+                                    </button>
+                                    <button class="btn-icon" title="Detalhes">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="consultation-item">
+                                <div class="consultation-time">
+                                    <span class="time">17:30</span>
+                                    <span class="duration">30 min</span>
+                                </div>
+                                <div class="consultation-info">
+                                    <h4>Giovani</h4>
+                                    <p>Retorno</p>
+                                    <div class="consultation-tags">
+                                        <span class="tag online">Online</span>
+                                        <span class="tag confirmed">Confirmada</span>
+                                    </div>
+                                </div>
+                                <div class="consultation-actions">
+                                    <button class="btn-icon" title="Iniciar consulta">
+                                        <i class="fas fa-video"></i>
+                                    </button>
+                                    <button class="btn-icon" title="Detalhes">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Atalhos Rápidos -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-rocket"></i> Atalhos Rápidos</h3>
+                        </div>
+                        <div class="quick-actions">
+                            <a href="#" class="quick-action">
+                                <div class="action-icon">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <span>Novo Paciente</span>
+                            </a>
+                            <a href="#" class="quick-action">
+                                <div class="action-icon">
+                                    <i class="fas fa-file-medical"></i>
+                                </div>
+                                <span>Emitir Atestado</span>
+                            </a>
+                            <a href="#" class="quick-action">
+                                <div class="action-icon">
+                                    <i class="fas fa-prescription"></i>
+                                </div>
+                                <span>Prescrição</span>
+                            </a>
+                            <a href="#" class="quick-action">
+                                <div class="action-icon">
+                                    <i class="fas fa-sticky-note"></i>
+                                </div>
+                                <span>Anotações</span>
+                            </a>
+                            <a href="#" class="quick-action">
+                                <div class="action-icon">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <span>Relatórios</span>
+                            </a>
+                            <a href="#" class="quick-action">
+                                <div class="action-icon">
+                                    <i class="fas fa-cog"></i>
+                                </div>
+                                <span>Configurações</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Agenda do Dia -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-calendar-alt"></i> Agenda de Hoje</h3>
+                        </div>
+                        <div class="day-schedule">
+                            <div class="time-slot">
+                                <span class="time">09:00</span>
+                                <span class="slot-status free">Livre</span>
+                            </div>
+                            <div class="time-slot">
+                                <span class="time">10:00</span>
+                                <span class="slot-status free">Livre</span>
+                            </div>
+                            <div class="time-slot">
+                                <span class="time">11:00</span>
+                                <span class="slot-status booked">Giovani</span>
+                            </div>
+                            <div class="time-slot">
+                                <span class="time">12:00</span>
+                                <span class="slot-status free">Almoço</span>
+                            </div>
+                            <div class="time-slot">
+                                <span class="time">14:30</span>
+                                <span class="slot-status booked">Melissa</span>
+                            </div>
+                            <div class="time-slot">
+                                <span class="time">16:00</span>
+                                <span class="slot-status booked">Carlos </span>
+                            </div>
+                            <div class="time-slot">
+                                <span class="time">17:30</span>
+                                <span class="slot-status booked">Felipe</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Pacientes Recentes -->
+            <section class="recent-patients">
+                <div class="section-header">
+                    <h2>Pacientes Recentes</h2>
+                    <a href="#" class="view-all">Ver todos <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="patients-grid">
+                    <div class="patient-card">
+                        <div class="patient-avatar">
+                            <img src=>
+                        </div>
+                        <div class="patient-info">
+                            <h4>Melissa</h4>
+                            <p>Última consulta: 15/03/2023</p>
+                            <div class="patient-status">
+                                <span class="status active">Ativa</span>
+                            </div>
+                        </div>
+                        <div class="patient-actions">
+                            <button class="btn-outline">Ver perfil</button>
+                        </div>
+                    </div>
+                    
+                    <div class="patient-card">
+                        <div class="patient-avatar">
+                            <img src= >
+                        </div>
+                        <div class="patient-info">
+                            <h4>Carlos </h4>
+                            <p>Primeira consulta: 20/03/2023</p>
+                            <div class="patient-status">
+                                <span class="status new">Novo</span>
+                            </div>
+                        </div>
+                        <div class="patient-actions">
+                            <button class="btn-outline">Ver perfil</button>
+                        </div>
+                    </div>
+                    
+                    <div class="patient-card">
+                        <div class="patient-avatar">
+                            <img src=>
+                        </div>
+                        <div class="patient-info">
+                            <h4>Giovani</h4>
+                            <p>Última consulta: 10/03/2023</p>
+                            <div class="patient-status">
+                                <span class="status active">Ativa</span>
+                            </div>
+                        </div>
+                        <div class="patient-actions">
+                            <button class="btn-outline">Ver perfil</button>
+                        </div>
+                    </div>
+                    
+                    <div class="patient-card">
+                        <div class="patient-avatar">
+                            <img src=>
+                        </div>
+                        <div class="patient-info">
+                            <h4>Felipe Sodré</h4>
+                            <p>Última consulta: Hoje</p>
+                            <div class="patient-status">
+                                <span class="status follow-up">Retorno</span>
+                            </div>
+                        </div>
+                        <div class="patient-actions">
+                            <button class="btn-outline">Ver perfil</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-brain"></i>
+                    <span> Apoio Conecta</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Sobre</a>
+                    <a href="#">Contato</a>
+                    <a href="#">Privacidade</a>
+                    <a href="#">Termos</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Apoio Conecta. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="ProfissionalPage.js"></script>
+</body>
+</html>
