@@ -139,13 +139,13 @@ h2 {
 /* conteúdo textual */
 .quadro-content {
     font-size: 1.4rem;          /* menor que antes */
-    max-width:50%;              /* aumenta proporcionalmente para caber texto */
+    max-width:10%;              /* aumenta proporcionalmente para caber texto */
     line-height: 1.4;           
 }
 
 /* imagem do quadro */
 .quadro-image {
-    max-width: 50%;              /* ocupa menos espaço */
+    max-width: 15%;              /* ocupa menos espaço */
     width: auto;                 /* mantém proporção da imagem */
     height: auto;
 }
@@ -359,6 +359,7 @@ h2 {
         padding: 10px 20px;
     }
 }
+
 
 
 
