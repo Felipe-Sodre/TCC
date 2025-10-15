@@ -222,6 +222,8 @@ h2 {
   transform: translateY(0);
 }
 
+/* ===== Icones===== */
+
 .icones-sobre {
     display: flex;
     justify-content: space-between; /* Distribui igualmente */
@@ -240,10 +242,10 @@ h2 {
 
 /* Ajuste da imagem para retangular e proporção correta */
 .icone-item img {
-    width: 150px;       /* largura retangular */
-    height: 100px;      /* altura retangular */
+    width: 200px;       /* largura retangular */
+    height: 150px;      /* altura retangular */
     object-fit: cover;  /* mantém proporção, preenche caixa */
-    margin-bottom: 15px; /* espaço entre imagem e texto */
+    margin-bottom: 10px; /* espaço entre imagem e texto */
 }
 
 /* Texto abaixo da imagem */
@@ -357,6 +359,7 @@ h2 {
         padding: 10px 20px;
     }
 }
+
 
 
 
