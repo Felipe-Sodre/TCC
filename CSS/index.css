@@ -134,22 +134,22 @@ h2 {
     padding: 20px 10px;         /* menos espaço interno */
     background-color: #e3f1f5;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* leve sombra para destacar */
-    gap: 15px;                  /* espaço entre elementos */
+    gap: 5px;                  /* espaço entre elementos */
 }
 
 /* conteúdo textual */
 /* --- Conteúdo do Quadro Ajustado --- */
 .quadro-content {
     font-size: 1.6rem;        /* aumenta um pouco para melhor leitura */
-    max-width: 60%;           /* ocupa mais espaço para caber o texto */
-    line-height: 1.5;
+    max-width: 50%;           /* ocupa mais espaço para caber o texto */
+    line-height: 1.1;
     margin: 0 auto;           /* centraliza horizontalmente */
     text-align: center;       /* deixa o texto centralizado */
 }
 
 /* Imagem do quadro */
 .quadro-image {
-    max-width: 25%;           /* ocupa mais espaço proporcionalmente */
+    max-width: 30%;           /* ocupa mais espaço proporcionalmente */
     width: auto;              /* mantém proporção da imagem */
     height: auto;
     display: block;           /* garante que a imagem se comporte como bloco */
@@ -491,3 +491,4 @@ h2 {
         border-radius: 10px;            /* Cantos suavizados */
     }
 }
+
