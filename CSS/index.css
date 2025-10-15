@@ -28,7 +28,7 @@ body {
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -139,7 +139,7 @@ h2 {
 /* conteúdo textual */
 .quadro-content {
     font-size: 1.4rem;          /* menor que antes */
-    max-width: 40%;              /* aumenta proporcionalmente para caber texto */
+    max-width: 30%;              /* aumenta proporcionalmente para caber texto */
     line-height: 1.4;           
 }
 
@@ -183,7 +183,7 @@ h2 {
 /* ===== Depoimentos ===== */
 .sec-depoimentos {
   background-color: #12429c;
-  padding: 40px 20px;
+  padding: 20px 20px;
   text-align: center;
   border-radius: 20px;
 }
@@ -357,6 +357,7 @@ h2 {
         padding: 10px 20px;
     }
 }
+
 
 
 
