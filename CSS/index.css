@@ -137,33 +137,27 @@ h2 {
 }
 
 /* conteúdo textual */
+/* --- Conteúdo do Quadro Ajustado --- */
 .quadro-content {
-    font-size: 1.4rem;          /* menor que antes */
-    max-width:10%;              /* aumenta proporcionalmente para caber texto */
-    line-height: 1.4;           
+    font-size: 1.6rem;        /* aumenta um pouco para melhor leitura */
+    max-width: 60%;           /* ocupa mais espaço para caber o texto */
+    line-height: 1.5;
+    margin: 0 auto;           /* centraliza horizontalmente */
+    text-align: center;       /* deixa o texto centralizado */
 }
 
-/* imagem do quadro */
+/* Imagem do quadro */
 .quadro-image {
-    max-width: 15%;              /* ocupa menos espaço */
-    width: auto;                 /* mantém proporção da imagem */
+    max-width: 40%;           /* ocupa mais espaço proporcionalmente */
+    width: auto;              /* mantém proporção da imagem */
     height: auto;
+    display: block;           /* garante que a imagem se comporte como bloco */
+    margin: 20px auto 0 auto; /* centraliza e adiciona espaçamento acima */
 }
 
-/* botões/ações */
+/* Removendo espaço de ações que não existem mais */
 .quadro-actions {
-    margin-top: 0;               /* remove excesso de espaço */
-    display: flex;
-    flex-direction: column;
-    gap: 10px;                   /* menos espaçamento entre botões */
-    align-items: center;
-}
-
-/* opcional: reduzir tamanho dos botões para proporção */
-.quadro-actions button {
-    padding: 8px 16px;           /* menor tamanho dos botões */
-    font-size: 1rem;
-    text-decoration: none;
+    display: none;            /* oculta completamente a seção de botões */
 }
 
 /* --- Sobre a Ong--- */
@@ -359,6 +353,7 @@ h2 {
         padding: 10px 20px;
     }
 }
+
 
 
 
