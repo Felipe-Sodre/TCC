@@ -1,5 +1,5 @@
 //// FELIPE SODRÉ / MELISSA ////
-// JavaScript - Navegação do site Apoio Conecta
+// JavaScript - Navegação e Depoimentos
 document.addEventListener("DOMContentLoaded", function() {
 
     // =====================
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // =====================
-    // SLIDES DE DEPOIMENTOS
+    // SLIDES DE DEPOIMENTOS (com animação)
     // =====================
     const slides = document.querySelectorAll(".slide-texto p");
     let index = 0;
@@ -64,8 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
         index = (index + 1) % slides.length;
     }
 
-    // Troca o slide a cada 4 segundos
     if (slides.length > 0) {
-        setInterval(mostrarSlide, 4000);
+        setInterval(mostrarSlide, 4000); // troca a cada 4 segundos
     }
 });
