@@ -181,9 +181,25 @@ h2 {
 
 
 /* Depoimentos */
-.sec-depoimentos {
-    padding: 10px 0 10px 0;
-    background-color: var(--cor-branco);
+.slide-texto {
+  position: relative;
+  height: 40px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #0077cc;
+  font-weight: bold;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.slide-ativo {
+  opacity: 1;
 }
 
 .text-depoimentos {
@@ -328,6 +344,7 @@ h2 {
         padding: 10px 20px;
     }
 }
+
 
 
 
