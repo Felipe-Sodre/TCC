@@ -133,7 +133,7 @@ h2 {
     align-items: center;
     padding: 15px 20px;         /* menos espaço interno */
     background-color: #e3f1f5;
-    gap: 20px;                  /* espaço entre elementos */
+    gap: 15px;                  /* espaço entre elementos */
 }
 
 /* conteúdo textual */
@@ -213,7 +213,7 @@ h2 {
   font-size: 1.8rem;
   color: #333;
   line-height: 1.5;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 /* Slide ativo aparece com fade e sobe suavemente */
@@ -229,7 +229,7 @@ h2 {
     justify-content: space-between; /* Distribui igualmente */
     align-items: center;
     flex-wrap: nowrap;
-    margin-top: 40px;
+    margin-top: 20px;
     padding: 0 20px; /* Padding nas laterais */
 }
 
@@ -359,6 +359,7 @@ h2 {
         padding: 10px 20px;
     }
 }
+
 
 
 
