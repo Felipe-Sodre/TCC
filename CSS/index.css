@@ -180,36 +180,48 @@ h2 {
 }
 
 
-/* Depoimentos */
+/* ===== Depoimentos ===== */
+.sec-depoimentos {
+  background-color: #e3f1f5;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.sec-depoimentos h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #003d52;
+}
+
+/* Contêiner de textos */
 .slide-texto {
   position: relative;
-  height: 40px;
+  height: 100px;
   overflow: hidden;
-  text-align: center;
-  font-size: 1.3rem;
-  color: #0077cc;
-  font-weight: bold;
 }
 
-.slide {
+/* Todos os slides começam invisíveis */
+.slide-texto p {
   position: absolute;
   width: 100%;
+  top: 0;
+  left: 0;
   opacity: 0;
-  transition: opacity 0.8s ease;
+  transform: translateY(15px);
+  transition: opacity 1s ease, transform 1s ease;
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.5;
+  padding: 0 20px;
 }
 
-.slide-ativo {
+/* Slide ativo aparece com fade e sobe suavemente */
+.slide-texto .slide-ativo {
   opacity: 1;
+  transform: translateY(0);
 }
 
-.text-depoimentos {
-    font-size: 1.2rem;
-    color: var(--cor-texto-escuro);
-    max-width: 1000px;
-    margin: 20px auto 0 auto;
-    text-align: center;
-    padding: 20px;
-}
 .icones-sobre {
     display: flex;
     justify-content: space-between; /* Distribui igualmente */
@@ -344,6 +356,7 @@ h2 {
         padding: 10px 20px;
     }
 }
+
 
 
 
