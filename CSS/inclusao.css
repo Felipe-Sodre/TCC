@@ -125,7 +125,7 @@ body {
 .pilares h2 {
     text-align: center;
     font-size: 1.8rem;
-    color: var(--cor-azul-principal);
+    color: black;
     margin-bottom: 20px;
 }
 
@@ -167,7 +167,7 @@ body {
 /* --- Footer --- */
 .ong-footer {
     margin-top: 40px;
-    background: linear-gradient(90deg, var(cor-fundo-cinza);
+    background: var(--cor-fundo-cinza);
     color: var(--cor-branco);
     padding: 25px;
     border-radius: 12px;
