@@ -1,4 +1,4 @@
-//// FELIPE SODRÉ/MELISSA ////
+//// FELIPE SODRÉ / MELISSA ////
 // JavaScript - Navegação do site Apoio Conecta
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -8,15 +8,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const btnApoio = document.querySelector(".cta-button-blue");
     const btnAjudar = document.querySelector(".cta-button-green");
 
-    // "Preciso de Apoio"
     if (btnApoio) {
         btnApoio.addEventListener("click", function(event) {
             event.preventDefault();
-            window.location.href = "HTML/Login.html"; // Página destino
+            window.location.href = "HTML/Login.html";
         });
     }
 
-    // "Quero Ajudar"
     if (btnAjudar) {
         btnAjudar.addEventListener("click", function(event) {
             event.preventDefault();
@@ -31,16 +29,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     icones.forEach(icone => {
         icone.addEventListener("click", function(event) {
-            event.preventDefault(); // Evita comportamento padrão
+            event.preventDefault();
             const destino = this.getAttribute("href");
             if (destino && destino !== "#") {
-                window.location.href = destino; // Navega até a página do ícone
+                window.location.href = destino;
             }
         });
     });
 
     // =====================
-    // MENU DE NAVEGAÇÃO (opcional)
+    // MENU DE NAVEGAÇÃO
     // =====================
     const menuLinks = document.querySelectorAll(".navbar nav ul li a");
 
@@ -53,12 +51,21 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
+
+    // =====================
+    // SLIDES DE DEPOIMENTOS
+    // =====================
+    const slides = document.querySelectorAll(".slide-texto p");
+    let index = 0;
+
+    function mostrarSlide() {
+        slides.forEach(slide => slide.classList.remove("slide-ativo"));
+        slides[index].classList.add("slide-ativo");
+        index = (index + 1) % slides.length;
+    }
+
+    // Troca o slide a cada 4 segundos
+    if (slides.length > 0) {
+        setInterval(mostrarSlide, 4000);
+    }
 });
-
-
-
-
-
-
-
-
