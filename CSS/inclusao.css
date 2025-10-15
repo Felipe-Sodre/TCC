@@ -68,135 +68,122 @@ body {
     color: var(--cor-branco);
 }
 
-/* --- Hero Section --- */
+/* --- Hero Section Mais Alegre --- */
 .hero {
-    background: linear-gradient(90deg, rgba(18,66,156,0.04), rgba(92,160,199,0.02));
-    padding: 40px 20px;
-    border-radius: 14px;
+    background: linear-gradient(90deg, rgba(18,66,156,0.1), rgba(92,160,199,0.05));
+    padding: 50px 20px;
+    border-radius: 16px;
     margin: 30px 0;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    top: -30px;
+    left: -30px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    bottom: -20px;
+    right: -20px;
+    animation: float 8s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg);}
+    50% { transform: translateY(15px) rotate(45deg);}
+    100% { transform: translateY(0px) rotate(0deg);}
 }
 
 .hero-text h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: var(--cor-azul-principal);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    animation: fadeInUp 1s ease forwards;
 }
 
 .hero-sub {
     color: var(--cor-texto-claro);
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    animation: fadeInUp 1.2s ease forwards;
 }
 
 .cta-button-blue {
     display: inline-block;
     background-color: var(--cor-cta-azul);
     color: var(--cor-branco);
-    padding: 12px 20px;
-    border-radius: 10px;
+    padding: 14px 24px;
+    border-radius: 12px;
     text-decoration: none;
     font-weight: bold;
     transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(18,66,156,0.2);
 }
 
 .cta-button-blue:hover {
-    background-color: #6b6b6b;
+    background-color: #0a3a8c;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(18,66,156,0.25);
 }
 
-/* --- Frases em Quadros --- */
-.quote-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 16px;
-    margin-bottom: 40px;
+/* --- Animações de Fade-in --- */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(15px);}
+    100% { opacity: 1; transform: translateY(0);}
 }
 
+/* --- Frases em Quadros mais alegres --- */
 .quote-card {
     background: var(--cor-branco);
-    padding: 18px;
-    border-radius: 12px;
+    padding: 20px;
+    border-radius: 16px;
     text-align: center;
     color: var(--cor-azul-principal);
     font-weight: 600;
-    box-shadow: var(--sombra-card);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* --- Cards dos Pilares --- */
-.pilares h2 {
-    text-align: center;
-    font-size: 1.8rem;
-    color: black;
-    margin-bottom: 20px;
+.quote-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 18px;
-}
-
+/* --- Cards dos Pilares com cores suaves --- */
 .card {
-    background-color: var(--cor-branco);
-    border-radius: 12px;
-    box-shadow: var(--sombra-card);
-    padding: 18px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 40px rgba(16,24,40,0.08);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(16,24,40,0.08);
 }
 
 .card h3 {
     color: var(--cor-azul-principal);
-    margin-bottom: 8px;
-}
-
-.card p {
-    color: var(--cor-texto-claro);
     margin-bottom: 10px;
 }
 
-.card ul {
-    list-style: disc;
-    margin-left: 18px;
+.card p, .card ul {
     color: var(--cor-texto-claro);
-}
-
-/* --- Footer --- */
-.ong-footer {
-    margin-top: 40px;
-    background: var(--cor-fundo-cinza);
-    color: var(--cor-branco);
-    padding: 25px;
-    border-radius: 12px;
-    text-align: center;
-    margin-bottom: 40px;
-    box-shadow: 0 10px 30px rgba(0,176,161,0.12);
-}
-
-/* --- Responsivo --- */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .navbar nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .hero-text h1 {
-        font-size: 1.6rem;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    .quote-grid {
-        grid-template-columns: 1fr;
-    }
+    margin-bottom: 12px;
 }
