@@ -69,121 +69,78 @@ body {
 }
 
 /* --- Hero Section Mais Alegre --- */
+/* --- Hero Section Mais Colorida --- */
 .hero {
     background: linear-gradient(90deg, rgba(18,66,156,0.1), rgba(92,160,199,0.05));
-    padding: 50px 20px;
-    border-radius: 16px;
+    padding: 40px 20px;
+    border-radius: 14px;
     margin: 30px 0;
     text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    top: -30px;
-    left: -30px;
-    animation: float 6s ease-in-out infinite;
-}
-
-.hero::after {
-    content: "";
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    bottom: -20px;
-    right: -20px;
-    animation: float 8s ease-in-out infinite alternate;
-}
-
-@keyframes float {
-    0% { transform: translateY(0px) rotate(0deg);}
-    50% { transform: translateY(15px) rotate(45deg);}
-    100% { transform: translateY(0px) rotate(0deg);}
-}
-
-.hero-text h1 {
-    font-size: 2.2rem;
-    color: var(--cor-azul-principal);
-    margin-bottom: 15px;
-    animation: fadeInUp 1s ease forwards;
-}
-
-.hero-sub {
-    color: var(--cor-texto-claro);
-    margin-bottom: 25px;
-    font-size: 1.1rem;
-    animation: fadeInUp 1.2s ease forwards;
+    /* Pequeno brilho */
+    box-shadow: 0 8px 20px rgba(18,66,156,0.08);
 }
 
 .cta-button-blue {
     display: inline-block;
     background-color: var(--cor-cta-azul);
     color: var(--cor-branco);
-    padding: 14px 24px;
-    border-radius: 12px;
+    padding: 12px 20px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
     transition: all 0.3s ease;
-    box-shadow: 0 6px 12px rgba(18,66,156,0.2);
+    /* Leve sombra para destacar */
+    box-shadow: 0 4px 12px rgba(18,66,156,0.3);
 }
 
 .cta-button-blue:hover {
-    background-color: #0a3a8c;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(18,66,156,0.25);
+    background-color: #0a3a8c; /* azul mais vivo */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(18,66,156,0.35);
 }
 
-/* --- Animações de Fade-in --- */
-@keyframes fadeInUp {
-    0% { opacity: 0; transform: translateY(15px);}
-    100% { opacity: 1; transform: translateY(0);}
-}
-
-/* --- Frases em Quadros mais alegres --- */
+/* --- Frases em Quadros mais coloridas --- */
 .quote-card {
-    background: var(--cor-branco);
-    padding: 20px;
-    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(92,160,199,0.1), rgba(18,66,156,0.05));
+    padding: 18px;
+    border-radius: 12px;
     text-align: center;
     color: var(--cor-azul-principal);
     font-weight: 600;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    box-shadow: var(--sombra-card);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .quote-card:hover {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(18,66,156,0.1);
 }
 
 /* --- Cards dos Pilares com cores suaves --- */
 .card {
     background-color: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-    padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    box-shadow: var(--sombra-card);
+    padding: 18px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(16,24,40,0.08);
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(16,24,40,0.08);
+    /* Fundo leve ao passar o mouse */
+    background: linear-gradient(135deg, rgba(92,160,199,0.05), rgba(18,66,156,0.02));
 }
 
-.card h3 {
-    color: var(--cor-azul-principal);
-    margin-bottom: 10px;
+/* --- Footer --- */
+.ong-footer {
+    margin-top: 40px;
+    background: linear-gradient(135deg, #12429c, #5ca0c7);
+    color: var(--cor-branco);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0,176,161,0.12);
 }
 
-.card p, .card ul {
-    color: var(--cor-texto-claro);
-    margin-bottom: 12px;
-}
