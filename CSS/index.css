@@ -182,14 +182,14 @@ h2 {
 
 /* ===== Depoimentos ===== */
 .sec-depoimentos {
-  background-color: #12429c;
+  background-color: #e3f1f5;
   padding: 20px 20px;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .sec-depoimentos h2 {
-  font-size: 2.6rem;
+  font-size: 2.1rem;
   margin-bottom: 20px;
   color: #003d52;
 }
@@ -357,6 +357,7 @@ h2 {
         padding: 10px 20px;
     }
 }
+
 
 
 
