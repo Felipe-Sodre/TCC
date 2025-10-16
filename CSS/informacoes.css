@@ -91,7 +91,7 @@ body {
     /* Divide em duas colunas: 30% para metadados e 70% para descrição */
     grid-template-columns: 30% 70%; 
     gap: 30px;
-    background-color: #ffffff; /* Fundo branco para destacar do fundo da página */
+    background-color: #97ccc8; 
     border-radius: 10px;
     padding: 25px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
