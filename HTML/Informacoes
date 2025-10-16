@@ -1,0 +1,117 @@
+<!--Melissa-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursos e Estudos | Apoio Conecta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/informacoes.css"> 
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">Apoio Conecta</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="#">Quem Somos</a></li>
+                <li><a href="#">Apoio</a></li>
+                <li><a href="Transtornos.html">Transtornos</a></li>
+                <li><a href="#">Eventos</a></li>
+                <li><a href="#">Administração</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="conteudo-pagina">
+        <div class="container">
+            
+            <section class="hero-recursos">
+               <div class="hero-text">
+                <h1>Aprofunde seu Conhecimento</h1>
+                 <p class="hero-sub">Livros, artigos e estudos selecionados para informar e capacitar famílias, educadores e profissionais sobre síndromes do neurodesenvolvimento.</p>
+               </div>
+               <div class="hero-image">
+                    <img src="../Imagens/livro.png" alt="Ícone de livros, artigos e conhecimento">
+             </div>
+            </section>
+
+            <hr>
+
+            <section class="secao-lista-recursos">
+                <h2>📖 Livros Recomendados</h2>
+                <div class="lista-detalhada">
+                    
+                    <article class="recurso-item">
+                        <div class="recurso-meta">
+                            <h4>O Cérebro Autista</h4>
+                            <p class="autor-fonte"><strong>Autor(a):</strong> Temple Grandin</p>
+                            <p class="tipo">Livro | 2005</p>
+                            <a href="#" target="_blank" class="cta-link-destaque">Ver Detalhes</a>
+                        </div>
+                        <div class="recurso-descricao">
+                            <p>Uma visão poderosa e inovadora sobre o funcionamento do cérebro autista, escrita por alguém com a vivência. Aborda as diferentes formas de pensar e aprender, oferecendo *insights* práticos para educadores e pais.</p>
+                        </div>
+                    </article>
+
+                    <article class="recurso-item">
+                        <div class="recurso-meta">
+                            <h4>Neurodiversidade: Conceitos e Práticas</h4>
+                            <p class="autor-fonte"><strong>Autor(a):</strong> Vários Autores</p>
+                            <p class="tipo">Livro-Coletânea | 2020</p>
+                            <a href="#" target="_blank" class="cta-link-destaque">Ver Detalhes</a>
+                        </div>
+                        <div class="recurso-descricao">
+                            <p>Coletânea que aborda o conceito de neurodiversidade e suas implicações em diversos contextos (educacional, social e clínico), promovendo uma perspectiva de valorização das diferenças.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <hr>
+
+            <section class="secao-lista-recursos">
+                <h2>🔬 Artigos e Estudos Científicos</h2>
+                <div class="lista-detalhada">
+                    
+                    <article class="recurso-item">
+                        <div class="recurso-meta">
+                            <h4>Inclusão Escolar e TDAH: Uma Revisão Sistemática</h4>
+                            <p class="autor-fonte"><strong>Fonte:</strong> Rev. Bras. Educação Especial</p>
+                            <p class="tipo">Artigo Científico | 2023</p>
+                            <a href="#" target="_blank" class="cta-link-destaque">Acessar Artigo</a>
+                        </div>
+                        <div class="recurso-descricao">
+                            <p>Análise robusta das melhores práticas e desafios no apoio a alunos com Transtorno de Déficit de Atenção e Hiperatividade (TDAH) no ambiente escolar brasileiro.</p>
+                        </div>
+                    </article>
+
+                    <article class="recurso-item">
+                        <div class="recurso-meta">
+                            <h4>A Relação entre Transtorno Opositivo Desafiador e Ambientes Familiares</h4>
+                            <p class="autor-fonte"><strong>Fonte:</strong> Portal Scielo</p>
+                            <p class="tipo">Estudo de Campo | 2022</p>
+                            <a href="#" target="_blank" class="cta-link-destaque">Acessar Artigo</a>
+                        </div>
+                        <div class="recurso-descricao">
+                            <p>Estudo que investiga o impacto da dinâmica familiar e da comunicação no desenvolvimento e manejo do Transtorno Opositivo Desafiador (TOD) em crianças e adolescentes.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <footer class="ong-footer" style="margin-top: 40px;">
+                <p>O conhecimento é a base da inclusão. Utilize esses materiais como ponto de partida para sua jornada.</p>
+            </footer>
+
+            <div style="padding: 10px px"> <a href="../index.html" class="cta-button-blue1">Voltar ao Início</a>
+                </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
