@@ -208,6 +208,7 @@ hr {
     text-decoration: none;
     font-weight: bold;
     transition: all 0.3s ease;
+    margin-top: 30px; 
 }
 
 /* Responsividade: Empilhar texto e imagem em telas menores */
