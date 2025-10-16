@@ -91,11 +91,11 @@ body {
     /* Divide em duas colunas: 30% para metadados e 70% para descrição */
     grid-template-columns: 30% 70%; 
     gap: 30px;
-    background-color: #97ccc8; 
+    background-color: #fff; 
     border-radius: 10px;
     padding: 25px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    border-left: 6px solid #1a73e8; /* Linha de destaque, use sua cor primária */
+    border-left: 6px solid #22535c; /* Linha de destaque, use sua cor primária */
     transition: box-shadow 0.3s ease;
 }
 
@@ -110,7 +110,7 @@ body {
 }
 
 .recurso-meta h4 {
-    color: #1a73e8; /* Título em destaque */
+    color: #22535c; /* Título em destaque */
     font-size: 1.3em;
     margin-top: 0;
     margin-bottom: 5px;
@@ -139,7 +139,7 @@ body {
 /* Estilo do botão/link de ação (Acessar/Ver Detalhes) */
 .cta-link-destaque {
     display: inline-block;
-    background-color: #1a73e8;
+    background-color: #5c7392;
     color: white;
     padding: 8px 15px;
     border-radius: 5px;
@@ -151,13 +151,13 @@ body {
 }
 
 .cta-link-destaque:hover {
-    background-color: #0c61c3;
+    background-color: #6b6b6b;
 }
 
 hr {
     border: 0;
     height: 1px;
-    background-color: #ddd;
+    background-color: #a1a1a1;
     margin: 40px 0;
 }
 /* --- Estilos para o HERO da Página de Recursos --- */
@@ -182,7 +182,7 @@ hr {
 
 .hero-text .hero-sub {
     font-size: 1.1em;
-    color: #083570;
+    color: #032450;
     line-height: 1.6;
 }
 
