@@ -1,113 +1,95 @@
-<!--FELIPE-->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apoio Conecta</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dra. Ana Silva | Psicóloga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/AdminPage.css">
 </head>
+
 <body>
-
-    <header class="navbar">
-        <div class="logo">
-            <span>Apoio Conecta</span>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="#">Quem Somos</a></li>
-                <li><a href="#">Apoio</a></li>
-                <li><a href="HTML/Transtornos.html">Transtornos</a></li>
-                <li><a href="#">Eventos</a></li>
-                <li><a href="#">Venha fazer parte</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="quadro-topo">
-        <div class="quadro-content">
-            <h1>Conectando pessoas que precisam de apoio a quem pode ajudar.</h1>
-            
-        </div>
-        <div class="quadro-image">
-       <img src="Imagens/criancas.png" alt="Ilustração de família e conexão" style="width: 100%; max-width: 500px;">
-        </div>
-        </section>
-
-    <section class="sobre">
-        <div class="container">
-            <h2>Sobre a ONG</h2>
-            <p class="text-sobre">
-                A Apoio Conecta nasceu com o coração voltado para o cuidado e a inclusão.
-Apoiamos pessoas com transtornos do neurodesenvolvimento, oferecendo um espaço de acolhimento, escuta e conexão.
-Nosso objetivo é aproximar quem busca apoio de quem deseja ajudar, construindo juntos uma rede de empatia, respeito e esperança.
-            </p>
-
-            <!-- NOVA SEÇÃO DE ÍCONES -->
-            <div class="icones-sobre">
-                <div class="icone-item">
-                    <a href="HTML/Inclusao.html">
-                        <img src="Imagens/inclusao.jpg" alt="Ícone de Inclusão">
-                        <p>INCLUSÃO</p>
-                       
-                    </a>
-                </div>
-                <div class="icone-item">
-                    <a href="HTML/escuta.html">
-                        <img src="Imagens/escuta.jpg" alt="Ícone de Escuta Ativa">
-                        <p>ESCUTA ATIVA</p>
-                        
-                    </a>
-                </div>
-                <div class="icone-item">
-                    <a href="HTML/conexao.html">
-                        <img src="Imagens/conexoes.jpg" alt="Ícone de Conexão">
-                        <p>CONEXÕES</p>
-                       
-                    </a>
-                </div>
-                <div class="icone-item">
-                    <a href="HTML/Informacoes.html">
-                        <img src="Imagens/informacoes.jpg" alt="Ícone de Informação">
-                         <p>INFORMAÇÕES</p>
-                        
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<section class="sec-depoimentos">
-  <div class="container">
-    <h2>Depoimentos</h2>
-    <div class="slide-texto">
-      <p class="slide-ativo">“O Neuro Apoio Conecta mudou minha rotina, encontrei o suporte que precisava.”</p>
-      <p class="slide">“A plataforma me ajudou a compreender melhor o autismo do meu filho.”</p>
-      <p class="slide">“Sinto que faço parte de uma comunidade acolhedora e solidária.”</p>
-      <p class="slide">“Encontrei profissionais incríveis que realmente entendem minhas dificuldades.”</p>
-      <p class="slide">“Os conteúdos e fóruns me ajudaram a lidar melhor com a ansiedade.”</p>
-      <p class="slide">“A plataforma me fez sentir acolhida e compreendida, sem julgamentos.”</p>
-      <p class="slide">“Participei de um evento online e aprendi muito sobre inclusão e empatia.”</p>
+  <!-- ======== CABEÇALHO ======== -->
+  <header class="navbar">
+    <div class="logo">
+      <span>Dra. Housen</span>
+      <p>Psicóloga Clínica | CRP 00/00000</p>
     </div>
-  </div>
-</section>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="#contato">Agenda</a></li>
+        <li><a href="#contato">Sair</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<script src="JavaScript/index.js"></script>
+  <!-- ======== SEÇÃO DE APRESENTAÇÃO ======== -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Equilíbrio emocional começa com o primeiro passo.</h1>
+      <p>Apoio psicológico e acolhimento para todas as fases da vida.</p>
+      <a href="#contato" class="cta-button-green">Agende uma sessão</a>
+    </div>
+    <div class="hero-image">
+      <img src="../Imagens/psicologa.png" alt="Psicóloga atendendo paciente">
+    </div>
+  </section>
 
+  <!-- ======== SOBRE ======== -->
+  <section id="sobre" class="sobre">
+    <div class="container">
+      <h2>Sobre mim</h2>
+      <p class="text-sobre">
+        Sou psicóloga formada pela Universidade de São Paulo e atuo há mais de 10 anos ajudando pessoas a 
+        encontrarem equilíbrio emocional, autoconhecimento e qualidade de vida. 
+        Trabalho com abordagens baseadas na empatia, na escuta ativa e em práticas terapêuticas eficazes.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======== SERVIÇOS ======== -->
+  <section id="servicos" class="servicos">
+    <div class="container">
+      <h2>Serviços</h2>
+      <div class="cards-servicos">
+        <div class="card">
+          <img src="../Imagens/atendimento.png" alt="Ícone Atendimento Individual">
+          <h3>Atendimento Individual</h3>
+          <p>Atendimento voltado para adolescentes, adultos e idosos em busca de autoconhecimento e bem-estar.</p>
+        </div>
+        <div class="card">
+          <img src="../Imagens/online.png" alt="Ícone Atendimento Online">
+          <h3>Terapia Online</h3>
+          <p>Atendimento remoto com a mesma qualidade e acolhimento da sessão presencial, via videochamada.</p>
+        </div>
+        <div class="card">
+          <img src="../Imagens/familia.png" alt="Ícone Terapia de Casal e Família">
+          <h3>Terapia de Casal e Família</h3>
+          <p>Espaço de diálogo, escuta e reconstrução de vínculos afetivos e emocionais.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CONTATO ======== -->
+  <section id="contato" class="contato">
+    <div class="container">
+      <h2>Contato</h2>
+      <p>Entre em contato para agendar sua sessão ou tirar dúvidas.</p>
+      <p><strong>Email:</strong> dra.ana@psicologia.com.br</p>
+      <p><strong>WhatsApp:</strong> (11) 99999-9999</p>
+      <a href="https://wa.me/5599999999999" target="_blank" class="cta-button-blue">Falar no WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- ======== RODAPÉ ======== -->
+  <footer class="rodape">
+    <p>© 2025 Dra. Ana Silva | Todos os direitos reservados</p>
+  </footer>
+
+  <script src="../JavaScript/index.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
