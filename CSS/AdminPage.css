@@ -1,492 +1,232 @@
-/* --- Estilos Base e Tipografia --- */ 
 :root {
-    --cor-azul-principal: #12429c; /* Azul Geral */
-    --cor-cta-azul: #5ca0c7; /* Botão "Preciso de Apoio" */
-    --cor-cta-verde: #00b0a1; /* Botão "Quero Ajudar" e ícones verdes */
-    --cor-texto-escuro: #333;
-    --cor-texto-claro: #555;
-    --cor-fundo-claro: #f8f9fa; /* Fundo cinza claro/quase branco */
-    --cor-branco: #fff;
-    --cor-borda-clara: #ddd;
-    --cor-link-cabecalho: #6c757d;
-    --cor-menu-fundo: #d3f1f5; /* Azul clarinho/verde claro para menu */
+  --cor-azul-principal: #12429c;
+  --cor-cta-azul: #5ca0c7;
+  --cor-cta-verde: #00b0a1;
+  --cor-texto-escuro: #333;
+  --cor-texto-claro: #555;
+  --cor-fundo-claro: #f8f9fa;
+  --cor-branco: #fff;
 }
 
+/* ======= BASE ======= */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    max-width: 1100px;
-    font-family: 'Poppins', sans-serif;
-    color: var(--cor-texto-escuro);
-    line-height: 1.6;
-    margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  color: var(--cor-texto-escuro);
+  background-color: var(--cor-fundo-claro);
+  line-height: 1.6;
 }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
+/* ======= NAVBAR ======= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: var(--cor-branco);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-h1 {
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 1.2;
+.logo span {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--cor-azul-principal);
 }
 
-h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 40px;
-    margin-top: 60px;
+.logo p {
+  font-size: 0.9rem;
+  color: var(--cor-texto-claro);
 }
 
-/* --- Botões --- */
-.button {
-  padding: 20px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-size: 14px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            text-align: center;
-            text-decoration: none;
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
-.primary-button {
-    background-color: var(--cor-cta-verde);
-    color: var(--cor-branco);
+.navbar ul li a {
+  text-decoration: none;
+  color: var(--cor-texto-escuro);
+  padding: 8px 14px;
+  border-radius: 50px;
+  transition: all 0.3s;
+  background-color: #d3f1f5;
 }
 
-.primary-button:hover {
-    background-color: #6b6b6b;
+.navbar ul li a:hover {
+  background-color: var(--cor-cta-verde);
+  color: var(--cor-branco);
 }
 
+/* ======= HERO ======= */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e3f1f5;
+  padding: 60px 40px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  color: var(--cor-azul-principal);
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: var(--cor-texto-claro);
+  margin-bottom: 25px;
+}
+
+.cta-button-green,
 .cta-button-blue {
-    background-color: var(--cor-cta-azul);
-    color: var(--cor-branco);
-}
-
-.cta-button-blue:hover {
-    background-color: #6b6b6b;
+  padding: 12px 25px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 .cta-button-green {
-    background-color: var(--cor-cta-verde);
-    color: var(--cor-branco);
+  background-color: var(--cor-cta-verde);
+  color: var(--cor-branco);
 }
 
 .cta-button-green:hover {
-    background-color: #6b6b6b;
+  background-color: #058f84;
 }
 
-/* --- Navbar Menu--- */
-.navbar {
-    display: flex;
-    justify-content: center; /* Centraliza o menu */
-    align-items: center;
-    padding: 15px 20px;
-    background-color: transparent; /* ou #fff se quiser branco */
-    border-bottom: 2px solid var(--cor-borda-clara);
-    gap: 40px;
+.cta-button-blue {
+  background-color: var(--cor-cta-azul);
+  color: var(--cor-branco);
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--cor-azul-principal);
+.cta-button-blue:hover {
+  background-color: #4a8caf;
 }
 
-.navbar nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
 }
 
-.navbar nav ul li a {
-    text-decoration: none;
-    color: var(--cor-texto-escuro);
-    font-weight: 400;
-    padding: 8px 12px;
-    border-radius: 55px;
-    transition: all 0.3s;
-    background-color: var(--cor-menu-fundo); /* Fundo dos links */
+/* ======= SOBRE ======= */
+.sobre {
+  text-align: center;
+  padding: 80px 20px;
 }
 
-.navbar nav ul li a:hover {
-    background-color: var(--cor-cta-verde);
-    color: var(--cor-branco);
-}
-
-/* --- quadro topo --- */
-.quadro-topo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10px;         /* menos espaço interno */
-    background-color: #e3f1f5;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* leve sombra para destacar */
-    gap: 5px;                  /* espaço entre elementos */
-}
-
-/* conteúdo textual */
-/* --- Conteúdo do Quadro Ajustado --- */
-.quadro-content {
-    font-size: 1.6rem;        /* aumenta um pouco para melhor leitura */
-    max-width: 50%;           /* ocupa mais espaço para caber o texto */
-    line-height: 1.1;
-    margin: 0 auto;           /* centraliza horizontalmente */
-    text-align: center;       /* deixa o texto centralizado */
-}
-
-/* Imagem do quadro */
-.quadro-image {
-    max-width: 30%;           /* ocupa mais espaço proporcionalmente */
-    width: auto;              /* mantém proporção da imagem */
-    height: auto;
-    display: block;           /* garante que a imagem se comporte como bloco */
-    margin: 5px auto 0 auto; /* centraliza e adiciona espaçamento acima */
-}
-
-/* Removendo espaço de ações que não existem mais */
-.quadro-actions {
-    display: none;            /* oculta completamente a seção de botões */
-}
-
-/* --- Sobre a Ong--- */
-.sobre{
-    padding: 5px 0 80px 0;
-    text-align: center;
+.sobre h2 {
+  color: var(--cor-azul-principal);
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .text-sobre {
-    max-width: 1000px;
-    margin: 20px auto 50px auto;
-    font-size: 1.1rem;
-    color: var(--cor-texto-claro);
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: var(--cor-texto-claro);
 }
 
-
-/* ===== Depoimentos ===== */
-.sec-depoimentos {
-  background-color: #e3f1f5;     /* cor de fundo suave */
-  padding: 5px;                 /* espaço interno */
-  max-width: 1200px;              /* limita a largura da seção */
-  margin: 20px auto;             /* centraliza e cria espaço ao redor */
+/* ======= SERVIÇOS ======= */
+.servicos {
+  background-color: #e3f1f5;
+  padding: 80px 20px;
   text-align: center;
-  border: 2px solid #6aa6a0;     /* borda ao redor */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* leve sombra para destacar */
 }
 
-.sec-depoimentos h2 {
-  font-size: 2.1rem;
+.cards-servicos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.card {
+  background: var(--cor-branco);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 30px;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: var(--cor-azul-principal);
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--cor-texto-claro);
+  font-size: 0.95rem;
+}
+
+/* ======= CONTATO ======= */
+.contato {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.contato h2 {
+  color: var(--cor-azul-principal);
+  font-size: 2rem;
   margin-bottom: 20px;
-  color: #000000;
 }
 
-/* Contêiner de textos */
-.slide-texto {
-  position: relative;
-  height: 100px;
-  overflow: hidden;
+.contato p {
+  font-size: 1rem;
+  color: var(--cor-texto-claro);
+  margin: 8px 0;
 }
 
-/* Todos os slides começam invisíveis */
-.slide-texto p {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transform: translateY(15px);
-  transition: opacity 1s ease, transform 1s ease;
-  font-size: 1.3rem;
-  color: #333;
-  line-height: 1.5;
-  padding: 0 10px;
-}
-
-/* Slide ativo aparece com fade e sobe suavemente */
-.slide-texto .slide-ativo {
-  opacity: 3;
-  transform: translateY(4);
-}
-
-/* ===== Icones===== */
-
-.icones-sobre {
-    display: flex;
-    justify-content: space-between; /* Distribui igualmente */
-    align-items: center;
-    flex-wrap: nowrap;
-    margin-top: 20px;
-    padding: 0 20px; /* Padding nas laterais */
-}
-
-.icone-item {
-  text-align: center;         /* Centraliza tudo dentro */
-  width: 210px;               /* Tamanho fixo opcional do bloco */
-  margin: 0 auto;             /* Centraliza o bloco na página */
-}
-
-.icone-item img {
-  width: 100%;                /* Preenche o bloco de forma proporcional */
-  max-width: 180px;           /* Limite máximo da imagem */
-  height: auto;               /* Mantém proporção */
-  object-fit: contain;        /* Mostra a imagem inteira */
-  margin-bottom: 10px;        /* Espaço entre imagem e texto */
- 
-}
-
-.icone-item p,
-.icone-item a {
-  color: #003d52;
-  font-weight: bold;
+/* ======= RODAPÉ ======= */
+.rodape {
+  background-color: var(--cor-azul-principal);
+  color: var(--cor-branco);
   text-align: center;
-  text-decoration: none;
-  font-size: 18x;            /* Ajuste de tamanho */
-  display: block;             /* Garante que fique em linha separada */
-  margin: 0 auto;             /* Centraliza o texto */    
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: 60px;
 }
 
-/* Hover: aumenta o tamanho do item inteiro */
-.icone-item:hover {
-    transform: scale(1.2); 
-}
-
-
-/* --- Layout Responsivo --- */
-
-/* Para tablets e celulares */
+/* ======= RESPONSIVIDADE ======= */
 @media (max-width: 768px) {
-    /* Ajusta o menu */
-    .navbar ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .navbar ul li {
-        margin: 5px 0;
-    }
+  .hero-text {
+    max-width: 100%;
+  }
 
-    /* Título principal menor */
-    .quadro-content h1 {
-        font-size: 1.4em;
-        text-align: center;
-        padding: 0 10px;
-    }
-
-    /* Imagem do topo */
-    .quadro-image img {
-        max-width: 300px;
-        margin: 20px auto;
-        display: block;
-    }
-
-    /* Botões principais */
-    .quadro-actions {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .button {
-        width: 80%;
-        margin: 8px 0;
-    }
-
-    /* Ícones da seção "Sobre" */
-    .icones-sobre {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        justify-items: center;
-    }
-
-    .icone-item img {
-        width: 70px;
-    }
-
-    .icone-item p {
-        font-size: 0.9em;
-    }
-
-    /* Texto geral */
-    .text-sobre,
-    .text-depoimentos {
-        font-size: 1em;
-        text-align: center;
-        padding: 0 15px;
-    }
-
-    /* Páginas internas */
-    .conteudo-pagina {
-        padding: 50px 15px;
-    }
-
-    .conteudo-pagina h1 {
-        font-size: 1.5em;
-    }
-
-    .imagem-conteudo {
-        max-width: 200px;
-    }
-}
-
-/* Para celulares muito pequenos */
-@media (max-width: 480px) {
-    .quadro-content h1 {
-        font-size: 1.2em;
-    }
-
-    .icone-item img {
-        width: 60px;
-    }
-
-    .button {
-        font-size: 0.9em;
-        padding: 10px 20px;
-    }
-}
-
-/* --- Layout Responsivo --- */
-
-/* === Para tablets e celulares (largura até 768px) === */
-@media (max-width: 768px) {
-
-    /* 🔹 Menu principal empilhado verticalmente */
-    .navbar ul {
-        display: flex;                  /* Mantém os itens como flexbox */
-        flex-direction: column;         /* Empilha verticalmente */
-        align-items: center;            /* Centraliza os itens */
-        gap: 10px;                      /* Espaçamento entre os links */
-    }
-
-    .navbar ul li {
-        margin: 5px 0;                  /* Espaço entre os itens do menu */
-    }
-
-    /* 🔹 Reduz tamanho e centraliza o título principal */
-    .quadro-content h1 {
-        font-size: 1.4em;               /* Diminui o tamanho da fonte */
-        text-align: center;             /* Centraliza o texto */
-        padding: 0 10px;                /* Adiciona margem lateral */
-        line-height: 1.3;               /* Melhora o espaçamento entre linhas */
-    }
-
-    /* 🔹 Ajusta a imagem do topo */
-    .quadro-image img {
-        max-width: 250px;               /* Limita o tamanho máximo da imagem */
-        margin: 20px auto;              /* Centraliza e adiciona espaço ao redor */
-        display: block;                 /* Garante que fique em bloco centralizado */
-    }
-
-    /* 🔹 Reorganiza os botões principais em coluna */
-    .quadro-actions {
-        display: flex;
-        flex-direction: column;         /* Um botão embaixo do outro */
-        align-items: center;            /* Centraliza */
-        gap: 10px;                      /* Espaço entre os botões */
-    }
-
-    .button {
-        width: 85%;                     /* Botões mais largos e proporcionais */
-        margin: 8px 0;
-        font-size: 1em;                 /* Tamanho de fonte equilibrado */
-    }
-
-    /* 🔹 Ajusta os ícones da seção “Sobre” */
-    .icones-sobre {
-        display: grid;                  /* Usa grid para melhor alinhamento */
-        grid-template-columns: repeat(2, 1fr); /* Duas colunas lado a lado */
-        gap: 20px;                      /* Espaço entre os ícones */
-        justify-items: center;          /* Centraliza dentro das colunas */
-    }
-
-    .icone-item img {
-        width: 80px;                    /* Reduz tamanho da imagem */
-        height: auto;                   /* Mantém proporção original */
-    }
-
-    .icone-item p {
-        font-size: 0.9em;               /* Texto um pouco menor */
-    }
-
-    /* 🔹 Ajuste do texto geral (Sobre e Depoimentos) */
-    .text-sobre,
-    .text-depoimentos {
-        font-size: 1em;                 /* Tamanho de leitura confortável */
-        text-align: center;             /* Centraliza o texto */
-        padding: 0 15px;                /* Margem lateral para não encostar nas bordas */
-        line-height: 1.5;               /* Espaçamento agradável entre linhas */
-    }
-
-    /* 🔹 Seção de depoimentos ajustada */
-    .sec-depoimentos {
-        max-width: 90%;                 /* Reduz largura da seção */
-        margin: 30px auto;              /* Centraliza e adiciona espaço externo */
-        padding: 15px;                  /* Espaço interno (conteúdo respirando) */
-        border: 2px solid #6aa6a0;      /* Borda destacada */
-        border-radius: 12px;            /* Cantos arredondados */
-        background-color: #badfda;      /* Cor de fundo leve */
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
-    }
-
-    /* 🔹 Ajusta páginas internas */
-    .conteudo-pagina {
-        padding: 40px 15px;             /* Reduz espaço nas laterais */
-    }
-
-    .conteudo-pagina h1 {
-        font-size: 1.4em;               /* Título menor */
-        text-align: center;             /* Centraliza título */
-    }
-
-    .imagem-conteudo {
-        max-width: 180px;               /* Reduz imagem de conteúdo */
-        margin: 10px auto;              /* Centraliza */
-        display: block;
-    }
-}
-
-/* === Para celulares muito pequenos (largura até 480px) === */
-@media (max-width: 480px) {
-
-    /* 🔹 Título principal ainda menor e mais compacto */
-    .quadro-content h1 {
-        font-size: 1.1em;
-        line-height: 1.2;
-    }
-
-    /* 🔹 Ícones ainda menores para caber bem na tela */
-    .icone-item img {
-        width: 65px;
-    }
-
-    .icone-item p {
-        font-size: 0.85em;
-    }
-
-    /* 🔹 Botões ajustados para telas pequenas */
-    .button {
-        font-size: 0.9em;
-        padding: 10px 18px;
-        width: 90%;
-    }
-
-    /* 🔹 Depoimentos compactos */
-    .sec-depoimentos {
-        padding: 12px;                  /* Menos espaço interno */
-        border-width: 1.5px;            /* Borda mais fina */
-        border-radius: 10px;            /* Cantos suavizados */
-    }
+  .cards-servicos {
+    flex-direction: column;
+    align-items: center;
+  }
 }
