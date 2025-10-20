@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () =>{
                                                  break;
                                                case "profissional":
                                                  window.location.href = "HTML/ProfissionalPage.html";
+                                                   break;
                                                case "admin":
                                                  window.location.href " "HTML/AdminPage.html";
                                                  break;
@@ -38,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () =>{
                                          }
                                        });
 });
+
 
 
 
