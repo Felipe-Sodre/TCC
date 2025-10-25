@@ -1,7 +1,57 @@
-Pagina do paciente pós login
+<!-- Pagina do paciente pós login
 
 Botões
 - Agendar atendimento
 - Ver Histórico
 - Conteúdos
-- Canal de escuta
+- Canal de escuta -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Paciente - Apoio Conecta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/PacientePage.css">
+    <link rel="stylesheet" href="../CSS/index.css"> 
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <span>Apoio Conecta</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#">Minha Área</a></li>
+                <li><a href="#">Configurações</a></li>
+                <li><a href="Login.html" id="logoutBtn">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner-area">
+        <img src="../Imagens/Gemini_Generated.png" 
+             alt="Banner abstrato de boas-vindas com formas azuis e verdes, representando conexão e bem-estar."
+             class="banner-img">
+    </section>
+
+    <main class="paciente-main-content">
+        <h2>Bem-vindo(a) à sua Área, [Nome do Paciente]!</h2>
+        <p class="paciente-descricao">Aqui você pode gerenciar seus atendimentos e acessar recursos de apoio.</p>
+
+        <section class="paciente-actions">
+            <a href="#" id="agendarBtn" class="action-button cta-button-green">Agendar Atendimento</a>
+            <a href="#" id="historicoBtn" class="action-button cta-button-blue">Ver Histórico</a>
+            <a href="#" id="conteudosBtn" class="action-button primary-button">Conteúdos de Apoio</a>
+            <a href="#" id="escutaBtn" class="action-button cta-button-blue">Canal de Escuta</a>
+        </section>
+        
+        <div id="feedback" class="feedback-message"></div>
+    </main>
+
+    <script src="PacientePage.js" defer></script>
+</body>
+</html>
