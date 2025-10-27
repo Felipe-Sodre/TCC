@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apoio Conecta</title>
+  <title>Login | Apoio Conecta</title>
   <style>
     body {
       display: flex;
@@ -19,35 +19,69 @@
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       text-align: center;
+      width: 350px;
     }
     h1 {
       margin-bottom: 30px;
       color: #1E3A5F;
     }
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 5px;
+      font-weight: 500;
+      color: #1E3A5F;
+    }
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
     .btn {
-      padding: 10px 20px;
-      margin: 10px;
+      width: 100%;
+      padding: 10px;
       border: none;
       border-radius: 5px;
       font-size: 16px;
       cursor: pointer;
       color: white;
-      text-decoration: none;
-    }
-    .login-btn {
       background-color: #1E3A5F;
     }
-    .cadastro-btn {
-      background-color: #A8D5EB;
+    .btn:hover {
+      opacity: 0.9;
+    }
+    .links {
+      margin-top: 15px;
+    }
+    .links a {
       color: #1E3A5F;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .links a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Apoio Conecta</h1>
-    <a href="login.html" class="btn login-btn">Login</a>
-    <a href="cadastro.html" class="btn cadastro-btn">Cadastro</a>
+    <h1>Login</h1>
+    <form action="process_login.php" method="post">
+      <label for="email">Digite seu e-mail:</label>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+
+      <label for="senha">Digite sua senha:</label>
+      <input type="password" id="senha" name="senha" placeholder="Senha" required>
+
+      <button type="submit" class="btn">Entrar</button>
+    </form>
+    <div class="links">
+      <a href="cadastro.html">Cadastro</a>
+    </div>
   </div>
 </body>
 </html>
