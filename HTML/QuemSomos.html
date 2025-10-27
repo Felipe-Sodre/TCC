@@ -1,1 +1,253 @@
+!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apoio Conecta - Quem Somos</title>
+  <style>
+    :root {
+      --azul-principal: #12429c;
+      --cta-verde: #00b0a1;
+      --texto-escuro: #333;
+      --texto-claro: #555;
+      --fundo-claro: #f8f9fa;
+      --branco: #fff;
+      --borda-clara: #ddd;
+      --menu-fundo: #d3f1f5;
+    }
 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      max-width: 1100px;
+      font-family: 'Poppins', sans-serif;
+      color: var(--texto-escuro);
+      line-height: 1.6;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin: 60px 0 40px;
+      color: var(--azul-principal);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 10%;
+      background-color: var(--branco);
+      border-bottom: 2px solid var(--borda-clara);
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--azul-principal);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .menu-btn {
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 55px;
+      background-color: var(--menu-fundo);
+      color: var(--texto-escuro);
+      font-weight: 400;
+      transition: all 0.3s;
+    }
+
+    .menu-btn:hover,
+    .menu-btn.active {
+      background-color: var(--cta-verde);
+      color: var(--branco);
+    }
+
+    .banner {
+      background-color: var(--fundo-claro);
+      text-align: center;
+      padding: 50px 10%;
+    }
+
+    .banner h2 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .banner p {
+      max-width: 700px;
+      margin: auto;
+      color: var(--texto-claro);
+      font-size: 1.1rem;
+    }
+
+    .missao-visao-valores {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      padding: 60px 10%;
+    }
+
+    .card {
+      background-color: var(--fundo-claro);
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      flex: 1 1 300px;
+      max-width: 340px;
+      text-align: center;
+      border: 2px solid var(--borda-clara);
+    }
+
+    .card h3 {
+      color: var(--azul-principal);
+      margin-bottom: 10px;
+    }
+
+    .card p,
+    .card ul {
+      color: var(--texto-claro);
+      font-size: 0.95rem;
+    }
+
+    .card ul {
+      text-align: left;
+      margin-left: 25px;
+    }
+
+    .equipe {
+      background-color: var(--fundo-claro);
+      text-align: center;
+      padding: 60px 10%;
+      border: 2px solid var(--borda-clara);
+      border-radius: 12px;
+    }
+
+    .metas {
+      text-align: center;
+      padding: 60px 10%;
+    }
+
+    .metas .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .card-grid .card {
+      max-width: 220px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--fundo-claro);
+      font-size: 0.9rem;
+      color: var(--texto-claro);
+      border-top: 1px solid var(--borda-clara);
+    }
+
+    @media (max-width: 768px) {
+      .missao-visao-valores,
+      .card-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul {
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="logo">Quem Somos</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="menu-btn">Início</a></li>
+        <li><a href="quem-somos.html" class="menu-btn active">Quem Somos</a></li>
+        <li><a href="apoio.html" class="menu-btn">Apoio</a></li>
+        <li><a href="transtornos.html" class="menu-btn">Transtornos</a></li>
+        <li><a href="eventos.html" class="menu-btn">Eventos</a></li>
+        <li><a href="venha-fazer-parte.html" class="menu-btn">Venha fazer parte</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <h2>Conectando pessoas e promovendo a inclusão</h2>
+    <p>
+      A <strong>Apoio Conecta</strong> é uma ONG que acredita no poder da escuta, da empatia e da conexão entre pessoas. Nossa missão é apoiar indivíduos com transtornos do neurodesenvolvimento e suas famílias, criando oportunidades e ambientes inclusivos.
+    </p>
+  </section>
+
+  <section class="missao-visao-valores">
+    <div class="card">
+      <h3>Missão</h3>
+      <p>Promover acolhimento, inclusão e oportunidades de desenvolvimento para pessoas neurodivergentes e suas famílias.</p>
+    </div>
+    <div class="card">
+      <h3>Visão</h3>
+      <p>Construir uma sociedade onde as diferenças sejam reconhecidas como força e onde todos possam prosperar em ambientes adaptativos.</p>
+    </div>
+    <div class="card">
+      <h3>Valores</h3>
+      <ul>
+        <li>Inclusão e empatia</li>
+        <li>Escuta ativa e respeito</li>
+        <li>Colaboração e transparência</li>
+        <li>Educação e conscientização</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="equipe">
+    <h2>Nossa Equipe</h2>
+    <p>
+      Somos um grupo de profissionais e voluntários comprometidos com a causa da inclusão: psicólogos, terapeutas ocupacionais, educadores e pessoas que acreditam no poder de transformar o mundo através do acolhimento e do apoio mútuo.
+    </p>
+  </section>
+
+  <section class="metas">
+    <h2>Metas e Impacto</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>+500</h3>
+        <p>Pessoas apoiadas desde o início</p>
+      </div>
+      <div class="card">
+        <h3>+200</h3>
+        <p>Eventos e oficinas realizadas</p>
+      </div>
+      <div class="card">
+        <h3>+100</h3>
+        <p>Voluntários ativos em todo o país</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
