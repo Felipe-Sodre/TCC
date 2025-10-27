@@ -3,85 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login | Apoio Conecta</title>
+  <title>Apoio Conecta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: #D9EEF7;
-      font-family: 'Poppins', sans-serif;
+      background-color: #f5f7fa; /* fundo claro */
     }
-    .container {
-      background-color: white;
+
+    .card {
+      background-color: #fff;
       padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
       text-align: center;
-      width: 350px;
+      width: 320px;
     }
-    h1 {
+
+    .card h1 {
+      color: #2a58c1; /* cor similar ao título do print */
       margin-bottom: 30px;
-      color: #1E3A5F;
+      font-size: 28px;
     }
-    label {
-      display: block;
-      text-align: left;
-      margin-bottom: 5px;
-      font-weight: 500;
-      color: #1E3A5F;
-    }
-    input[type="email"],
-    input[type="password"] {
+
+    .card button {
       width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 14px;
-    }
-    .btn {
-      width: 100%;
-      padding: 10px;
+      padding: 12px;
+      margin: 10px 0;
       border: none;
-      border-radius: 5px;
+      border-radius: 6px;
       font-size: 16px;
       cursor: pointer;
-      color: white;
-      background-color: #1E3A5F;
+      transition: background-color 0.3s ease;
     }
-    .btn:hover {
-      opacity: 0.9;
+
+    .btn-login {
+      background-color: #00a89d; /* cor do botão entrar no print */
+      color: #fff;
     }
-    .links {
-      margin-top: 15px;
+
+    .btn-login:hover {
+      background-color: #00887f;
     }
-    .links a {
-      color: #1E3A5F;
-      text-decoration: none;
-      margin: 0 10px;
+
+    .btn-cadastro {
+      background-color: #2a58c1; /* cor de destaque para cadastro */
+      color: #fff;
     }
-    .links a:hover {
-      text-decoration: underline;
+
+    .btn-cadastro:hover {
+      background-color: #1f3f8f;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Login</h1>
-    <form action="process_login.php" method="post">
-      <label for="email">Digite seu e-mail:</label>
-      <input type="email" id="email" name="email" placeholder="Email" required>
-
-      <label for="senha">Digite sua senha:</label>
-      <input type="password" id="senha" name="senha" placeholder="Senha" required>
-
-      <button type="submit" class="btn">Entrar</button>
-    </form>
-    <div class="links">
-      <a href="cadastro.html">Cadastro</a>
-    </div>
+  <div class="card">
+    <h1>Apoio Conecta</h1>
+    <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
+    <button class="btn-cadastro" onclick="window.location.href='cadastro.html'">Cadastro</button>
   </div>
 </body>
 </html>
