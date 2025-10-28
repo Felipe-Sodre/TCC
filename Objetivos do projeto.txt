@@ -2,6 +2,11 @@ PRIORIDADES
 - Pagina de login vinculada ao banco de dados ✅
 - Pagina de cadastro vinculada ao banco de dados ✅
 - Paginas de agenda vinculadas ao banco de dados 👷
-- 
+- Paginas do usuário comum (sem login) 👷
+- Paginas do paciente 👷
+- Paginas do profissional 👷
+- Paginas do admin 👷
+
 
 NÃO ESSENCIAIS
+- Pagina recuperar senha ⚪
