@@ -10,4 +10,4 @@ PRIORIDADES
 
 NÃO ESSENCIAIS
 - Pagina recuperar senha ⚪
-- Paginas dos familiares 
+- Paginas dos familiares ⚪
