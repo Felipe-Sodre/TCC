@@ -106,5 +106,36 @@
         </section>
 
     </main>
+   <!-- ===== POPUP ===== -->
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <h3 id="tituloPalestra"></h3>
+        <p>⏳ O evento ainda não começou! Aguarde a data e horário programados.</p>
+        <button class="close-btn" onclick="fecharPopup()">Fechar</button>
+    </div>
+</div>
+
+<!-- ===== SCRIPT ===== -->
+<script>
+function abrirPopup(titulo) {
+    document.getElementById('tituloPalestra').innerText = titulo;
+    document.getElementById('popup').style.display = 'flex';
+}
+
+function fecharPopup() {
+    document.getElementById('popup').style.display = 'none';
+}
+
+document.querySelectorAll('.palestra-card .cta-button-blue1').forEach(botao => {
+    botao.addEventListener('click', (e) => {
+        e.preventDefault();
+        const titulo = botao.parentElement.querySelector('h3').innerText;
+        abrirPopup(titulo);
+    });
+});
+</script>
+</body>
+</html>
+
 </body>
 </html>
