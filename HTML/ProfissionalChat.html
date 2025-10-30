@@ -1,1 +1,41 @@
 Canal de escuta dos pacientes
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canal de Escuta - Profissional</title>
+    <link rel="stylesheet" href="../CSS/ProfissionalStyle.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="ProfissionalPage.html">Início</a></li>
+            <li><a href="ProfissionalAgenda.html">Agenda</a></li>
+            <li><a href="ProfissionalChat.html" class="active">Canal de Escuta</a></li>
+            <li><a href="ProfissionalConteudo.html">Conteúdos</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <header>
+            <h1>Canal de Escuta</h1>
+            <p>Comunique-se com seus pacientes</p>
+        </header>
+
+        <section class="chat-container">
+            <div class="chat-box">
+                <div class="mensagem paciente">Olá, doutor(a)! Estou me sentindo ansioso hoje.</div>
+                <div class="mensagem profissional">Olá! Vamos conversar sobre o que está acontecendo?</div>
+            </div>
+
+            <div class="chat-input">
+                <input type="text" placeholder="Digite sua mensagem..." id="msg">
+                <button>Enviar</button>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
