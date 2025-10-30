@@ -1,1 +1,53 @@
 Confirmar atendimentos, cancelar, Atualizar status
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda - Profissional</title>
+    <link rel="stylesheet" href="../CSS/ProfissionalStyle.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="ProfissionalPage.html">Início</a></li>
+            <li><a href="ProfissionalAgenda.html" class="active">Agenda</a></li>
+            <li><a href="ProfissionalChat.html">Canal de Escuta</a></li>
+            <li><a href="ProfissionalConteudo.html">Conteúdos</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <header>
+            <h1>Agenda de Consultas</h1>
+            <p>Gerencie suas consultas e horários</p>
+        </header>
+
+        <section class="agenda">
+            <button id="add-consulta" style="margin-bottom:15px;">+ Nova Consulta</button>
+            <div class="consulta">
+                <h3>Maria Oliveira</h3>
+                <p>Data: 28/10/2025 - 14:00</p>
+                <button>Ver Detalhes</button>
+                <button class="secundario">Cancelar</button>
+            </div>
+
+            <div class="consulta">
+                <h3>João Silva</h3>
+                <p>Data: 29/10/2025 - 09:00</p>
+                <button>Ver Detalhes</button>
+                <button class="secundario">Cancelar</button>
+            </div>
+
+            <div class="consulta">
+                <h3>Ana Costa</h3>
+                <p>Data: 30/10/2025 - 16:30</p>
+                <button>Ver Detalhes</button>
+                <button class="secundario">Cancelar</button>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
