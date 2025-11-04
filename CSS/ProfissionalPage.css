@@ -21,12 +21,13 @@
 }
 
 body {
+    max-width: 1100px;
+    margin: 0 auto;
     font-family: 'Poppins', sans-serif;
-    background-color: #f5f7fb;
-    color: var(--dark);
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-texto-escuro);
     line-height: 1.6;
 }
-
 .container {
     width: 100%;
     max-width: 1200px;
@@ -66,6 +67,7 @@ body {
 .nav {
     display: flex;
     gap: 25px;
+    
 }
 
 .nav-link {
@@ -82,6 +84,7 @@ body {
 
 .nav-link:hover, .nav-link.active {
     color: var(--primary);
+     border-radius: 55px;
     background-color: rgba(67, 97, 238, 0.1);
 }
 
@@ -122,7 +125,7 @@ body {
 
 /* Banner de Boas-Vindas */
 .welcome-banner {
-    background: linear-gradient(180deg, #12429c, #d3f1f5);
+    background: linear-gradient(110deg, #12429c, #383737);
     color: white;
     border-radius: var(--border-radius);
     padding: 30px;
@@ -133,12 +136,12 @@ body {
     box-shadow: var(--box-shadow);
 }
 .welcome-content h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 10px;
 }
 
 .welcome-content p {
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     opacity: 0.9;
 }
 
@@ -204,6 +207,7 @@ body {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
+     align-items: center;
     margin-bottom: 30px;
 }
 
@@ -212,16 +216,17 @@ body {
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     padding: 20px;
+
 }
 
 .dashboard-card.wide {
     grid-column: 1 / 2;
+    
 }
 
 .card-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     margin-bottom: 20px;
     padding-bottom: 15px;
     border-bottom: 1px solid var(--gray-light);
@@ -236,7 +241,74 @@ body {
 
 .card-header h3 i {
     color: var(--primary);
+    
 }
+/* --- ESTILOS PARA O MINI CALENDÁRIO SIMPLIFICADO --- */
+
+/* Garante que o mini calendário tenha a mesma largura do card de Atalhos */
+.mini-calendar-card {
+    flex: 1 1 300px; /* Alinha ao lado dos outros cards */
+    min-width: 250px;
+    padding-bottom: 10px; 
+     background-color: #d8eaff;
+}
+
+/* Container do calendário */
+.simple-calendar {
+    padding: 10px;
+}
+
+/* Cabeçalho (Dias da Semana) */
+.cal-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 colunas iguais */
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 0.85em;
+}
+
+/* Grid dos dias do mês */
+.cal-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 3px;
+    text-align: center;
+}
+
+/* Estilo de cada célula do dia */
+.cal-days .day {
+    padding: 6px 0;
+    font-size: 0.9em;
+    border-radius: 4px;
+    cursor: pointer; /* Opcional: indica que pode ser clicável */
+    transition: background-color 0.15s;
+}
+.cal-days .day:hover:not(.today) {
+    background-color: #2f8b87;
+}
+
+/* Células vazias */
+.cal-days .empty {
+    visibility: hidden;
+}
+
+/* Marcação do dia de hoje */
+.cal-days .day.today {
+    background-color: #3f51b5; /* Cor principal (azul) */
+    color: white;
+    font-weight: 600;
+}
+
+/* Marcação de dia com agendamento (Exemplo) */
+.cal-days .day.has-appointment {
+    color: #3f51b5;
+    font-weight: 600;
+    border: 1px solid #3f51b5;
+    background-color: #f0f3ff; /* Fundo leve para destaque */
+}
+
 
 /* Botões */
 .btn-primary {
@@ -473,7 +545,7 @@ body {
 }
 
 .patient-card {
-    background: white;
+    background: #b0b7c5;;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     padding: 20px;
