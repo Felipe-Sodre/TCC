@@ -540,7 +540,7 @@ body {
 /* Pacientes Recentes */
 .patients-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 2fr));
     gap: 20px;
 }
 
@@ -562,13 +562,13 @@ body {
 }
 
 .patient-avatar {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 .patient-avatar img {
     width: 60px;
-    height: 60px;
-    border-radius: 50%;
+    height: 90px;
+    border-radius: 10%;
     object-fit: cover;
 }
 
