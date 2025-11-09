@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Responsável - Apoio Conecta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../CSS/ResponsavelPage.css">
+    <link rel="stylesheet" href="../CSS/index.css"> 
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <span>Apoio Conecta</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#">Minha Área</a></li>
+                <li><a href="#">Configurações</a></li>
+                <li><a href="Login.html" id="logoutBtn">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner-area">
+        <img src="http://googleusercontent.com/image_generation_content/0" 
+             alt="Banner abstrato de apoio familiar com cores do Neuro Apoio Conecta."
+             class="banner-img">
+    </section>
+
+    <main class="responsavel-main-content">
+        <h2>Área do Responsável, [Nome do Responsável]!</h2>
+        <p class="responsavel-descricao">Gerencie o apoio e acompanhamento de seu familiar ou paciente.</p>
+
+        <div class="paciente-data-panel">
+            <h3>Dados do Paciente</h3>
+            <div class="data-grid">
+                <div class="data-item">
+                    <span class="data-label">Nome:</span>
+                    <span class="data-value" id="pacienteNome">João Silva</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Transtorno Principal:</span>
+                    <span class="data-value" id="pacienteTranstorno">TEA (Grau 2)</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Próximo Atendimento:</span>
+                    <span class="data-value" id="proximoAtendimento">15/03/2026 - 14:00h (Psicólogo)</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Status do Plano:</span>
+                    <span class="data-value status-ativo" id="statusPlano">Ativo</span>
+                </div>
+            </div>
+            <a href="#" class="data-link">Acessar Prontuário Completo</a>
+        </div>
+        <section class="responsavel-actions">
+            <a href="#" id="statusBtn" class="action-button cta-button-blue">Ver Status do Paciente</a>
+            <a href="#" id="agendarParaPacienteBtn" class="action-button cta-button-green">Agendar Consultas</a>
+            <a href="#" id="materiaisBtn" class="action-button primary-button">Materiais para Cuidadores</a>
+            <a href="#" id="suporteBtn" class="action-button cta-button-blue">Suporte e Emergência</a>
+        </section>
+        
+        <div id="feedback" class="feedback-message"></div>
+    </main>
+
+    <script src="../JavaScript/ResponsavelPage.js" defer></script>
+</body>
+</html>
