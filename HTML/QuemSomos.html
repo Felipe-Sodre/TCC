@@ -14,7 +14,7 @@
       --branco: #fff;
       --borda-clara: #ddd;
       --menu-fundo: #d3f1f5;
-      --card-fundo: #e0f7fa; /* tom alegre para os cards */
+      --card-fundo: #e0f7fa;
     }
 
     * {
@@ -29,7 +29,7 @@
       color: var(--texto-escuro);
       line-height: 1.6;
       margin: 0 auto;
-      background-color: #f0f8ff; /* fundo mais leve */
+      background-color: #f0f8ff;
     }
 
     h1, h2, h3 {
@@ -93,40 +93,7 @@
       color: var(--branco);
     }
 
-    /* Banner com imagem alegre */
-    .banner {
-      position: relative;
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .banner img {
-      width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-      border-radius: 12px;
-    }
-
-    .banner-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-      max-width: 700px;
-    }
-
-    .banner-text h2 {
-      font-size: 2.4rem;
-      margin-bottom: 10px;
-    }
-
-    .banner-text p {
-      font-size: 1.2rem;
-      line-height: 1.4;
-    }
-
+    /* MISSÃO, VISÃO, VALORES - CORRIGIDO */
     .missao-visao-valores {
       display: flex;
       flex-wrap: wrap;
@@ -135,13 +102,14 @@
       padding: 60px 10%;
     }
 
-    .card {
+    .missao-visao-valores .card {
+      flex: 1 1 300px;
+      max-width: 320px;
+      min-width: 280px;
       background-color: var(--card-fundo);
       border-radius: 12px;
       padding: 25px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      flex: 1 1 300px;
-      max-width: 340px;
       text-align: center;
       border: 2px solid var(--borda-clara);
       transition: transform 0.3s, box-shadow 0.3s;
@@ -165,14 +133,6 @@
     .card ul {
       text-align: left;
       margin-left: 25px;
-    }
-
-    .equipe {
-      background-color: var(--fundo-claro);
-      text-align: center;
-      padding: 60px 10%;
-      border: 2px solid var(--borda-clara);
-      border-radius: 12px;
     }
 
     .equipe-banner {
@@ -237,10 +197,13 @@
     }
 
     @media (max-width: 768px) {
-      .missao-visao-valores,
-      .card-grid {
+      .missao-visao-valores {
         flex-direction: column;
         align-items: center;
+      }
+      
+      .missao-visao-valores .card {
+        max-width: 100%;
       }
 
       nav ul {
@@ -257,7 +220,6 @@
         font-size: 1rem;
       }
     }
-
   </style>
 </head>
 <body>
