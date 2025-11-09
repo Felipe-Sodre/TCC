@@ -1,0 +1,184 @@
+/*
+ * Arquivo CSS Externo para a Página do Responsável (ResponsavelPage.css).
+ * Baseado no PacientePage.css, com layout de botões em coluna e painel de dados.
+*/
+
+/* --- Variáveis (Reaproveitadas do projeto base) --- */
+:root {
+    --cor-azul-principal: #12429c; 
+    --cor-cta-azul: #5ca0c7; 
+    --cor-cta-verde: #00b0a1; 
+    --cor-texto-escuro: #333;
+    --cor-texto-claro: #555;
+    --cor-fundo-claro: #f8f9fa; 
+    --cor-branco: #fff;
+    --cor-borda-clara: #ddd;
+}
+
+/* --- Estilos do Banner --- */
+.banner-area {
+    width: 100%;
+    margin: 0; 
+    padding: 0;
+    overflow: hidden; 
+}
+
+.banner-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 250px; 
+    object-fit: cover; 
+}
+
+/* --- Estilos do Conteúdo Principal --- */
+.responsavel-main-content {
+    max-width: 1100px; 
+    /* CORREÇÃO: Reduz a margem superior para aproximar o título do banner */
+    margin: 20px auto; 
+    padding: 20px;
+    text-align: center;
+}
+
+.responsavel-main-content h2 {
+    color: var(--cor-azul-principal);
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+}
+
+.responsavel-descricao {
+    font-size: 1.1rem;
+    color: var(--cor-texto-claro);
+    margin-bottom: 30px; /* Reduzida para ficar mais perto do Painel */
+}
+
+
+/* --- Estilo do Painel de Dados do Paciente --- */
+
+.paciente-data-panel {
+    background-color: var(--cor-branco);
+    border: 1px solid var(--cor-borda-clara);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 30px auto; 
+    max-width: 800px; 
+    text-align: left; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
+}
+
+.paciente-data-panel h3 {
+    color: var(--cor-azul-principal);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--cor-fundo-claro);
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px 30px; 
+    margin-bottom: 20px;
+}
+
+.data-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.data-label {
+    font-weight: 600;
+    color: var(--cor-texto-escuro);
+    font-size: 0.9rem;
+    opacity: 0.7;
+    text-transform: uppercase;
+}
+
+.data-value {
+    font-size: 1.1rem;
+    color: var(--cor-texto-escuro);
+    padding-top: 3px;
+    word-break: break-word;
+}
+
+.status-ativo {
+    font-weight: 700;
+    color: var(--cor-cta-verde) !important;
+}
+
+.data-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: var(--cor-azul-principal);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+
+/* --- Estilo para os Botões (Centralizados em Coluna e Modernizados) --- */
+
+/* --- Estilo para os Botões (Lado a Lado - Retornando ao Flex Horizontal) --- */
+
+.responsavel-actions {
+    display: flex; 
+    flex-direction: row; /* Volta o layout para horizontal */
+    justify-content: space-between; /* Distribui os botões no espaço disponível */
+    align-items: stretch; /* Garante que todos tenham a mesma altura */
+    gap: 15px; 
+    margin-top: 50px; 
+    width: 100%; 
+    max-width: 1100px; /* Garante que o container de botões tenha largura suficiente */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.action-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px; 
+    font-size: 1.2rem;
+    font-weight: 600; 
+    text-decoration: none;
+    border-radius: 12px;
+    
+    /* Estilo de Cartão/Botão Moderno */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 2px solid transparent; 
+    transition: transform 0.2s, box-shadow 0.2s;
+
+    /* Configuração para Layout Lado a Lado */
+    flex-grow: 1; /* Permite que os botões ocupem o espaço igualmente */
+    flex-basis: 0; /* Define a base para que o flex-grow funcione */
+    min-width: 200px; /* Mínimo para não quebrar o texto */
+}
+
+/* Estilo de Hover Aprimorado (Mantido) */
+.action-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15); 
+}
+
+/* --- Responsividade (Fundamental para o layout lado a lado) --- */
+@media (max-width: 960px) {
+    .responsavel-actions {
+        flex-wrap: wrap; /* Permite que os botões quebrem para a linha de baixo */
+        justify-content: center;
+    }
+    .action-button {
+        flex-basis: 45%; /* Ocupa 45% em telas menores (2 por linha) */
+        margin-bottom: 15px;
+    }
+    @media (max-width: 600px) {
+        /* Garante que o painel de dados fique em uma coluna */
+        .data-grid {
+            grid-template-columns: 1fr; 
+        }
+        /* Botões em tela muito pequena */
+        .action-button {
+            flex-basis: 90%; /* Ocupa 90% em telas muito pequenas (1 por linha) */
+        }
+    }
+}
