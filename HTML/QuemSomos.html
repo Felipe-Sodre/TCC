@@ -1,5 +1,4 @@
 <!--Lucas-->
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -16,6 +15,7 @@
       --branco: #fff;
       --borda-clara: #ddd;
       --menu-fundo: #d3f1f5;
+      --card-fundo: #e0f7fa; /* tom alegre para os cards */
     }
 
     * {
@@ -30,11 +30,17 @@
       color: var(--texto-escuro);
       line-height: 1.6;
       margin: 0 auto;
+      background-color: #f0f8ff; /* fundo mais leve */
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
     }
 
     h1 {
       font-size: 2rem;
       font-weight: 600;
+      color: var(--azul-principal);
     }
 
     h2 {
@@ -42,6 +48,10 @@
       text-align: center;
       margin: 60px 0 40px;
       color: var(--azul-principal);
+    }
+
+    h3 {
+      margin-bottom: 10px;
     }
 
     header {
@@ -70,11 +80,11 @@
 
     .menu-btn {
       text-decoration: none;
-      padding: 8px 12px;
+      padding: 8px 15px;
       border-radius: 55px;
       background-color: var(--menu-fundo);
       color: var(--texto-escuro);
-      font-weight: 400;
+      font-weight: 500;
       transition: all 0.3s;
     }
 
@@ -84,22 +94,38 @@
       color: var(--branco);
     }
 
+    /* Banner com imagem alegre */
     .banner {
-      background-color: var(--fundo-claro);
+      position: relative;
       text-align: center;
-      padding: 50px 10%;
+      margin-top: 20px;
     }
 
-    .banner h2 {
-      font-size: 2.2rem;
+    .banner img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      max-width: 700px;
+    }
+
+    .banner-text h2 {
+      font-size: 2.4rem;
       margin-bottom: 10px;
     }
 
-    .banner p {
-      max-width: 700px;
-      margin: auto;
-      color: var(--texto-claro);
-      font-size: 1.1rem;
+    .banner-text p {
+      font-size: 1.2rem;
+      line-height: 1.4;
     }
 
     .missao-visao-valores {
@@ -111,24 +137,29 @@
     }
 
     .card {
-      background-color: var(--fundo-claro);
+      background-color: var(--card-fundo);
       border-radius: 12px;
       padding: 25px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       flex: 1 1 300px;
       max-width: 340px;
       text-align: center;
       border: 2px solid var(--borda-clara);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
 
     .card h3 {
       color: var(--azul-principal);
-      margin-bottom: 10px;
     }
 
     .card p,
     .card ul {
-      color: var(--texto-claro);
+      color: var(--texto-escuro);
       font-size: 0.95rem;
     }
 
@@ -168,6 +199,7 @@
       font-size: 0.9rem;
       color: var(--texto-claro);
       border-top: 1px solid var(--borda-clara);
+      margin-top: 50px;
     }
 
     @media (max-width: 768px) {
@@ -183,6 +215,7 @@
         gap: 10px;
       }
     }
+
   </style>
 </head>
 <body>
@@ -200,11 +233,13 @@
     </nav>
   </header>
 
+  <!-- Banner com imagem alegre -->
   <section class="banner">
-    <h2>Conectando pessoas e promovendo a inclusão</h2>
-    <p>
-      A <strong>Apoio Conecta</strong> é uma ONG que acredita no poder da escuta, da empatia e da conexão entre pessoas. Nossa missão é apoiar indivíduos com transtornos do neurodesenvolvimento e suas famílias, criando oportunidades e ambientes inclusivos.
-    </p>
+    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80" alt="Pessoas se conectando">
+    <div class="banner-text">
+      <h2>Conectando pessoas e promovendo a inclusão</h2>
+      <p>A <strong>Apoio Conecta</strong> acredita no poder da escuta, da empatia e da conexão entre pessoas, apoiando indivíduos com transtornos do neurodesenvolvimento e suas famílias.</p>
+    </div>
   </section>
 
   <section class="missao-visao-valores">
@@ -214,7 +249,7 @@
     </div>
     <div class="card">
       <h3>Visão</h3>
-      <p>Construir uma sociedade onde as diferenças sejam reconhecidas como força e onde todos possam prosperar em ambientes adaptativos.</p>
+      <p>Construir uma sociedade onde as diferenças sejam reconhecidas como força e todos possam prosperar.</p>
     </div>
     <div class="card">
       <h3>Valores</h3>
@@ -229,9 +264,7 @@
 
   <section class="equipe">
     <h2>Nossa Equipe</h2>
-    <p>
-      Somos um grupo de profissionais e voluntários comprometidos com a causa da inclusão: psicólogos, terapeutas ocupacionais, educadores e pessoas que acreditam no poder de transformar o mundo através do acolhimento e do apoio mútuo.
-    </p>
+    <p>Profissionais e voluntários comprometidos com a inclusão: psicólogos, terapeutas ocupacionais, educadores e pessoas que acreditam no poder do acolhimento e do apoio mútuo.</p>
   </section>
 
   <section class="metas">
@@ -251,5 +284,9 @@
       </div>
     </div>
   </section>
+
+  <footer>
+    &copy; 2025 Apoio Conecta - Todos os direitos reservados
+  </footer>
 </body>
 </html>
