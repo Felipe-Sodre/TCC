@@ -1,52 +1,49 @@
-<!-- FELIPE SODRÉ -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lista de Pacientes</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../CSS/ListaPacientes.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pacientes</title>
+    <link rel="stylesheet" href="../CSS/AdminPage.css">
 </head>
-
 <body>
-  <header>
-    <h1>Lista de Pacientes</h1>
-    <a href="AdminPage.html" class="voltar">Voltar ao Painel</a>
-  </header>
+    <div class="container">
+        <header>
+            <h1>Lista de Pacientes</h1>
+            <a href="AdminPage.html" class="logout">Voltar</a>
+        </header>
 
-  <main>
-    <h2>Pacientes Cadastrados</h2>
-    <table>
-      <tr>
-        <th>Nome</th>
-        <th>Idade</th>
-        <th>Telefone</th>
-        <th>Status</th>
-      </tr>
-      <tr>
-        <td>Maria Souza</td>
-        <td>32</td>
-        <td>(15) 99845-6654</td>
-        <td>Ativo</td>
-      </tr>
-      <tr>
-        <td>João Pereira</td>
-        <td>27</td>
-        <td>(15) 99123-9087</td>
-        <td>Ativo</td>
-      </tr>
-      <tr>
-        <td>Carla Lima</td>
-        <td>41</td>
-        <td>(15) 99785-1200</td>
-        <td>Inativo</td>
-      </tr>
-    </table>
-  </main>
+        <main>
+            <h2>Pacientes Cadastrados</h2>
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ana Souza</td>
+                        <td>ana.souza@email.com</td>
+                        <td>(11) 99999-1234</td>
+                        <td><a href="#" class="botao-visualizar">Excluir</a></td>
+                    </tr>
+                    <tr>
+                        <td>João Pereira</td>
+                        <td>joao.pereira@email.com</td>
+                        <td>(11) 98888-5678</td>
+                        <td><a href="#" class="botao-visualizar">Excluir</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
 
-  <footer>
-    <p>© 2025 Sistema Apoio Conecta - Administração</p>
-  </footer>
+        <footer>
+            <p>© 2025 Sistema Apoio Conecta - Administração</p>
+        </footer>
+    </div>
 </body>
 </html>
