@@ -1,77 +1,49 @@
-  body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background-color: #f4f6f9;
-      color: #333;
-    }
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Profissionais</title>
+    <link rel="stylesheet" href="../CSS/AdminPage.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Lista de Profissionais</h1>
+            <a href="AdminPage.html" class="logout">Voltar</a>
+        </header>
 
-    header {
-      background-color: #4b6cb7;
-      background-image: linear-gradient(315deg, #4b6cb7 0%, #182848 74%);
-      color: white;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+        <main>
+            <h2>Profissionais Cadastrados</h2>
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Especialidade</th>
+                        <th>Email</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dra. Carla Lima</td>
+                        <td>Psicóloga</td>
+                        <td>carla.lima@email.com</td>
+                        <td><a href="#" class="botao-visualizar">Excluir</a></td>
+                    </tr>
+                    <tr>
+                        <td>Dr. Marcos Silva</td>
+                        <td>Terapeuta Ocupacional</td>
+                        <td>marcos.silva@email.com</td>
+                        <td><a href="#" class="botao-visualizar">Excluir</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
 
-    header h1 {
-      font-size: 22px;
-      margin: 0;
-    }
-
-    a.voltar {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      background: rgba(255,255,255,0.2);
-      padding: 8px 15px;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
-
-    a.voltar:hover {
-      background: rgba(255,255,255,0.4);
-    }
-
-    main {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    h2 {
-      color: #182848;
-      margin-bottom: 20px;
-    }
-
-    table {
-      width: 90%;
-      max-width: 900px;
-      margin: 0 auto;
-      border-collapse: collapse;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    th, td {
-      padding: 15px;
-      border-bottom: 1px solid #ddd;
-    }
-
-    th {
-      background: #4b6cb7;
-      color: white;
-    }
-
-    tr:hover {
-      background: #f1f3f8;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #182848;
-      color: white;
-      margin-top: 40px;
-    }
+        <footer>
+            <p>© 2025 Sistema Apoio Conecta - Administração</p>
+        </footer>
+    </div>
+</body>
+</html>
