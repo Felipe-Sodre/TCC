@@ -1,52 +1,49 @@
-<!-- FELIPE SODRÉ -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lista de Profissionais</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../CSS/ListaProfissionais.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Profissionais</title>
+    <link rel="stylesheet" href="../CSS/AdminPage.css">
 </head>
-
 <body>
-  <header>
-    <h1>Lista de Profissionais</h1>
-    <a href="AdminPage.html" class="voltar">Voltar ao Painel</a>
-  </header>
+    <div class="container">
+        <header>
+            <h1>Lista de Profissionais</h1>
+            <a href="AdminPage.html" class="logout">Voltar</a>
+        </header>
 
-  <main>
-    <h2>Profissionais Cadastrados</h2>
-    <table>
-      <tr>
-        <th>Nome</th>
-        <th>Especialidade</th>
-        <th>Telefone</th>
-        <th>Status</th>
-      </tr>
-      <tr>
-        <td>Dra. Ana Silva</td>
-        <td>Psicologia</td>
-        <td>(15) 99612-2201</td>
-        <td>Ativo</td>
-      </tr>
-      <tr>
-        <td>Dr. Paulo Lima</td>
-        <td>Fisioterapia</td>
-        <td>(15) 99548-8787</td>
-        <td>Ativo</td>
-      </tr>
-      <tr>
-        <td>Dra. Camila Torres</td>
-        <td>Nutrição</td>
-        <td>(15) 99124-3320</td>
-        <td>Inativo</td>
-      </tr>
-    </table>
-  </main>
+        <main>
+            <h2>Profissionais Cadastrados</h2>
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Especialidade</th>
+                        <th>Email</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dra. Carla Lima</td>
+                        <td>Psicóloga</td>
+                        <td>carla.lima@email.com</td>
+                        <td><a href="#" class="botao-visualizar">Excluir</a></td>
+                    </tr>
+                    <tr>
+                        <td>Dr. Marcos Silva</td>
+                        <td>Terapeuta Ocupacional</td>
+                        <td>marcos.silva@email.com</td>
+                        <td><a href="#" class="botao-visualizar">Excluir</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
 
-  <footer>
-    <p>© 2025 Sistema Apoio Conecta - Administração</p>
-  </footer>
+        <footer>
+            <p>© 2025 Sistema Apoio Conecta - Administração</p>
+        </footer>
+    </div>
 </body>
 </html>
