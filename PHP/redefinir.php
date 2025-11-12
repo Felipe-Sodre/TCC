@@ -26,7 +26,7 @@ if (!$user) {
   <script src="JavaScript/redefinir.js" defer></script>
 </head>
 <body>
-  <main class="recuperar-container">
+  <main class="">
     <h2>Redefinir Senha</h2>
 
     <form id="formRedefinir">
