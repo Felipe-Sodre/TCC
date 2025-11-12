@@ -134,7 +134,12 @@ h2 {
     justify-content: space-between;
     align-items: center;
     padding: 20px 10px;         /* menos espaço interno */
-    background-color: #e3f1f5;
+    background: radial-gradient(
+      circle at bottom right,
+      rgba(255, 255, 255, 0.25),
+      transparent 70%
+    ),
+    linear-gradient(180deg, #08497a 0%, #4bb6e6 100%);
     box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* leve sombra para destacar */
     gap: 5px;                  /* espaço entre elementos */
 }
@@ -179,7 +184,12 @@ h2 {
 
 /* ===== Depoimentos ===== */
 .sec-depoimentos {
-  background-color: #e3f1f5;     /* cor de fundo suave */
+  background: radial-gradient(
+      circle at bottom right,
+      rgba(255, 255, 255, 0.25),
+      transparent 70%
+    ),
+    linear-gradient(360deg, #08497a 0%, #4bb6e6 100%);
   padding: 5px;                 /* espaço interno */
   max-width: 1200px;              /* limita a largura da seção */
   margin: 20px auto;             /* centraliza e cria espaço ao redor */
@@ -493,5 +503,6 @@ h2 {
         border-radius: 10px;            /* Cantos suavizados */
     }
 }
+
 
 
