@@ -7,7 +7,7 @@
   <script src="JavaScript/recuperar.js" defer></script>
 </head>
 <body>
-  <main class="recuperar-container">
+  <main class="">
     <h2>Recuperar Senha</h2>
 
     <form id="formRecuperar">
