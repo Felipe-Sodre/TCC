@@ -22,7 +22,7 @@ if (!$user) {
 <head>
   <meta charset="UTF-8">
   <title>Redefinir Senha</title>
-  <link rel="stylesheet" href="CSS/recuperar.css">
+  <link rel="stylesheet" href="CSS/.css">
   <script src="JavaScript/redefinir.js" defer></script>
 </head>
 <body>
