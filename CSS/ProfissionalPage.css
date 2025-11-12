@@ -663,6 +663,303 @@ body {
     font-size: 0.9rem;
 }
 
+/* ===== ESTILOS PARA PÁGINA DE RELATÓRIOS ===== */
+
+/* Filtros */
+.filters-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-group label {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--dark);
+}
+
+.filter-select {
+    padding: 10px 12px;
+    border: 1px solid var(--gray-light);
+    border-radius: var(--border-radius);
+    background: white;
+    font-family: 'Poppins', sans-serif;
+    transition: var(--transition);
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.1);
+}
+
+/* Containers de Gráficos */
+.chart-container {
+    position: relative;
+    height: 300px;
+    padding: 15px;
+    background: white;
+    border-radius: var(--border-radius);
+    margin-top: 10px;
+}
+
+/* Grid de Métricas */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.metric-item {
+    background: var(--gray-light);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.metric-item:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.metric-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-bottom: 8px;
+}
+
+.metric-trend {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.metric-trend.positive {
+    background: rgba(76, 201, 240, 0.1);
+    color: var(--success);
+}
+
+.metric-trend.neutral {
+    background: rgba(108, 117, 125, 0.1);
+    color: var(--gray);
+}
+
+.metric-trend.negative {
+    background: rgba(247, 37, 133, 0.1);
+    color: var(--warning);
+}
+
+/* Lista de Ranking */
+.ranking-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.ranking-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: var(--gray-light);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.ranking-item:hover {
+    background: rgba(67, 97, 238, 0.05);
+    transform: translateX(5px);
+}
+
+.rank-number {
+    width: 32px;
+    height: 32px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.patient-avatar-small {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.ranking-info {
+    flex: 1;
+}
+
+.ranking-info h4 {
+    margin-bottom: 2px;
+    font-size: 0.95rem;
+    color: var(--dark);
+}
+
+.ranking-info p {
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+
+.ranking-badge {
+    flex-shrink: 0;
+}
+
+/* Ícones de Relatórios */
+.report-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(67, 97, 238, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+    transition: var(--transition);
+}
+
+.patient-card:hover .report-icon {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Botões de Ação Específicos */
+.btn-download {
+    background: var(--success);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-download:hover {
+    background: #00a090;
+    transform: translateY(-2px);
+}
+
+/* Estados dos Relatórios */
+.report-status {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.report-status.available {
+    background: rgba(76, 201, 240, 0.1);
+    color: var(--success);
+}
+
+.report-status.pending {
+    background: rgba(247, 37, 133, 0.1);
+    color: var(--warning);
+}
+
+.report-status.updated {
+    background: rgba(67, 97, 238, 0.1);
+    color: var(--primary);
+}
+
+/* ===== RESPONSIVIDADE PARA RELATÓRIOS ===== */
+
+@media (max-width: 992px) {
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filters-container {
+        flex-direction: column;
+    }
+    
+    .filter-group {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .chart-container {
+        height: 250px;
+        padding: 10px;
+    }
+    
+    .ranking-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .ranking-info {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .metric-item {
+        padding: 15px;
+    }
+    
+    .metric-value {
+        font-size: 1.5rem;
+    }
+    
+    .report-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .chart-container {
+        height: 200px;
+    }
+}
+
 /* Responsividade */
 @media (max-width: 992px) {
     .dashboard-cards {
