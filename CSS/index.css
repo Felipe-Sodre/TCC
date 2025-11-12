@@ -133,6 +133,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 16px; 
     padding: 20px 10px;         /* menos espaço interno */
     background: radial-gradient(
       circle at bottom right,
@@ -195,7 +196,7 @@ h2 {
   max-width: 1200px;              /* limita a largura da seção */
   margin: 20px auto;             /* centraliza e cria espaço ao redor */
   text-align: center;
-     border-radius: 12px; 
+ border-radius: 16px; 
   border: 2px solid #6aa6a0;     /* borda ao redor */
   box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* leve sombra para destacar */
 }
@@ -505,6 +506,7 @@ h2 {
         border-radius: 10px;            /* Cantos suavizados */
     }
 }
+
 
 
 
