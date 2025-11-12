@@ -1,5 +1,3 @@
---Pagina de relatório para Profissionais--
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -363,114 +361,151 @@
     </footer>
 
     <script>
-        // Inicialização dos gráficos
+        // Script seguro para a página de relatórios
         document.addEventListener('DOMContentLoaded', function() {
+            console.log('Página de relatórios carregada');
+            
+            // Verifica se Chart.js carregou
+            if (typeof Chart === 'undefined') {
+                console.error('Chart.js não carregou!');
+                showFallbackMessages();
+                return;
+            }
+            
+            console.log('Chart.js disponível, criando gráficos...');
+            createCharts();
+            setupButtons();
+        });
+
+        function createCharts() {
             // Gráfico de Consultas por Mês
-            const consultationsCtx = document.getElementById('consultationsChart').getContext('2d');
-            new Chart(consultationsCtx, {
-                type: 'bar',
-                data: {
-                    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
-                    datasets: [{
-                        label: 'Consultas Realizadas',
-                        data: [18, 22, 25, 20, 23, 28, 26, 30, 28, 24, 20, 15],
-                        backgroundColor: 'rgba(67, 97, 238, 0.7)',
-                        borderColor: 'rgba(67, 97, 238, 1)',
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            ticks: {
-                                stepSize: 5
-                            }
-                        }
-                    }
-                }
-            });
-
-            // Gráfico de Tipo de Consulta
-            const typeCtx = document.getElementById('consultationTypeChart').getContext('2d');
-            new Chart(typeCtx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Online', 'Presencial', 'Híbrida'],
-                    datasets: [{
-                        data: [65, 30, 5],
-                        backgroundColor: [
-                            'rgba(67, 97, 238, 0.7)',
-                            'rgba(114, 9, 183, 0.7)',
-                            'rgba(76, 201, 240, 0.7)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            position: 'bottom'
-                        }
-                    }
-                }
-            });
-
-            // Gráfico de Progresso
-            const progressCtx = document.getElementById('progressChart').getContext('2d');
-            new Chart(progressCtx, {
-                type: 'line',
-                data: {
-                    labels: ['Sem 1', 'Sem 2', 'Sem 3', 'Sem 4', 'Sem 5', 'Sem 6'],
-                    datasets: [
-                        {
-                            label: 'Melissa A.',
-                            data: [45, 52, 68, 74, 82, 85],
-                            borderColor: 'rgba(67, 97, 238, 1)',
-                            backgroundColor: 'rgba(67, 97, 238, 0.1)',
-                            tension: 0.3,
-                            fill: true
+            const consultationsCanvas = document.getElementById('consultationsChart');
+            if (consultationsCanvas) {
+                try {
+                    new Chart(consultationsCanvas, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                            datasets: [{
+                                label: 'Consultas Realizadas',
+                                data: [18, 22, 25, 20, 23, 28, 26, 30, 28, 24, 20, 15],
+                                backgroundColor: 'rgba(67, 97, 238, 0.7)',
+                                borderColor: 'rgba(67, 97, 238, 1)',
+                                borderWidth: 1
+                            }]
                         },
-                        {
-                            label: 'Giovani',
-                            data: [30, 42, 55, 60, 68, 72],
-                            borderColor: 'rgba(114, 9, 183, 1)',
-                            backgroundColor: 'rgba(114, 9, 183, 0.1)',
-                            tension: 0.3,
-                            fill: true
-                        },
-                        {
-                            label: 'Carlos',
-                            data: [25, 35, 48, 52, 58, 65],
-                            borderColor: 'rgba(76, 201, 240, 1)',
-                            backgroundColor: 'rgba(76, 201, 240, 0.1)',
-                            tension: 0.3,
-                            fill: true
-                        }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        y: {
-                            min: 0,
-                            max: 100,
-                            ticks: {
-                                callback: function(value) {
-                                    return value + '%';
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            scales: {
+                                y: {
+                                    beginAtZero: true,
+                                    ticks: {
+                                        stepSize: 5
+                                    }
                                 }
                             }
                         }
-                    }
+                    });
+                    console.log('Gráfico de consultas criado');
+                } catch (error) {
+                    console.error('Erro ao criar gráfico de consultas:', error);
                 }
-            });
+            }
 
-            // Interatividade dos botões
+            // Gráfico de Tipo de Consulta
+            const typeCanvas = document.getElementById('consultationTypeChart');
+            if (typeCanvas) {
+                try {
+                    new Chart(typeCanvas, {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['Online', 'Presencial', 'Híbrida'],
+                            datasets: [{
+                                data: [65, 30, 5],
+                                backgroundColor: [
+                                    'rgba(67, 97, 238, 0.7)',
+                                    'rgba(114, 9, 183, 0.7)',
+                                    'rgba(76, 201, 240, 0.7)'
+                                ],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    position: 'bottom'
+                                }
+                            }
+                        }
+                    });
+                    console.log('Gráfico de tipos criado');
+                } catch (error) {
+                    console.error('Erro ao criar gráfico de tipos:', error);
+                }
+            }
+
+            // Gráfico de Progresso
+            const progressCanvas = document.getElementById('progressChart');
+            if (progressCanvas) {
+                try {
+                    new Chart(progressCanvas, {
+                        type: 'line',
+                        data: {
+                            labels: ['Sem 1', 'Sem 2', 'Sem 3', 'Sem 4', 'Sem 5', 'Sem 6'],
+                            datasets: [
+                                {
+                                    label: 'Melissa A.',
+                                    data: [45, 52, 68, 74, 82, 85],
+                                    borderColor: 'rgba(67, 97, 238, 1)',
+                                    backgroundColor: 'rgba(67, 97, 238, 0.1)',
+                                    tension: 0.3,
+                                    fill: true
+                                },
+                                {
+                                    label: 'Giovani',
+                                    data: [30, 42, 55, 60, 68, 72],
+                                    borderColor: 'rgba(114, 9, 183, 1)',
+                                    backgroundColor: 'rgba(114, 9, 183, 0.1)',
+                                    tension: 0.3,
+                                    fill: true
+                                },
+                                {
+                                    label: 'Carlos',
+                                    data: [25, 35, 48, 52, 58, 65],
+                                    borderColor: 'rgba(76, 201, 240, 1)',
+                                    backgroundColor: 'rgba(76, 201, 240, 0.1)',
+                                    tension: 0.3,
+                                    fill: true
+                                }
+                            ]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            scales: {
+                                y: {
+                                    min: 0,
+                                    max: 100,
+                                    ticks: {
+                                        callback: function(value) {
+                                            return value + '%';
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                    console.log('Gráfico de progresso criado');
+                } catch (error) {
+                    console.error('Erro ao criar gráfico de progresso:', error);
+                }
+            }
+        }
+
+        function setupButtons() {
             const actionButtons = document.querySelectorAll('.btn-outline, .btn-download');
             
             actionButtons.forEach(button => {
@@ -484,9 +519,23 @@
                     }
                 });
             });
-        });
+        }
+
+        function showFallbackMessages() {
+            const chartContainers = document.querySelectorAll('.chart-container');
+            chartContainers.forEach(container => {
+                container.innerHTML = `
+                    <div style="text-align: center; padding: 40px; color: #666;">
+                        <i class="fas fa-exclamation-triangle" style="font-size: 2rem; margin-bottom: 15px;"></i>
+                        <h4>Gráfico não disponível</h4>
+                        <p>Verifique sua conexão com a internet</p>
+                        <button onclick="window.location.reload()" class="btn-outline" style="margin-top: 10px;">
+                            <i class="fas fa-redo"></i> Tentar Novamente
+                        </button>
+                    </div>
+                `;
+            });
+        }
     </script>
-</body>
-</html>
 </body>
 </html>
