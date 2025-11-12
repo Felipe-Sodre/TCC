@@ -1,1 +1,490 @@
 --Pagina de relatório para Profissionais--
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios - Apoio Conecta</title>
+    <link rel="stylesheet" href="CSS/ProfissionalPage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <span>Apoio Conecta</span>
+            </div>
+            <nav class="nav">
+                <a href="ProfissionalPage.html" class="nav-link"><i class="fas fa-home"></i> Início</a>
+                <a href="ProfissionalAgenda.html" class="nav-link"><i class="fas fa-calendar-check"></i> Agenda</a>
+                <a href="PacientePage.html" class="nav-link"><i class="fas fa-users"></i> Pacientes</a>
+                <a href="ProfissionalRelatorios.html" class="nav-link active"><i class="fas fa-chart-line"></i> Relatórios</a>
+            </nav>
+            <div class="user-menu">
+                <div class="user-info">
+                    <div class="patient-avatar">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <span class="user-name">Dr. Adilson Brandão</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="main">
+        <div class="container">
+            <!-- Banner de Boas-Vindas -->
+            <section class="welcome-banner">
+                <div class="welcome-content">
+                    <h1>Relatórios e Estatísticas</h1>
+                    <p>Análise detalhada do seu desempenho e acompanhamento de pacientes</p>
+                </div>
+                <div class="welcome-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">42</span>
+                            <span class="stat-label">Pacientes Ativos</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">87%</span>
+                            <span class="stat-label">Taxa de Comparecimento</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Filtros -->
+            <section class="dashboard">
+                <div class="dashboard-card wide">
+                    <div class="card-header">
+                        <h3><i class="fas fa-filter"></i> Filtros e Período</h3>
+                        <button class="btn-download">
+                            <i class="fas fa-file-export"></i> Exportar Relatório
+                        </button>
+                    </div>
+                    <div class="filters-container">
+                        <div class="filter-group">
+                            <label>Período:</label>
+                            <select class="filter-select">
+                                <option>Últimos 7 dias</option>
+                                <option>Últimos 30 dias</option>
+                                <option selected>Últimos 3 meses</option>
+                                <option>Últimos 6 meses</option>
+                                <option>Este ano</option>
+                                <option>Personalizado</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Tipo de Consulta:</label>
+                            <select class="filter-select">
+                                <option>Todas</option>
+                                <option>Online</option>
+                                <option>Presencial</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Status:</label>
+                            <select class="filter-select">
+                                <option>Todos</option>
+                                <option>Concluídas</option>
+                                <option>Agendadas</option>
+                                <option>Canceladas</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Paciente:</label>
+                            <select class="filter-select">
+                                <option>Todos os pacientes</option>
+                                <option>Melissa Assunção</option>
+                                <option>Carlos</option>
+                                <option>Giovani</option>
+                                <option>Felipe Sodré</option>
+                                <option>Guilherme</option>
+                                <option>Adilson</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Estatísticas Principais -->
+            <section class="dashboard">
+                <div class="section-header">
+                    <h2>Visão Geral do Período</h2>
+                    <a href="#" class="view-all">Ver detalhes completos <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="dashboard-cards">
+                    <!-- Gráfico de Consultas -->
+                    <div class="dashboard-card wide">
+                        <div class="card-header">
+                            <h3><i class="fas fa-chart-bar"></i> Consultas por Mês (2025)</h3>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="consultationsChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <!-- Métricas Rápidas -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-tachometer-alt"></i> Métricas Principais</h3>
+                        </div>
+                        <div class="metrics-grid">
+                            <div class="metric-item">
+                                <div class="metric-value">24</div>
+                                <div class="metric-label">Consultas Este Mês</div>
+                                <div class="metric-trend positive">
+                                    <i class="fas fa-arrow-up"></i> 12%
+                                </div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value">18.5h</div>
+                                <div class="metric-label">Horas de Atendimento</div>
+                                <div class="metric-trend positive">
+                                    <i class="fas fa-arrow-up"></i> 8%
+                                </div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value">94%</div>
+                                <div class="metric-label">Satisfação do Paciente</div>
+                                <div class="metric-trend neutral">
+                                    <i class="fas fa-minus"></i> 0%
+                                </div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value">3.2</div>
+                                <div class="metric-label">Sessões/Paciente</div>
+                                <div class="metric-trend positive">
+                                    <i class="fas fa-arrow-up"></i> 5%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Distribuição por Tipo -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-chart-pie"></i> Distribuição por Tipo</h3>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="consultationTypeChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pacientes em Destaque -->
+            <section class="dashboard">
+                <div class="section-header">
+                    <h2>Pacientes em Destaque</h2>
+                    <a href="#" class="view-all">Ver todos os pacientes <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="dashboard-cards">
+                    <!-- Pacientes com Mais Sessões -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-trophy"></i> Maior Frequência</h3>
+                        </div>
+                        <div class="ranking-list">
+                            <div class="ranking-item">
+                                <div class="rank-number">1</div>
+                                <div class="patient-avatar-small">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="ranking-info">
+                                    <h4>Melissa Assunção</h4>
+                                    <p>12 sessões • 94% assiduidade</p>
+                                </div>
+                                <div class="ranking-badge">
+                                    <span class="tag online">Ativa</span>
+                                </div>
+                            </div>
+                            <div class="ranking-item">
+                                <div class="rank-number">2</div>
+                                <div class="patient-avatar-small">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="ranking-info">
+                                    <h4>Giovani</h4>
+                                    <p>10 sessões • 90% assiduidade</p>
+                                </div>
+                                <div class="ranking-badge">
+                                    <span class="tag online">Ativa</span>
+                                </div>
+                            </div>
+                            <div class="ranking-item">
+                                <div class="rank-number">3</div>
+                                <div class="patient-avatar-small">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="ranking-info">
+                                    <h4>Felipe Sodré</h4>
+                                    <p>8 sessões • 88% assiduidade</p>
+                                </div>
+                                <div class="ranking-badge">
+                                    <span class="tag online">Ativa</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Evolução de Pacientes -->
+                    <div class="dashboard-card wide">
+                        <div class="card-header">
+                            <h3><i class="fas fa-chart-line"></i> Progresso dos Pacientes</h3>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="progressChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Relatórios Detalhados -->
+            <section class="recent-patients">
+                <div class="section-header">
+                    <h2>Relatórios Detalhados</h2>
+                    <a href="#" class="view-all">Gerar novo relatório <i class="fas fa-plus"></i></a>
+                </div>
+                
+                <div class="patients-grid">
+                    <div class="patient-card">
+                        <div class="report-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="patient-info">
+                            <h4>Relatório Mensal</h4>
+                            <p>Outubro 2025 - Análise completa</p>
+                            <div class="patient-status">
+                                <span class="report-status available">Disponível</span>
+                            </div>
+                        </div>
+                        <div class="patient-actions">
+                            <button class="btn-outline">
+                                <i class="fas fa-eye"></i> Visualizar
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="patient-card">
+                        <div class="report-icon">
+                            <i class="fas fa-user-clock"></i>
+                        </div>
+                        <div class="patient-info">
+                            <h4>Frequência e Assiduidade</h4>
+                            <p>Taxa de comparecimento detalhada</p>
+                            <div class="patient-status">
+                                <span class="report-status updated">Atualizado</span>
+                            </div>
+                        </div>
+                        <div class="patient-actions">
+                            <button class="btn-outline">
+                                <i class="fas fa-eye"></i> Visualizar
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="patient-card">
+                        <div class="report-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <div class="patient-info">
+                            <h4>Relatório Financeiro</h4>
+                            <p>Receitas, despesas e lucratividade</p>
+                            <div class="patient-status">
+                                <span class="report-status pending">Pendente</span>
+                            </div>
+                        </div>
+                        <div class="patient-actions">
+                            <button class="btn-outline">
+                                <i class="fas fa-eye"></i> Visualizar
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="patient-card">
+                        <div class="report-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="patient-info">
+                            <h4>Satisfação do Paciente</h4>
+                            <p>Feedback e avaliações detalhadas</p>
+                            <div class="patient-status">
+                                <span class="report-status available">Disponível</span>
+                            </div>
+                        </div>
+                        <div class="patient-actions">
+                            <button class="btn-outline">
+                                <i class="fas fa-eye"></i> Visualizar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-brain"></i>
+                    <span> Apoio Conecta</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Sobre</a>
+                    <a href="#">Contato</a>
+                    <a href="#">Privacidade</a>
+                    <a href="#">Termos</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Apoio Conecta. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Inicialização dos gráficos
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gráfico de Consultas por Mês
+            const consultationsCtx = document.getElementById('consultationsChart').getContext('2d');
+            new Chart(consultationsCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                    datasets: [{
+                        label: 'Consultas Realizadas',
+                        data: [18, 22, 25, 20, 23, 28, 26, 30, 28, 24, 20, 15],
+                        backgroundColor: 'rgba(67, 97, 238, 0.7)',
+                        borderColor: 'rgba(67, 97, 238, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 5
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Gráfico de Tipo de Consulta
+            const typeCtx = document.getElementById('consultationTypeChart').getContext('2d');
+            new Chart(typeCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Online', 'Presencial', 'Híbrida'],
+                    datasets: [{
+                        data: [65, 30, 5],
+                        backgroundColor: [
+                            'rgba(67, 97, 238, 0.7)',
+                            'rgba(114, 9, 183, 0.7)',
+                            'rgba(76, 201, 240, 0.7)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+
+            // Gráfico de Progresso
+            const progressCtx = document.getElementById('progressChart').getContext('2d');
+            new Chart(progressCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Sem 1', 'Sem 2', 'Sem 3', 'Sem 4', 'Sem 5', 'Sem 6'],
+                    datasets: [
+                        {
+                            label: 'Melissa A.',
+                            data: [45, 52, 68, 74, 82, 85],
+                            borderColor: 'rgba(67, 97, 238, 1)',
+                            backgroundColor: 'rgba(67, 97, 238, 0.1)',
+                            tension: 0.3,
+                            fill: true
+                        },
+                        {
+                            label: 'Giovani',
+                            data: [30, 42, 55, 60, 68, 72],
+                            borderColor: 'rgba(114, 9, 183, 1)',
+                            backgroundColor: 'rgba(114, 9, 183, 0.1)',
+                            tension: 0.3,
+                            fill: true
+                        },
+                        {
+                            label: 'Carlos',
+                            data: [25, 35, 48, 52, 58, 65],
+                            borderColor: 'rgba(76, 201, 240, 1)',
+                            backgroundColor: 'rgba(76, 201, 240, 0.1)',
+                            tension: 0.3,
+                            fill: true
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            min: 0,
+                            max: 100,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Interatividade dos botões
+            const actionButtons = document.querySelectorAll('.btn-outline, .btn-download');
+            
+            actionButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const buttonText = this.textContent.trim();
+                    
+                    if (buttonText.includes('Exportar')) {
+                        alert('Relatório exportado com sucesso!');
+                    } else if (buttonText.includes('Visualizar')) {
+                        alert('Abrindo relatório detalhado...');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
