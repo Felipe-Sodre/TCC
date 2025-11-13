@@ -1,23 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Recuperar Senha</title>
-  <link rel="stylesheet" href="CSS/.css">
-  <script src="JavaScript/recuperar.js" defer></script>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha - Apoio Conecta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="../JavaScript/recuperar.js" defer></script>
+    <link rel="stylesheet" href="../CSS/RecuperarSenha.css">
+    </head>
 <body>
-  <main class="">
-    <h2>Recuperar Senha</h2>
 
-    <form id="formRecuperar">
-      <label for="email">Digite seu e-mail cadastrado:</label>
-      <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+    <div class="recovery-container">
+        
+        <div class="logo">
+            <i class="fas fa-brain"></i>
+            <span>Apoio Conecta</span>
+        </div>
 
-      <button type="submit">Enviar código</button>
-    </form>
+        <div class="recovery-box">
+            <h1>Recuperação de Senha</h1>
+            <p class="description">
+                Insira o seu endereço de e-mail abaixo. Enviaremos um link para que você possa criar uma nova senha.
+            </p>
 
-    <p id="msg"></p>
-  </main>
+            <form id="formRecuperar" action="#" method="POST" class="recovery-form">
+                <div class="input-group">
+                    <label for="email"><i class="fas fa-envelope"></i> E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+                </div>
+                
+                <button type="submit" class="btn-primary">
+                    Enviar Link de Recuperação
+                </button>
+            </form>
+
+            <div class="back-link">
+                <a href="Login.html"><i class="fas fa-arrow-left"></i> Voltar para o Login</a>
+            </div>
+            
+            <p id="msg"></p>
+        </div>
+    </div>
+
 </body>
 </html>
