@@ -1,14 +1,24 @@
-/* --- Variáveis --- Guilherme */
+/*
+ * Arquivo CSS Externo para a Página de Login (Login.css).
+ * ESTILO CONSOLIDADO: Utiliza o padrão de cores, fontes e design centralizado.
+*/
+
+/* --- Variáveis (Replicadas do ResponsavelPage.css) --- */
 :root {
-    --cor-azul-principal: #12429c; 
-    --cor-cta-verde: #00b0a1; 
+    --primary: #12429c; /* Azul Principal */
+    --primary-dark: #5ca0c7; /* Azul CTA */
+    --success: #00b0a1; /* Verde (Para Botões como o 'Agendar' ou 'Entrar') */
+    --light: #f8f9fa; /* Fundo Claro */
+    --dark: #212529; 
+    --gray: #6c757d; 
+    --gray-light: #f1f1f1; 
+    
     --cor-texto-escuro: #333;
-    --cor-branco: #fff;
-    --cor-borda-clara: #ddd;
-    --cor-fundo-claro: #f8f9fa;
+    --border-radius: 10px; 
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para a caixa */
+    --transition: all 0.3s ease; 
 }
 
-/* --- Estilos Base --- */ 
 * {
     margin: 0;
     padding: 0;
@@ -17,82 +27,151 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: var(--light); 
     color: var(--cor-texto-escuro);
     line-height: 1.6;
-    background-color: var(--cor-fundo-claro);
-    display: flex; 
+    
+    /* Centralização Vertical e Horizontal para tela cheia */
+    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 20px; 
 }
 
-h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    text-align: center;
+/* --- Layout Principal --- */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 450px; /* Limita a largura para foco no formulário */
+}
+
+/* --- Logo (Padrão do Header) --- */
+.logo {
+    display: flex;
+    align-items: center;
     margin-bottom: 20px;
-    color: var(--cor-azul-principal);
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--primary); /* Usa o azul principal */
 }
 
-.form-content {
-    background-color: var(--cor-branco);
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+.logo i {
+    margin-right: 8px;
+    font-size: 2.2rem;
+}
+
+/* --- Caixa de Formulário (login-box substitui form-content) --- */
+.login-box {
+    background-color: white;
+    padding: 35px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow); /* Sombra do padrão */
     width: 100%;
-    max-width: 400px;
     text-align: center;
 }
 
-/* Estilo do Formulário */
-.form-centralizado {
-    display: block;
-    text-align: left; /* Garante que os rótulos e inputs fiquem alinhados à esquerda */
-}
-
-/* Estilo dos rótulos (labels) */
-.form-centralizado label {
-    display: block; /* Faz o rótulo ocupar a largura total e pular linha */
-    margin-top: 10px;
+.login-box h1 {
+    font-size: 1.8rem;
+    color: var(--primary);
     margin-bottom: 5px;
-    font-weight: 500;
-    color: var(--cor-texto-escuro);
 }
 
-/* Estilo dos campos de input */
-.form-centralizado input[type="email"],
-.form-centralizado input[type="password"] {
-    width: 100%; 
-    padding: 12px;
-    margin-bottom: 15px; /* Adiciona espaço após o input */
-    border: 1px solid var(--cor-borda-clara);
-    border-radius: 6px;
-    font-size: 1rem;
+.description {
+    color: var(--gray);
+    margin-bottom: 25px;
+    font-size: 0.95rem;
 }
 
-/* Estilo do botão base */
-.button {
-    padding: 12px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s;
+/* --- Formulário --- */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    text-align: left;
+}
+
+.input-group label {
     display: block;
-    border: none;
-    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--dark);
+    font-size: 0.9rem;
+}
+
+.input-group label i {
+    margin-right: 5px;
+    color: var(--primary-dark); /* Azul CTA para ícones */
+}
+
+.input-group input[type="email"],
+.input-group input[type="password"] {
     width: 100%;
+    padding: 12px;
+    border: 1px solid var(--gray-light);
+    border-radius: var(--border-radius);
     font-size: 1rem;
-    margin-top: 20px; /* Adiciona um espaço acima do botão */
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-/* Estilo do botão primário (verde) */
-.primary-button {
-    background-color: var(--cor-cta-verde);
-    color: var(--cor-branco);
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(18, 66, 156, 0.15); 
 }
 
-/* Estilo do hover */
-.primary-button:hover {
-    background-color: #6b6b6b;
+/* --- Botão Principal (btn-primary com ícone) --- */
+.btn-primary {
+    background-color: var(--success); /* Usei o verde para dar mais destaque, como um CTA */
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    border-radius: var(--border-radius);
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
 
+.btn-primary:hover {
+    background-color: #008f84; /* Um tom um pouco mais escuro do verde */
+    box-shadow: 0 4px 10px rgba(0, 176, 161, 0.4);
+}
+
+/* --- Link de Recuperação de Senha --- */
+.recovery-link {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.recovery-link a {
+    color: var(--gray);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.recovery-link a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 480px) {
+    .login-box {
+        padding: 25px;
+    }
+    .login-box h1 {
+        font-size: 1.5rem;
+    }
 }
