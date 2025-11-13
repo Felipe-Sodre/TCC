@@ -1,101 +1,480 @@
-/* Importando variáveis do index.css (para um ambiente real, este arquivo faria o import ou as variáveis estariam acessíveis) */
-/* As variáveis foram copiadas aqui para garantir o funcionamento independente */
-/* ... [Estilos anteriores do PacientePage.css] ... */
+/*
+ * Arquivo CSS Externo para a Página do Paciente (PacientePage.css).
+ * ESTILO CONSOLIDADO: Adotando o padrão de cores, cabeçalho e estrutura de ResponsavelPage.css.
+*/
 
-/* --- Estilos do Banner em Tela Cheia --- */
-.banner-area {
-    width: 100%;
-    /* Limpa a margem automática do body que o index.css estabelece para centralizar o site */
-    margin: 0; 
+/* --- Reset e Variáveis (Copiado de ResponsavelPage.css) --- */
+* {
+    margin: 0;
     padding: 0;
-    overflow: hidden; /* Garante que a imagem não cause scroll horizontal */
+    box-sizing: border-box;
 }
 
-.banner-img {
-    display: block;
-    width: 100%;
-    /* Garante que a imagem se estique para cobrir a largura total, 
-       mas limita a altura para não dominar a tela, mantendo a proporção */
-    height: auto;
-    max-height: 250px; /* Limita a altura do banner para que ele seja uma faixa e não ocupe toda a tela */
-    object-fit: cover; /* Recorta a imagem para garantir que ela cubra a área, mantendo a proporção */
-}
-
-
-/* --- Ajuste no Conteúdo Principal --- */
-.paciente-main-content {
-    /* Ajuste de margem para o conteúdo principal não colar no banner */
-    max-width: 1100px; 
-    margin: 0px auto; 
-    padding: 5px;
-    text-align: center;
-}
-
-/* ... [Restante dos estilos anteriores do PacientePage.css] ... */
 :root {
-    --cor-azul-principal: #12429c; 
-    --cor-cta-azul: #5ca0c7; 
-    --cor-cta-verde: #00b0a1; 
+    --primary: #12429c; /* Azul Principal */
+    --primary-dark: #5ca0c7; /* Azul CTA */
+    --secondary: #7209b7; /* Roxo */
+    --success: #00b0a1; /* Verde (para Status Ativo/CTA) */
+    --warning: #f72585; /* Rosa/Alerta (Para Suporte/Escuta) */
+    --light: #f8f9fa; /* Fundo Claro */
+    --dark: #212529; 
+    --gray: #6c757d; 
+    --gray-light: #f1f1f1; 
+    
+    /* Variáveis para consistência de texto/borda */
     --cor-texto-escuro: #333;
     --cor-texto-claro: #555;
-    --cor-fundo-claro: #f8f9fa; 
-    --cor-branco: #fff;
     --cor-borda-clara: #ddd;
-}
-.paciente-main-content h2 {
-    color: var(--cor-azul-principal);
-    margin-bottom: 10px;
-    font-size: 2.2rem;
+
+    --border-radius: 10px; 
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    --transition: all 0.3s ease; 
 }
 
-.paciente-descricao {
+body {
+    max-width: 1200px; 
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light);
+    color: var(--cor-texto-escuro);
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Estilos do Cabeçalho (Copiado de ResponsavelPage.css) --- */
+.header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.logo i {
+    margin-right: 5px;
+    font-size: 1.8rem;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--gray);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+    padding: 8px 15px;
+    border-radius: var(--border-radius);
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary);
+    border-radius: 55px;
+    background-color: rgba(18, 66, 156, 0.1); 
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    color: var(--dark);
+}
+
+.user-info:hover {
+    background-color: var(--gray-light);
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-name {
+    font-weight: 500;
+}
+
+/* --- Estilos do Conteúdo Principal --- */
+.paciente-main-content {
+    max-width: 1100px; 
+    margin: 20px auto; 
+    padding: 20px;
+    /* Remover o text-align: center se houver mais conteúdo além do banner */
+}
+
+/* --- Banner de Boas-Vindas (Copiado e adaptado de ResponsavelPage.css) --- */
+.welcome-banner {
+    background: linear-gradient(110deg, var(--primary), var(--primary-dark)); 
+    color: white;
+    border-radius: var(--border-radius);
+    padding: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+.welcome-content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+.welcome-content p {
     font-size: 1.1rem;
-    color: var(--cor-texto-claro);
+    opacity: 0.9;
+}
+
+
+/* --- Estilo do Painel de Dados do Paciente (Copiado de ResponsavelPage.css) --- */
+.paciente-data-panel {
+    background-color: white;
+    border: 1px solid var(--cor-borda-clara);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 30px 0; 
+    text-align: left; 
+    box-shadow: var(--box-shadow);
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--gray-light);
+    padding-bottom: 15px;
+}
+
+.panel-header h3 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.paciente-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-dark);
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px 30px; 
+    margin-bottom: 20px;
+}
+
+.data-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.data-label {
+    font-weight: 600;
+    color: var(--cor-texto-escuro);
+    font-size: 0.9rem;
+    opacity: 0.7;
+    text-transform: uppercase;
+}
+
+.data-value {
+    font-size: 1.1rem;
+    color: var(--cor-texto-escuro);
+    padding-top: 3px;
+    word-break: break-word;
+}
+
+.status-ativo {
+    font-weight: 700;
+    color: var(--success) !important; 
+}
+
+.data-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: var(--primary); 
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.data-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Estilos de Seções (Copiado de ResponsavelPage.css) --- */
+.dashboard-section {
     margin-bottom: 40px;
 }
 
-/* Estilo para os botões de ação (AGORA EM FLEXBOX) */
-.paciente-actions {
-    display: flex; /* Mudança para alinhar os itens em uma linha */
-    flex-direction: row;
-    justify-content: space-between; /* Distribui o espaço entre os botões */
-    gap: 15px; /* Espaçamento entre os botões */
-    margin-top: 40px;
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-/* Estilo para os botões de ação. */
+.section-header h2 {
+    font-size: 1.5rem;
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.view-all {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: var(--transition);
+}
+
+.view-all:hover {
+    color: var(--primary-dark);
+}
+
+/* --- Lista de Consultas (Copiado de ResponsavelPage.css) --- */
+.consultation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.consultation-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    border: 1px solid var(--gray-light);
+    background-color: white;
+}
+
+.consultation-item:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.consultation-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+    padding-right: 10px;
+    border-right: 1px solid var(--gray-light);
+}
+
+.consultation-time .time {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--primary);
+}
+
+.consultation-time .duration {
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+
+.consultation-info {
+    flex: 1;
+}
+
+.consultation-info h4 {
+    margin-bottom: 5px;
+    color: var(--dark);
+}
+
+.consultation-info p {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.consultation-tags {
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    padding: 3px 8px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.tag.online {
+    background-color: rgba(67, 97, 238, 0.1);
+    color: var(--primary);
+}
+
+.tag.presential {
+    background-color: rgba(114, 9, 183, 0.1);
+    color: var(--secondary);
+}
+
+.tag.confirmed {
+    background-color: rgba(76, 201, 240, 0.1);
+    color: var(--success);
+}
+
+.tag.pending {
+    background-color: rgba(247, 37, 133, 0.1);
+    color: var(--warning);
+}
+
+.consultation-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-outline:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* --- Estilo para os Botões de Ação (Ações Principais) --- */
+.paciente-actions {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: stretch; 
+    gap: 15px; 
+    margin-top: 50px; 
+    margin-bottom: 50px;
+    width: 100%; 
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .action-button {
     display: flex;
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     min-height: 120px; 
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 600; 
     text-decoration: none;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    gap: 10px;
     
-    /* Configurações de Flex para ocupar o mesmo espaço */
-    flex-grow: 1; /* Permite que o botão cresça para ocupar espaço */
-    flex-basis: 0; /* Define a base inicial para que o flex-grow funcione */
-    min-width: 200px; /* Garante que os botões não fiquem pequenos demais */
+    color: white !important; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 2px solid transparent; 
+    transition: transform 0.2s, box-shadow 0.2s;
+    
+    flex-grow: 1; 
+    flex-basis: 0; 
+    min-width: 150px; 
 }
 
-/* Adiciona responsividade: em telas pequenas, os botões voltam a quebrar a linha */
-@media (max-width: 960px) {
-    .paciente-actions {
-        flex-wrap: wrap; 
-        justify-content: center;
-    }
-    .action-button {
-        flex-basis: 40%; /* Ocupa 40% em telas menores, permitindo 2 por linha */
-        margin-bottom: 15px;
-    }
-    @media (max-width: 500px) {
-        .action-button {
-            flex-basis: 100%; /* Ocupa 100% em telas muito pequenas (1 por linha) */
-        }
-    }
+.action-button i {
+    font-size: 1.8rem;
+}
+
+.action-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15); 
+    filter: brightness(1.1); 
+}
+
+/* Cores específicas dos botões */
+.cta-button-blue {
+    background-color: var(--primary-dark); 
+}
+
+.cta-button-green {
+    background-color: var(--success); 
+}
+
+.primary-button {
+    background-color: var(--primary); 
+}
+
+.cta-button-warning {
+    background-color: var(--warning); 
 }
 
 /* Mensagens de feedback */
@@ -108,4 +487,133 @@
     border-radius: 8px;
     display: none; 
     font-weight: 500;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* --- Rodapé (Copiado de ResponsavelPage.css) --- */
+.footer {
+    background-color: var(--dark);
+    color: white;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.footer-logo i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--success);
+}
+
+.footer-copyright {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+/* --- Responsividade (Copiado de ResponsavelPage.css) --- */
+
+@media (max-width: 960px) {
+    /* Responsividade do Header */
+    .header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .user-menu {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Responsividade dos Botões de Ação */
+    .paciente-actions {
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    .action-button {
+        flex-basis: 45%; 
+        margin-bottom: 15px;
+        min-height: 100px;
+    }
+    
+    /* Responsividade das Consultas */
+    .consultation-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    .consultation-time {
+        border-right: none;
+        padding-right: 0;
+        border-bottom: 1px solid var(--gray-light);
+        padding-bottom: 10px;
+        min-width: auto;
+    }
+    .consultation-actions {
+        align-self: stretch;
+        justify-content: center;
+    }
+    
+    /* Rodapé */
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    /* Painel de Dados */
+    .data-grid {
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Botões em tela muito pequena (1 por linha) */
+    .action-button {
+        flex-basis: 90%; 
+    }
+    
+    /* Painel de Dados */
+    .data-grid {
+        grid-template-columns: 1fr; 
+    }
 }
