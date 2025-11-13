@@ -1,6 +1,42 @@
-*Giovanni*
+<?php
+session_start();
+if (!isset($_SESSION['Usuario'])) {
+  header('Location: Login.php');
+  exit;
+}
+?>
 
-- Escolher profissional
-- Escolher data disponivel do profissional
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Agendamento</title>
+  <link rel="stylesheet" href="CSS/.css">
+  <script src="JavaScript/agendamento.js" defer></script>
+</head>
+<body>
+  <main class="">
+    <h2>Agendar Atendimento</h2>
 
+    <form id="formAgendamento">
+      <label for="profissional">Selecione o Profissional:</label>
+      <select id="profissional" name="profissional" required>
+        <option value="">Carregando...</option>
+      </select>
 
+      <label for="data">Data do atendimento:</label>
+      <input type="date" id="data" name="data" required>
+
+      <label for="hora">Horário:</label>
+      <input type="time" id="hora" name="hora" required>
+
+      <label for="obs">Observações:</label>
+      <textarea id="obs" name="obs" placeholder="Informações adicionais..." rows="3"></textarea>
+
+      <button type="submit">Agendar</button>
+    </form>
+
+    <p id="msg"></p>
+  </main>
+</body>
+</html>
