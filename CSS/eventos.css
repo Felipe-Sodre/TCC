@@ -31,7 +31,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: sticky;
+    top: 0;
     padding: 15px 20px;
+    background-color: #ffffff;
     border-bottom: 2px solid var(--cor-borda-clara);
     gap: 40px;
 }
