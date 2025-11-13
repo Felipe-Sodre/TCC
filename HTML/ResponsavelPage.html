@@ -6,38 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área do Responsável - Apoio Conecta</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <link rel="stylesheet" href="../CSS/ResponsavelPage.css">
     <link rel="stylesheet" href="../CSS/index.css"> 
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="logo">
-            <span>Apoio Conecta</span>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <span>Apoio Conecta</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Início</a>
+                <a href="#" class="nav-link"><i class="fas fa-user-circle"></i> Minha Área</a>
+                <a href="#" class="nav-link"><i class="fas fa-cog"></i> Configurações</a>
+            </nav>
+            <div class="user-menu">
+                <a href="Login.html" id="logoutBtn" class="user-info" style="text-decoration: none;">
+                    <img src="../Imagens/Maria.png" alt="Avatar do Responsável" class="user-avatar">
+                    <span class="user-name">Responsável</span>
+                    <i class="fas fa-sign-out-alt"></i>
+                </a>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="#">Minha Área</a></li>
-                <li><a href="#">Configurações</a></li>
-                <li><a href="Login.html" id="logoutBtn">Sair</a></li>
-            </ul>
-        </nav>
     </header>
-
-    <section class="banner-area">
-        <img src="http://googleusercontent.com/image_generation_content/0" 
-             alt="Banner abstrato de apoio familiar com cores do Neuro Apoio Conecta."
-             class="banner-img">
-    </section>
-
+    
     <main class="responsavel-main-content">
-        <h2>Área do Responsável, [Nome do Responsável]!</h2>
-        <p class="responsavel-descricao">Gerencie o apoio e acompanhamento de seu familiar ou paciente.</p>
+        
+        <section class="welcome-banner">
+            <div class="welcome-content">
+                <h1>Bem-vindo(a), Maria!</h1>
+                <p>Gerencie o apoio de <strong>João Silva</strong>. Ele tem <strong>2 consultas</strong> agendadas para esta semana.</p>
+            </div>
+            <div class="welcome-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-user-clock"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">Consultas no mês</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Profissionais ativos</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <div class="paciente-data-panel">
-            <h3>Dados do Paciente</h3>
+            <div class="panel-header">
+                 <h3><i class="fas fa-child"></i> Dados do Paciente</h3>
+                 <img src="../Imagens/Joao.png" alt="Avatar do Paciente" class="paciente-avatar">
+            </div>
+           
             <div class="data-grid">
                 <div class="data-item">
                     <span class="data-label">Nome:</span>
@@ -56,17 +87,165 @@
                     <span class="data-value status-ativo" id="statusPlano">Ativo</span>
                 </div>
             </div>
-            <a href="#" class="data-link">Acessar Prontuário Completo</a>
+            <a href="#" class="data-link">Acessar Prontuário Completo <i class="fas fa-external-link-alt"></i></a>
         </div>
+        
+        <section class="dashboard-section">
+            <div class="section-header">
+                <h2><i class="fas fa-calendar-check"></i> Próximas Consultas</h2>
+                <a href="#" class="view-all">Ver Agenda Completa <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="consultation-list">
+                <div class="consultation-item">
+                    <div class="consultation-time">
+                        <span class="time">15/03 - 14:00h</span>
+                        <span class="duration">50 min</span>
+                    </div>
+                    <div class="consultation-info">
+                        <h4>Psicólogo Dr. Brandão</h4>
+                        <p>Sessão de Terapia Cognitivo-Comportamental (TCC)</p>
+                        <div class="consultation-tags">
+                            <span class="tag online">Online</span>
+                            <span class="tag confirmed">Confirmada</span>
+                        </div>
+                    </div>
+                    <div class="consultation-actions">
+                        <button class="btn-primary" title="Entrar na sala"><i class="fas fa-video"></i></button>
+                        <button class="btn-outline" title="Detalhes"><i class="fas fa-ellipsis-v"></i></button>
+                    </div>
+                </div>
+                
+                <div class="consultation-item">
+                    <div class="consultation-time">
+                        <span class="time">22/03 - 10:30h</span>
+                        <span class="duration">50 min</span>
+                    </div>
+                    <div class="consultation-info">
+                        <h4>Terapeuta Ocupacional Dra. Ana</h4>
+                        <p>Avaliação de Integração Sensorial</p>
+                        <div class="consultation-tags">
+                            <span class="tag presential">Presencial</span>
+                            <span class="tag pending">Aguardando Confimação</span>
+                        </div>
+                    </div>
+                    <div class="consultation-actions">
+                        <button class="btn-primary" title="Pagar Consulta"><i class="fas fa-money-check-alt"></i></button>
+                        <button class="btn-outline" title="Detalhes"><i class="fas fa-ellipsis-v"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-patients dashboard-section">
+            <div class="section-header">
+                <h2><i class="fas fa-history"></i> Consultas Recentes</h2>
+                <a href="#" class="view-all">Ver Histórico <i class="fas fa-arrow-right" ></i></a>
+            </div>
+            
+            <div class="patients-grid" >
+                <div class="patient-card">
+                    <div class="patient-avatar">
+                         <img src="../Imagens/dr-adilson.png" alt="Avatar Dr. Brandão">
+                    </div>
+                    <div class="patient-info">
+                        <h4>Dr. Adilson Brandão</h4>
+                        <p>Psicólogo</p>
+                        <div class="patient-status">
+                            <span class="status confirmed">10/03/2026</span>
+                        </div>
+                    </div>
+                    <div class="patient-actions">
+                        <button class="btn-outline">Ver Relatório</button>
+                    </div>
+                </div>
+                
+                <div class="patient-card">
+                    <div class="patient-avatar">
+                          <img src="../Imagens/Ana.png" alt="Avatar Dra. Ana">
+                    </div>
+                    <div class="patient-info">
+                        <h4>Dra. Ana Costa</h4>
+                        <p>Terapeuta Ocupacional</p>
+                        <div class="patient-status">
+                            <span class="status confirmed">08/03/2026</span>
+                        </div>
+                    </div>
+                    <div class="patient-actions">
+                        <button class="btn-outline">Ver Relatório</button>
+                    </div>
+                </div>
+                
+                <div class="patient-card">
+                    <div class="patient-avatar">
+                          <img src="../Imagens/Matos.png" alt="Avatar Dr. Matos">
+                    </div>
+                    <div class="patient-info">
+                        <h4>Dr. Bruno Matos</h4>
+                        <p>Neurologista</p>
+                        <div class="patient-status">
+                            <span class="status confirmed">25/02/2026</span>
+                        </div>
+                    </div>
+                    <div class="patient-actions">
+                        <button class="btn-outline">Ver Relatório</button>
+                    </div>
+                </div>
+                
+                <div class="patient-card">
+                    <div class="patient-avatar">
+                          <img src="../Imagens/dr-adilson.png" alt="Avatar Dr. Brandão">
+                    </div>
+                    <div class="patient-info">
+                        <h4>Dr. Adilson Brandão</h4>
+                        <p>Psicólogo</p>
+                        <div class="patient-status">
+                            <span class="status confirmed">18/02/2026</span>
+                        </div>
+                    </div>
+                    <div class="patient-actions">
+                        <button class="btn-outline">Ver Relatório</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="responsavel-actions">
-            <a href="#" id="statusBtn" class="action-button cta-button-blue">Ver Status do Paciente</a>
-            <a href="#" id="agendarParaPacienteBtn" class="action-button cta-button-green">Agendar Consultas</a>
-            <a href="#" id="materiaisBtn" class="action-button primary-button">Materiais para Cuidadores</a>
-            <a href="#" id="suporteBtn" class="action-button cta-button-blue">Suporte e Emergência</a>
+            <a href="#" id="statusBtn" class="action-button cta-button-blue">
+                <i class="fas fa-chart-line"></i> Ver Status do Paciente
+            </a>
+            <a href="#" id="agendarParaPacienteBtn" class="action-button cta-button-green">
+                <i class="fas fa-calendar-alt"></i> Agendar Consultas
+            </a>
+            <a href="#" id="materiaisBtn" class="action-button primary-button">
+                <i class="fas fa-book-open"></i> Materiais para Cuidadores
+            </a>
+            <a href="#" id="suporteBtn" class="action-button cta-button-warning">
+                <i class="fas fa-headset"></i> Suporte e Emergência
+            </a>
         </section>
         
         <div id="feedback" class="feedback-message"></div>
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-brain"></i>
+                    <span> Apoio Conecta</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Sobre</a>
+                    <a href="#">Contato</a>
+                    <a href="#">Privacidade</a>
+                    <a href="#">Termos</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Apoio Conecta. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="../JavaScript/ResponsavelPage.js" defer></script>
 </body>
