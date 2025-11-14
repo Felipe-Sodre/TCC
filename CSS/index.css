@@ -372,6 +372,16 @@ h2 {
         font-size: 0.9em;
         padding: 10px 20px;
     }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--fundo-claro);
+      font-size: 0.9rem;
+      color: var(--texto-claro);
+      border-top: 1px solid var(--borda-clara);
+      margin-top: 50px;
+    }
 }
 
 /* --- Layout Responsivo --- */
@@ -506,6 +516,7 @@ h2 {
         border-radius: 10px;            /* Cantos suavizados */
     }
 }
+
 
 
 
