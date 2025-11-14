@@ -25,22 +25,27 @@ if (!isset($_SESSION['Usuario'])) {
     <h2>Agendar Atendimento</h2>
     <p class ="description">Agende uma consulta.</p>
       
-    <form id="formAgendamento">
+    <form id="formAgendamento" class = "login-form">
+      <div class = "input-group">
       <label for="profissional">Selecione o Profissional:</label>
       <select id="profissional" name="profissional" required>
         <option value="">Carregando...</option>
       </select>
+      </div>
 
+      <div class = "input-group">
       <label for="data">Data do atendimento:</label>
       <input type="date" id="data" name="data" required>
-
+      </div>
+        <div class = "input-group">
       <label for="hora">Horário:</label>
       <input type="time" id="hora" name="hora" required>
-
+        </div>
+          <div class = "input-group">
       <label for="obs">Observações:</label>
       <textarea id="obs" name="obs" placeholder="Informações adicionais..." rows="3"></textarea>
-
-      <button type="submit">Agendar</button>
+          </div>
+      <button type="submit" class = "btn-primary">Agendar</button>
     </form>
 
     <p id="msg"></p>
@@ -49,4 +54,5 @@ if (!isset($_SESSION['Usuario'])) {
   </main>
 </body>
 </html>
+
 
