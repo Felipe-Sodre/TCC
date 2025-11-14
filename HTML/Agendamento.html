@@ -11,13 +11,20 @@ if (!isset($_SESSION['Usuario'])) {
 <head>
   <meta charset="UTF-8">
   <title>Agendamento</title>
-  <link rel="stylesheet" href="CSS/.css">
+  <link rel="stylesheet" href="../CSS/Login.css">
   <script src="JavaScript/agendamento.js" defer></script>
 </head>
 <body>
-  <main class="">
-    <h2>Agendar Atendimento</h2>
 
+  <main class="login-container">
+        <div class="logo">
+            <i class="fas fa-brain"></i>
+            <span>Apoio Conecta</span>
+        </div>
+    <div class = "login-box">
+    <h2>Agendar Atendimento</h2>
+    <p class ="description">Agende uma consulta.</p>
+      
     <form id="formAgendamento">
       <label for="profissional">Selecione o Profissional:</label>
       <select id="profissional" name="profissional" required>
@@ -37,6 +44,9 @@ if (!isset($_SESSION['Usuario'])) {
     </form>
 
     <p id="msg"></p>
+    </div>
+  
   </main>
 </body>
 </html>
+
