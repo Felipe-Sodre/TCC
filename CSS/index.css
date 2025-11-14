@@ -165,7 +165,6 @@ h2 {
     margin: 5px auto 0 auto; /* centraliza e adiciona espaçamento acima */
 }
 
-/* Removendo espaço de ações que não existem mais */
 .quadro-actions {
     display: none;            /* oculta completamente a seção de botões */
 }
@@ -276,7 +275,15 @@ h2 {
 .icone-item:hover {
     transform: scale(1.2); 
 }
-
+   footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--fundo-claro);
+      font-size: 0.9rem;
+      color: var(--texto-claro);
+      border-top: 1px solid var(--borda-clara);
+      margin-top: 50px;
+    }
 
 /* --- Layout Responsivo --- */
 
@@ -516,6 +523,7 @@ h2 {
         border-radius: 10px;            /* Cantos suavizados */
     }
 }
+
 
 
 
