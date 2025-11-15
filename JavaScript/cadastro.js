@@ -1,40 +1,61 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("formCadastro");
-  const msg = document.getElementById("msg");
+<?php
+session_start();
+require 'conexao.php';
+header ('Content-Type: application/json');
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    const data = {
-      nome: form.nome.value,
-      email: form.email.value,
-      senha: form.senha.value,
-      tipo_perfil: form.tipo_perfil.value
-    };
+//Recebe dados do fetch
+$input = json_decode(file_get_contents('php://input'), true);
 
-    try {
-      const res = await fetch("PHP/cadastrarAction.php", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-      });
+$nome = trim($input['nome'] ?? '');
+$email = trim($input['email'] ?? '');
+$senha = trim($input['senha'] ?? '');
+$tipo_perfil = trim($input['tipo_perfil'] ?? '');
 
-      const json = await res.json();
-      msg.textContent = json.message || "";
+//Verifica campos vazios
+if(!$nome || !$email || !$senha || !$tipo_perfil){
+    echo json_encode(['success' => false, 'message' => 'Preencha todos os campos!']);
+    exit();
+}
 
-      if (json.success) {
-        msg.style.color = "green";
-        setTimeout(() => {
-          window.location.href = json.redirect;
-        }, 1500);
-      } else {
-        msg.style.color = "red";
-      }
+//Verifica se o email já existe
+$stmt = $pdo->prepare("SELECT COUNT(*) FROM usuario WHERE email = ?");
+$stmt->execute([$email]);
 
-    } catch (err) {
-      console.error(err);
-      msg.textContent = "Erro ao conectar com o servidor.";
-      msg.style.color = "red";
-    }
-  });
-});
+if($stmt->fetchColumn() > 0){
+    echo json_encode(['success' => false, 'message' => 'Esse e-mail já está cadastrado!']);
+    exit();
+}
+
+//Hash da senha
+$senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+
+//INSERE
+$stmt = $pdo->prepare("INSERT INTO usuario (nome, email, senha, tipo) VALUES (?, ?, ?, ?)");
+$stmt->execute([$nome, $email, $senhaHash, $tipo_perfil]);
+
+//Pega o id do novo usuario
+$id_usuario = $pdo->lastInsertId();
+
+//cria sessão
+$_SESSION['user_id'] = $id_usuario;
+$_SESSION['user_nome'] = $nome;
+$_SESSION['user_tipo'] = $tipo_perfil;
+
+//Redirecionamento
+switch (strtolower($tipo_perfil)) {
+  case 'paciente':
+    $pagina = 'HTML/PacientePage.html';
+    break;
+  case 'profissional':
+    $pagina = 'HTML/ProfissionalPage.html';
+    break;
+  case 'familiar':
+    $pagina = 'HTML/Responsaveis.html';
+    break;
+  default:
+    $pagina = 'Login.php';
+}
+
+echo json_encode(['success' => true, 'redirect' => $pagina]);
