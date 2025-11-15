@@ -1,61 +1,49 @@
-<?php
-session_start();
-require 'conexao.php';
-header ('Content-Type: application/json');
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("formCadastro");
+  const msg = document.getElementById("msg");
 
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-//Recebe dados do fetch
-$input = json_decode(file_get_contents('php://input'), true);
+    // Coleta os dados do formulário
+    const data = {
+      nome: form.nome.value.trim(),
+      email: form.email.value.trim(),
+      senha: form.senha.value.trim(),
+      tipo_perfil: form.tipo_perfil.value.trim()
+    };
 
-$nome = trim($input['nome'] ?? '');
-$email = trim($input['email'] ?? '');
-$senha = trim($input['senha'] ?? '');
-$tipo_perfil = trim($input['tipo_perfil'] ?? '');
+    // (Opcional) validação simples no front
+    if (!data.nome || !data.email || !data.senha || !data.tipo_perfil) {
+      msg.textContent = "Preencha todos os campos!";
+      msg.style.color = "red";
+      return;
+    }
 
-//Verifica campos vazios
-if(!$nome || !$email || !$senha || !$tipo_perfil){
-    echo json_encode(['success' => false, 'message' => 'Preencha todos os campos!']);
-    exit();
-}
+    try {
+      // IMPORTANTE: ajuste esse caminho de acordo com a pasta onde seu HTML está
+      const res = await fetch("../PHP/cadastrarAction.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
 
-//Verifica se o email já existe
-$stmt = $pdo->prepare("SELECT COUNT(*) FROM usuario WHERE email = ?");
-$stmt->execute([$email]);
+      const json = await res.json();
 
-if($stmt->fetchColumn() > 0){
-    echo json_encode(['success' => false, 'message' => 'Esse e-mail já está cadastrado!']);
-    exit();
-}
+      msg.textContent = json.message || "";
+      msg.style.color = json.success ? "green" : "red";
 
-//Hash da senha
-$senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+      if (json.success) {
+        // Dá um tempinho pro usuário ver a mensagem
+        setTimeout(() => {
+          window.location.href = json.redirect;
+        }, 1500);
+      }
 
-//INSERE
-$stmt = $pdo->prepare("INSERT INTO usuario (nome, email, senha, tipo) VALUES (?, ?, ?, ?)");
-$stmt->execute([$nome, $email, $senhaHash, $tipo_perfil]);
-
-//Pega o id do novo usuario
-$id_usuario = $pdo->lastInsertId();
-
-//cria sessão
-$_SESSION['user_id'] = $id_usuario;
-$_SESSION['user_nome'] = $nome;
-$_SESSION['user_tipo'] = $tipo_perfil;
-
-//Redirecionamento
-switch (strtolower($tipo_perfil)) {
-  case 'paciente':
-    $pagina = 'HTML/PacientePage.html';
-    break;
-  case 'profissional':
-    $pagina = 'HTML/ProfissionalPage.html';
-    break;
-  case 'familiar':
-    $pagina = 'HTML/Responsaveis.html';
-    break;
-  default:
-    $pagina = 'Login.php';
-}
-
-echo json_encode(['success' => true, 'redirect' => $pagina]);
+    } catch (err) {
+      console.error("Erro no fetch:", err);
+      msg.textContent = "Erro na conexão com o servidor.";
+      msg.style.color = "red";
+    }
+  });
+});
