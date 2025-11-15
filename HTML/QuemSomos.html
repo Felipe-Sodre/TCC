@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <title>Apoio Conecta - Quem Somos</title>
+
   <style>
     :root {
       --azul-principal: #12429c;
@@ -51,32 +52,35 @@
       color: var(--azul-principal);
     }
 
-    h3 {
-      margin-bottom: 10px;
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 3%; /* corrigido */
+      background-color: var(--branco);
+      border-bottom: 2px solid var(--borda-clara);
+      flex-wrap: nowrap;
     }
-
- header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 10%;
-  background-color: var(--branco);
-  border-bottom: 2px solid var(--borda-clara);
-  flex-wrap: nowrap;   /* Corrigido */
-}
 
     .logo {
       font-size: 1.5rem;
       font-weight: 700;
       color: var(--azul-principal);
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     nav ul {
       list-style: none;
       display: flex;
       gap: 15px;
-      flex-wrap: wrap;
-      margin-top: 10px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      list-style: none;
     }
 
     .menu-btn {
@@ -95,7 +99,7 @@
       color: var(--branco);
     }
 
-    /* MISSÃO, VISÃO, VALORES - */
+    /* MISSÃO, VISÃO, VALORES */
     .missao-visao-valores {
       display: flex;
       flex-wrap: wrap;
@@ -122,21 +126,6 @@
       box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
 
-    .card h3 {
-      color: var(--azul-principal);
-    }
-
-    .card p,
-    .card ul {
-      color: var(--texto-escuro);
-      font-size: 0.95rem;
-    }
-
-    .card ul {
-      text-align: left;
-      margin-left: 25px;
-    }
-
     .equipe-banner {
       position: relative;
       text-align: center;
@@ -161,33 +150,6 @@
       text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
     }
 
-    .equipe-text h2 {
-      font-size: 2rem;
-      margin-bottom: 15px;
-      color: white;
-    }
-
-    .equipe-text p {
-      font-size: 1.1rem;
-      line-height: 1.5;
-    }
-
-    .metas {
-      text-align: center;
-      padding: 60px 10%;
-    }
-
-    .metas .card-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-    }
-
-    .card-grid .card {
-      max-width: 220px;
-    }
-
     footer {
       text-align: center;
       padding: 20px;
@@ -199,36 +161,29 @@
     }
 
     @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
       .missao-visao-valores {
         flex-direction: column;
         align-items: center;
       }
-      
-      .missao-visao-valores .card {
-        max-width: 100%;
-      }
-
-      nav ul {
-        justify-content: center;
-        flex-direction: column;
-        gap: 10px;
-      }
-      
-      .equipe-text h2 {
-        font-size: 1.6rem;
-      }
-      
-      .equipe-text p {
-        font-size: 1rem;
-      }
     }
   </style>
 </head>
+
 <body>
+
+  <!-- HEADER CORRIGIDO -->
   <header>
-     <div class="logo">
-  <i class="fas fa-brain"></i> Apoio Conecta
-</div>
+    <div class="logo">
+      <i class="fas fa-brain"></i> Apoio Conecta
+    </div>
+
+    <nav>
       <ul>
         <li><a href="../index.html" class="menu-btn">Início</a></li>
         <li><a href="QuemSomos.html" class="menu-btn active">Quem Somos</a></li>
@@ -240,7 +195,7 @@
     </nav>
   </header>
 
-  <!-- Banner com imagem alegre -->
+  <!-- Banner -->
   <section class="equipe-banner">
     <img src="../Imagens/equipe.jpg" alt="Conexão da equipe da ONG">
     <div class="equipe-text">
@@ -251,14 +206,15 @@
     </div>
   </section>
 
+  <!-- MISSÃO, VISÃO E VALORES -->
   <section class="missao-visao-valores">
     <div class="card">
       <h3>Missão</h3>
-      <p>Promover acolhimento, inclusão e oportunidades de desenvolvimento para pessoas neurodivergentes e suas famílias.</p>
+      <p>Promover acolhimento, inclusão e desenvolvimento para pessoas neurodivergentes.</p>
     </div>
     <div class="card">
       <h3>Visão</h3>
-      <p>Construir uma sociedade onde as diferenças sejam reconhecidas como força e todos possam prosperar.</p>
+      <p>Construir uma sociedade onde as diferenças sejam vistas como força.</p>
     </div>
     <div class="card">
       <h3>Valores</h3>
@@ -266,41 +222,14 @@
         <li>Inclusão e empatia</li>
         <li>Escuta ativa e respeito</li>
         <li>Colaboração e transparência</li>
-        <li>Educação e conscientização</li>
+        <li>Conscientização</li>
       </ul>
-    </div>
-  </section>
-
-  <section class="equipe-banner">
-    <img src="../Imagens/sobrenos1.jpg" alt="Profissionais da ONG">
-    <div class="equipe-text">
-      <h2>Nossa Atuação</h2>
-      <p>
-        Trabalhamos em diversas frentes para garantir o suporte adequado às pessoas neurodivergentes e suas famílias, promovendo inclusão social e qualidade de vida.
-      </p>
-    </div>
-  </section>
-
-  <section class="metas">
-    <h2>Metas e Impacto</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3>+500</h3>
-        <p>Pessoas apoiadas desde o início</p>
-      </div>
-      <div class="card">
-        <h3>+200</h3>
-        <p>Eventos e oficinas realizadas</p>
-      </div>
-      <div class="card">
-        <h3>+100</h3>
-        <p>Voluntários ativos em todo o país</p>
-      </div>
     </div>
   </section>
 
   <footer>
     &copy; 2025 Apoio Conecta - Todos os direitos reservados
   </footer>
+
 </body>
 </html>
