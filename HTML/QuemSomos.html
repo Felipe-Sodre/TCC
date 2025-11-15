@@ -55,15 +55,15 @@
       margin-bottom: 10px;
     }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 10%;
-      background-color: var(--branco);
-      border-bottom: 2px solid var(--borda-clara);
-      flex-wrap: wrap;
-    }
+ header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  background-color: var(--branco);
+  border-bottom: 2px solid var(--borda-clara);
+  flex-wrap: nowrap;   /* Corrigido */
+}
 
     .logo {
       font-size: 1.5rem;
@@ -227,8 +227,8 @@
 <body>
   <header>
      <div class="logo">
-    <i class="fas fa-brain"></i>Apoio Conecta</div>
-    <nav>
+  <i class="fas fa-brain"></i> Apoio Conecta
+</div>
       <ul>
         <li><a href="../index.html" class="menu-btn">Início</a></li>
         <li><a href="QuemSomos.html" class="menu-btn active">Quem Somos</a></li>
