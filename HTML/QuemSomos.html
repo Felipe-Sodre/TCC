@@ -39,24 +39,27 @@
       font-family: 'Poppins', sans-serif;
     }
 
-    h1 {
-      font-size: 2rem;
-      font-weight: 600;
-      color: var(--azul-principal);
-    }
-
     h2 {
       font-size: 2rem;
       text-align: center;
       margin: 60px 0 40px;
       color: var(--azul-principal);
+      font-weight: 600; /* Adicionado para maior impacto */
     }
 
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--azul-principal);
+    }
+
+    /* HEADER */
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 3%; /* corrigido */
+      padding: 15px 3%; /* Ajustado para melhor espaçamento lateral */
       background-color: var(--branco);
       border-bottom: 2px solid var(--borda-clara);
       flex-wrap: nowrap;
@@ -79,10 +82,6 @@
       padding: 0;
     }
 
-    nav ul li {
-      list-style: none;
-    }
-
     .menu-btn {
       text-decoration: none;
       padding: 8px 15px;
@@ -91,6 +90,7 @@
       color: var(--texto-escuro);
       font-weight: 500;
       transition: all 0.3s;
+      white-space: nowrap; /* Impede quebra de linha em telas pequenas */
     }
 
     .menu-btn:hover,
@@ -99,7 +99,7 @@
       color: var(--branco);
     }
 
-    /* MISSÃO, VISÃO, VALORES */
+    /* MISSÃO, VISÃO, VALORES (CARDS) */
     .missao-visao-valores {
       display: flex;
       flex-wrap: wrap;
@@ -114,185 +114,22 @@
       min-width: 220px;
       background-color: var(--card-fundo);
       border-radius: 12px;
-      padding: 15px;
+      padding: 20px; /* Aumentei um pouco o padding */
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       text-align: center;
       border: 2px solid var(--borda-clara);
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    .card ul {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+        margin-top: 15px;
     }
-
-    .equipe-banner {
-      position: relative;
-      text-align: center;
-      margin: 30px 0;
-    }
-
-    .equipe-banner img {
-      width: 100%;
-      max-height: 350px;
-      object-fit: cover;
-      border-radius: 12px;
-      filter: brightness(0.6);
-    }
-
-    .equipe-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      max-width: 500px;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: var(--fundo-claro);
-      font-size: 0.9rem;
-      color: var(--texto-claro);
-      border-top: 1px solid var(--borda-clara);
-      margin-top: 50px;
-    }
-
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-      }
-
-      .missao-visao-valores {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- HEADER CORRIGIDO -->
-  <header>
-    <div class="logo">
-      <i class="fas fa-brain"></i> Apoio Conecta
-    </div>
-
     
-  </header>
-
-  <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <title>Apoio Conecta - Quem Somos</title>
-
-  <style>
-    :root {
-      --azul-principal: #12429c;
-      --cta-verde: #00b0a1;
-      --texto-escuro: #333;
-      --texto-claro: #555;
-      --fundo-claro: #f8f9fa;
-      --branco: #fff;
-      --borda-clara: #ddd;
-      --menu-fundo: #d3f1f5;
-      --card-fundo: #e0f7fa;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      max-width: 1100px;
-      font-family: 'Poppins', sans-serif;
-      color: var(--texto-escuro);
-      line-height: 1.6;
-      margin: 0 auto;
-      background-color: #f0f8ff;
-    }
-
-    h1, h2, h3 {
-      font-family: 'Poppins', sans-serif;
-    }
-
-    h2 {
-      font-size: 2rem;
-      text-align: center;
-      margin: 60px 0 40px;
-      color: var(--azul-principal);
-    }
-
-    /* HEADER */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 10%;
-      background-color: var(--branco);
-      border-bottom: 2px solid var(--borda-clara);
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--azul-principal);
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 15px;
-      margin-top: 10px;
-    }
-
-    .menu-btn {
-      text-decoration: none;
-      padding: 8px 15px;
-      border-radius: 55px;
-      background-color: var(--menu-fundo);
-      color: var(--texto-escuro);
-      font-weight: 500;
-      transition: all 0.3s;
-    }
-
-    .menu-btn:hover,
-    .menu-btn.active {
-      background-color: var(--cta-verde);
-      color: var(--branco);
-    }
-
-    /* CARDS */
-    .missao-visao-valores {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 60px 10%;
-    }
-
-    .missao-visao-valores .card {
-      flex: 1 1 300px;
-      max-width: 280px;
-      background-color: var(--card-fundo);
-      border-radius: 12px;
-      padding: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      text-align: center;
-      border: 2px solid var(--borda-clara);
-      transition: transform 0.3s, box-shadow 0.3s;
+    .card ul li {
+        margin-bottom: 5px;
     }
 
     .card:hover {
@@ -300,6 +137,7 @@
       box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
 
+    /* BANNERS DE IMAGEM */
     .equipe-banner {
       position: relative;
       text-align: center;
@@ -320,10 +158,18 @@
       left: 50%;
       transform: translate(-50%, -50%);
       color: white;
-      max-width: 500px;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      max-width: 90%; /* Ajuste para não sair da tela */
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+      padding: 10px;
+    }
+    
+    .equipe-text h2 {
+        color: var(--branco);
+        margin: 0 0 10px 0;
+        font-size: 2.5rem;
     }
 
+    /* METAS */
     .metas {
       text-align: center;
       padding: 60px 10%;
@@ -336,6 +182,18 @@
       flex-wrap: wrap;
     }
 
+    .card-grid .card h3 {
+        font-size: 2.5rem;
+        color: var(--cta-verde);
+        margin-bottom: 5px;
+    }
+    
+    .card-grid .card p {
+        font-weight: 600;
+    }
+
+
+    /* FOOTER */
     footer {
       text-align: center;
       padding: 20px;
@@ -346,6 +204,57 @@
       margin-top: 50px;
     }
 
+    /* MEDIA QUERIES (Responsividade) */
+    @media (max-width: 992px) {
+        header {
+            padding: 15px 5%;
+        }
+        nav ul {
+            gap: 10px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 3%;
+      }
+      
+      nav {
+        width: 100%;
+        margin-top: 15px;
+      }
+      
+      nav ul {
+        flex-direction: row; /* Mantendo horizontal, mas quebrando linha se necessário */
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .menu-btn {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+      }
+
+      .missao-visao-valores {
+        padding: 30px 5%;
+        gap: 30px;
+      }
+      
+      .missao-visao-valores .card {
+          max-width: 90%;
+      }
+
+      .equipe-text h2 {
+          font-size: 2rem;
+      }
+      
+      .card-grid {
+          gap: 15px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -354,7 +263,7 @@
     <div class="logo">
       <i class="fas fa-brain"></i> Apoio Conecta
     </div>
-
+    
     <nav>
       <ul>
         <li><a href="../index.html" class="menu-btn">Início</a></li>
@@ -367,16 +276,14 @@
     </nav>
   </header>
 
-  <!-- Banner 1 -->
   <section class="equipe-banner">
-    <img src="../Imagens/equipe.jpg" alt="Conexão da equipe da ONG">
+    <img src="../Imagens/equipe.jpg" alt="Conexão da equipe da ONG"> 
     <div class="equipe-text">
       <h2>Nossa Equipe</h2>
       <p>Profissionais e voluntários comprometidos com a inclusão.</p>
     </div>
   </section>
 
-  <!-- Missão Visão Valores -->
   <section class="missao-visao-valores">
     <div class="card">
       <h3>Missão</h3>
@@ -391,15 +298,14 @@
     <div class="card">
       <h3>Valores</h3>
       <ul>
-        <li>Inclusão e empatia</li>
-        <li>Escuta ativa e respeito</li>
-        <li>Colaboração</li>
-        <li>Educação e conscientização</li>
+        <li><i class="fas fa-check-circle" style="color: var(--cta-verde);"></i> Inclusão e empatia</li>
+        <li><i class="fas fa-check-circle" style="color: var(--cta-verde);"></i> Escuta ativa e respeito</li>
+        <li><i class="fas fa-check-circle" style="color: var(--cta-verde);"></i> Colaboração</li>
+        <li><i class="fas fa-check-circle" style="color: var(--cta-verde);"></i> Educação e conscientização</li>
       </ul>
     </div>
   </section>
 
-  <!-- Banner 2 -->
   <section class="equipe-banner">
     <img src="../Imagens/sobrenos1.jpg" alt="Profissionais da ONG">
     <div class="equipe-text">
@@ -408,7 +314,6 @@
     </div>
   </section>
 
-  <!-- Metas -->
   <section class="metas">
     <h2>Metas e Impacto</h2>
     <div class="card-grid">
@@ -435,4 +340,3 @@
 
 </body>
 </html>
-
